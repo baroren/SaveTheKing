@@ -1,6 +1,8 @@
+#pragma once
 #include <vector>
 #include "Window.h"
 #include "GameObject.h"
+#include "MainMenu.h"
 
 using std::vector;
 
@@ -10,14 +12,14 @@ public:
 	
 	GameController();
 
-	void run(sf::RenderWindow window);
+	void run(sf::RenderWindow);
 
 	void handleKey();
 
 
 private:
-
-	Window m_window;
+    //MainMenu mainMenu;
+    sf::RenderWindow m_window;
 	vector <GameObject> m_gameObjects;
 
 };

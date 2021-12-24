@@ -1,3 +1,4 @@
+
 #include "GameController.h"
 
 #include <iostream>
@@ -7,13 +8,13 @@ using std::endl;
 
 
 GameController::GameController()
-	:m_window(sf::Vector2u(1400, 700), "Dungeon Edition")
+
 {
 	
 }
 
 
-void GameController::run()
+void GameController::run(sf::RenderWindow)
 {
 	while (m_window.isOpen())
 	{
@@ -32,5 +33,8 @@ void GameController::handleKey()
 		cout << "ey" << endl;
 
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-		m_window.close();
+    {
+
+    }
+		//mainMenu.run();
 }

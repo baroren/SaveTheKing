@@ -44,7 +44,7 @@ else()
 
     set_target_properties (sfml-main sfml-system sfml-window sfml-graphics sfml-audio sfml-network PROPERTIES MAP_IMPORTED_CONFIG_RELWITHDEBINFO RELEASE)
 
-    target_link_libraries (test_mario_kart sfml-graphics sfml-audio sfml-network sfml-main)
+    target_link_libraries (ex02 sfml-graphics sfml-audio sfml-network sfml-main)
 
     configure_file (C:/SFML/SFML-2.5.1/bin/openal32.dll ${CMAKE_BINARY_DIR} COPYONLY)
     #=========================================
