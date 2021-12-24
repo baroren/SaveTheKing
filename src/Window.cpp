@@ -4,9 +4,10 @@
 
 using std::string;
 
-Window::Window(const sf::Vector2u windowSize, const string title)
+/*Window::Window(const sf::Vector2u windowSize, const string title)
 {
 	m_window.setSize(windowSize);
 
 	m_window.setTitle(title);
 }
+ */

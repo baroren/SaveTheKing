@@ -1,8 +1,11 @@
 ﻿
 #include "GameController.h"
+#include "MainMenu.h"
+#include <SFML/Graphics.hpp>
 
 int main()
 {
-	
-	return 0;
+ MainMenu mainMenu;
+ mainMenu.run();
+
 }
