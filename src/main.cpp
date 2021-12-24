@@ -1,5 +1,7 @@
 ﻿
 #include "GameController.h"
+#include "MainMenu.h"
+#include <SFML/Graphics.hpp>
 
 //	delete in the end
 #include "Window.h"
@@ -10,6 +12,9 @@ using std::endl;
 
 int main()
 {
+
+ //MainMenu mainMenu;
+ //mainMenu.run();
 
 	GameController gameController;
 
