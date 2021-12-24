@@ -1,5 +1,5 @@
 #pragma once
-
+#include "GameController.h"
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <iostream>
@@ -11,6 +11,8 @@ class MainMenu {
     void run();
 private :
     void makeTitle(sf::Text&,int size,std::string text);
+    GameController gameController;
+
 
     Button* m_startGameButton;
     Button* m_helpButton;

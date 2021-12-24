@@ -13,12 +13,10 @@ using std::endl;
 int main()
 {
 
- //MainMenu mainMenu;
- //mainMenu.run();
+    MainMenu mainMenu;
+    mainMenu.run();
 
-	GameController gameController;
 
-	gameController.run();
 
 	return 0;
 }

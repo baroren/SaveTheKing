@@ -10,7 +10,7 @@ public:
 	
 	GameController();
 
-	void run();
+	void run(sf::RenderWindow window);
 
 	void handleKey();
 

@@ -99,7 +99,13 @@ void MainMenu::run()
         {
             m_helpButton->quit();
         }
-        m_startGameButton->quit();
+        if(m_startGameButton->isPressed())
+        {
+            gameController.run();
+        } else{
+            m_startGameButton->quit();
+        }
+
         if(m_quit->isPressed())
         {
             window.close();
