@@ -34,7 +34,11 @@ void GameController::handleKey()
 
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
     {
-
+        runing=false;
     }
-		//mainMenu.run();
+
+}
+bool GameController:: isRuning()
+{
+    return runing;
 }

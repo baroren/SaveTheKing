@@ -1,6 +1,6 @@
 #include "SFML/Graphics.hpp"
 #include <string>
-
+#include "Animation.h"
 using std::string;
 
 class GameObject {
@@ -9,11 +9,11 @@ public:
 	void draw();
 
 private:
-
+    Animation m_animation;
 	sf::Vector2i m_location;
-
+    sf::Texture m_texture;
+    sf::Sprite m_sprie;
 	sf::Vector2i indexToPixel(const int x, const int y);
 
 	
 };
- 
