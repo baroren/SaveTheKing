@@ -61,8 +61,8 @@ void MainMenu::run()
     m_second_title.setPosition(sf::Vector2f(680.f,210.f));//change into not hard coded
     m_skeleton.setPosition(sf::Vector2f(200.f,200.f));
     m_skeleton.setScale(10.f,10.f);// need to make func
-   // m_mage.setOrigin(m_mage.getGlobalBounds().width/2.f,m_mage.getGlobalBounds().height/2.f);
-    m_mage.setPosition(sf::Vector2f(700.f,300.f));
+    m_mage.setOrigin(m_mage.getGlobalBounds().width/3.f/2.f,m_mage.getGlobalBounds().height/2.f);
+    m_mage.setPosition(sf::Vector2f(0.f,0.f));
     m_mage.setScale(10.f,10.f);// need to make func
 
     m_help.setOrigin(sf::Vector2f(m_help.getGlobalBounds().width/2.f,m_help.getGlobalBounds().height/2.f));
