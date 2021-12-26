@@ -1,14 +1,21 @@
-#include "Window.h"
+#pragma once
 
+#include "SFML/Graphics.hpp"
 
-class Board : public Window {
+#define SQUARE 100
+
+class Board {
 
 public:
-	Board(const sf::Vector2i boardSize);
+//		where the actual game will take place
+	Board(const int rowNum = 5, const int colNum = 6);
 
+//		display the game board on window
+	void display(sf::RenderWindow& window);
 
 private:
 
-
+	const sf::Vector2f m_upperLeftDot = sf::Vector2f(4 * SQUARE, SQUARE);
+	int m_rowNUm, m_colNum;
 
 };

@@ -36,7 +36,7 @@ MainMenu::MainMenu()
     m_skeleton.setTexture(m_skelTex);
     m_help.setTexture(m_helpTex);
     makeTitle(m_title,72,"Save  The  King");
-    makeTitle(m_second_title,32,"dungeon  Edition");
+    makeTitle(m_second_title,32,"Dungeon  Edition");
 
     this->m_startGameButton=new Button(680,300,150,50,&this->m_font,"New Game",
                                        sf::Color(70,70,70,200),sf::Color(70,3,150,200),
@@ -81,13 +81,7 @@ void MainMenu::run(sf::RenderWindow & window)
         m_helpButton->update(window.mapPixelToCoords(sf::Mouse::getPosition(window)));
         m_quit->update(window.mapPixelToCoords(sf::Mouse::getPosition(window)));
 
-        sf::Event event;
 
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
 
         m_animation->update(0,deltaTime);
         m_mage.setTextureRect(m_animation->getRect());
@@ -131,11 +125,17 @@ void MainMenu::run(sf::RenderWindow & window)
             m_startGameButton->quit();
 
 
-        if(m_quit->isPressed())
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+
+        if (m_quit->isPressed() || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
         {
             window.close();
         }
-
 
         window.display();
     }

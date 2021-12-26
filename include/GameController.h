@@ -1,8 +1,10 @@
 #pragma once
+
 #include <vector>
 #include "Window.h"
 #include "GameObject.h"
 #include "MainMenu.h"
+#include "Board.h"
 
 using std::vector;
 
@@ -19,8 +21,9 @@ public:
 
 private:
     bool runing=true;
-    MainMenu mainMenu;
-    sf::RenderWindow m_window;
+    MainMenu m_mainMenu;
+	Window m_window;
+
 	vector <GameObject> m_gameObjects;
 
 };
