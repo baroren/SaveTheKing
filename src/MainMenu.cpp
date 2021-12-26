@@ -69,7 +69,7 @@ void MainMenu::run()
     m_help.setPosition(sf::Vector2f(700.f,350.f));
     m_help.setScale(1.5,1.5);
     // auto bounds = m_title_sprite.getLocalBounds();
-
+    mage= new Mage(300.f,300.f,1,3,0.17,10,"W_Red_Idle_SPR.png");
     //m_title_sprite.setOrigin( bounds.width / 2.f, bounds.height / 2.f );
  // m_title_sprite.setPosition(sf::Vector2f(680.f,200.f));
     sf::Clock clock;
@@ -107,7 +107,10 @@ void MainMenu::run()
         window.draw(m_quit->drawText());
 
         window.draw(m_skeleton);
-        window.draw(m_mage);
+        //window.draw(m_mage);
+        mage->update(0,deltaTime,window);
+     //   mage->draw(window);
+
 
         if(m_helpButton->isPressed())
         {
