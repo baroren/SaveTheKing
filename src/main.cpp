@@ -13,8 +13,8 @@ using std::endl;
 int main()
 {
 
-    MainMenu mainMenu;
-    mainMenu.run();
+   GameController gameController;
+   gameController.run();
 
 
 

@@ -3,7 +3,7 @@
 #include <vector>
 #include <iostream>
 #include "Button.h"
-#include "GameController.h"
+//#include "GameController.h"
 #include "Animation.h"
 #include "Mage.h"
 
@@ -11,11 +11,11 @@ class MainMenu {
     public:
     MainMenu();
     //add dest
-    void run();
+    void run(sf::RenderWindow & window);
 private :
 
     void makeTitle(sf::Text&,int size,std::string text);
-   // GameController gameController;
+    //GameController gameController;
     Mage* mage;
     Animation *m_animation;
     Animation *m_animationSkel;

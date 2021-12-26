@@ -10,15 +10,22 @@ using std::endl;
 GameController::GameController()
 
 {
-	
+
 }
 
 
-void GameController::run(sf::RenderWindow)
+void GameController::run()
 {
-	while (m_window.isOpen())
+    sf::RenderWindow window(sf::VideoMode(1400, 700), "Save The king Dungen edition");
+    mainMenu.run(window);
+    std::cout << "in game controller";
+	while (window.isOpen())
 	{
-		m_window.display();
+
+
+
+
+        window.display();
 
 		handleKey();
 	}

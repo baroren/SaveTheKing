@@ -52,18 +52,16 @@ MainMenu::MainMenu()
 
 }
 
-void MainMenu::run()
+
+void MainMenu::run(sf::RenderWindow & window)
 {
-    sf::RenderWindow window(sf::VideoMode(1400, 700), "Save The king Dungen edition");
+    //sf::RenderWindow window(sf::VideoMode(1400, 700), "Save The king Dungen edition");
     sf::CircleShape shape;
 
     m_title.setPosition(sf::Vector2f(680.f,150.f));
     m_second_title.setPosition(sf::Vector2f(680.f,210.f));//change into not hard coded
     m_skeleton.setPosition(sf::Vector2f(200.f,200.f));
     m_skeleton.setScale(10.f,10.f);// need to make func
-    m_mage.setOrigin(m_mage.getGlobalBounds().width/3.f/2.f,m_mage.getGlobalBounds().height/2.f);
-    m_mage.setPosition(sf::Vector2f(0.f,0.f));
-    m_mage.setScale(10.f,10.f);// need to make func
 
     m_help.setOrigin(sf::Vector2f(m_help.getGlobalBounds().width/2.f,m_help.getGlobalBounds().height/2.f));
     m_help.setPosition(sf::Vector2f(700.f,350.f));
@@ -108,7 +106,7 @@ void MainMenu::run()
 
         window.draw(m_skeleton);
         //window.draw(m_mage);
-        mage->update(0,deltaTime,window);
+        mage->updateAndDraw(0,deltaTime,window);
      //   mage->draw(window);
 
 
@@ -127,7 +125,8 @@ void MainMenu::run()
         }
         if(m_startGameButton->isPressed())
         {
-           // gameController.run(window);
+            return;
+        //    std::cout << "testtest";
         }
             m_startGameButton->quit();
 

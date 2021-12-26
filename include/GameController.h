@@ -2,7 +2,7 @@
 #include <vector>
 #include "Window.h"
 #include "GameObject.h"
-
+#include "MainMenu.h"
 
 using std::vector;
 
@@ -12,14 +12,14 @@ public:
 	
 	GameController();
 
-	void run(sf::RenderWindow);
+	void run();
     bool isRuning();
 	void handleKey();
 
 
 private:
     bool runing=true;
-    //MainMenu mainMenu;
+    MainMenu mainMenu;
     sf::RenderWindow m_window;
 	vector <GameObject> m_gameObjects;
 
