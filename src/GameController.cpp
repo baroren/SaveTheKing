@@ -1,3 +1,4 @@
+
 #include "GameController.h"
 
 #include <iostream>
@@ -7,17 +8,32 @@ using std::endl;
 
 
 GameController::GameController()
-	:m_window(sf::Vector2u(1400, 700), "Dungeon Edition")
+
 {
-	
+
 }
 
 
 void GameController::run()
 {
-	while (m_window.isOpen())
+    sf::RenderWindow window(sf::VideoMode(1400, 700), "Save The king Dungen edition");
+    mainMenu.run(window);
+    std::cout << "in game controller";
+	while (window.isOpen())
 	{
-		m_window.display();
+
+        sf::Event event;
+
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+        window.clear(sf::Color(34,20,26));
+
+
+
+        window.display();
 
 		handleKey();
 	}
@@ -32,5 +48,12 @@ void GameController::handleKey()
 		cout << "ey" << endl;
 
 	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-		m_window.close();
+    {
+        runing=false;
+    }
+
+}
+bool GameController:: isRuning()
+{
+    return runing;
 }

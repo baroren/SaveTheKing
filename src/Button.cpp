@@ -33,31 +33,37 @@ sf::RectangleShape Button:: render()
 void Button::update(sf::Vector2f mousePos)
 {
     //idle
-    this->m_bState=BTN_IDLE;
-    this->m_shape.setFillColor(this->m_idleColor);
-    //hover
-    if(m_shape.getGlobalBounds().contains(mousePos))
-    {
-        this->m_bState=BTN_HOVER;
-        //pressed
-        if(sf::Mouse::isButtonPressed(sf::Mouse::Left))
-        {
-            this->m_bState=BTN_PRESSED;
-        }
-        switch(this->m_bState)
-        {
-            case BTN_IDLE:
-                this->m_shape.setFillColor(this->m_idleColor);
-                break;
-            case BTN_HOVER:
-                this->m_shape.setFillColor(this->m_hoverColor);
-                break;
-            case BTN_PRESSED:
-                this->m_shape.setFillColor(this->m_activeColor);
-            default:
-                break;
+    if(!m_pressed) {
+        this->m_bState = BTN_IDLE;
+        this->m_shape.setFillColor(this->m_idleColor);
+
+        //hover
+        if (m_shape.getGlobalBounds().contains(mousePos)) {
+            this->m_bState = BTN_HOVER;
+            //pressed
+            if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+                this->m_bState = BTN_PRESSED;
+            }
+            switch (this->m_bState) {
+                case BTN_IDLE:
+                    this->m_shape.setFillColor(this->m_idleColor);
+                    break;
+                case BTN_HOVER:
+                    this->m_shape.setFillColor(this->m_hoverColor);
+                    break;
+                case BTN_PRESSED:
+                    this->m_shape.setFillColor(this->m_activeColor);
+                    m_pressed=true;
+                default:
+                    break;
+            }
         }
     }
+
+}
+void Button::quit()
+{
+    m_pressed=false;
 }
 const bool Button::isPressed()const
 {
