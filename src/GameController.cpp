@@ -39,18 +39,18 @@ void GameController::run()
                 m_window.close();
         }
 
-        for (int i = 0; i < 1; i++)
+        for (int i = 0; i < 1; i++) // needs to be expanded to entire vector
         {
             m_gameObjects[0]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
 
         m_window.display();
 
-		handleKey();
+		handleKey(deltaTime);
 	}
 }
 
-void GameController::handleKey()
+void GameController::handleKey(float deltaTime)
 {
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
@@ -62,25 +62,25 @@ void GameController::handleKey()
 
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
     {
-        m_gameObjects[0]->move(left);
+        m_gameObjects[0]->move(left, deltaTime);
     }
 
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
     {
-        m_gameObjects[0]->move(right);
+        m_gameObjects[0]->move(right, deltaTime);
     }
 
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
     {
-        m_gameObjects[0]->move(up);
+        m_gameObjects[0]->move(up, deltaTime);
     }
 
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
     {
-        m_gameObjects[0]->move(down);
+        m_gameObjects[0]->move(down, deltaTime);
     }
-
 }
+
 bool GameController::isRunning()
 {
     return running;

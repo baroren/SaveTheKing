@@ -38,38 +38,40 @@ sf::Vector2<float> GameObject::getLocation( ) const
 }
 
 
-void GameObject::move(const direction dir)
+void GameObject::move(const direction dir, float deltaTime)
 {
 
-    int x = 5, y = 5;
+    int x = 0, y = 0;
+    const float speed = 100;
 
     switch (dir)                    //check what happens diagonally
     {
     case left:                  
-        x *= -1;
-        y = 0;
-
+        x = -1;
         if (m_sprite.getScale().x < 0)
             m_sprite.scale(sf::Vector2f(-1, 1));
         break;
 
     case down:
-        x = 0;
+        y = 1;
         break;
 
     case right:
-        y = 0;
+        x = 1;
         if (m_sprite.getScale().x > 0)
             m_sprite.scale(sf::Vector2f(-1, 1));
         break;
 
     case up:
-        y *= -1;
-        x = 0;
+        y = -1;
         break;
     }
 
-    sf::Vector2f updatedPos(m_sprite.getPosition().x + x, m_sprite.getPosition().y + y);
+    sf::Vector2f direction(x, y);
 
-    m_sprite.setPosition(updatedPos);
+    //sf::Vector2f updatedPos(m_sprite.getPosition().x + x, m_sprite.getPosition().y + y);
+
+    //m_sprite.setPosition(updatedPos);
+
+    m_sprite.move(direction * speed * deltaTime);
 }

@@ -18,7 +18,7 @@ public:
 
 	void run();
     bool isRunning();
-	void handleKey();
+	void handleKey(float deltaTime);
 
 private:
     bool running = true;

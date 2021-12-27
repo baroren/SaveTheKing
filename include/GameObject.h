@@ -15,7 +15,7 @@ public:
      void updateAndDraw(const int row,float deltaTime,sf::RenderWindow& window);
      void  setLocation(const float x, const float y );
      sf::Vector2<float> getLocation() const;
-     void move(const direction dir);
+     void move(const direction dir, float deltaTime);
 
 private:
 //      move the object on board in the appropriate direction
