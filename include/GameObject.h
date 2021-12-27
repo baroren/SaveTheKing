@@ -1,10 +1,11 @@
 #pragma once
+
 #include "SFML/Graphics.hpp"
 #include <string>
 #include "Animation.h"
 using std::string;
 
-enum direction { left, right, up, down };
+const enum direction { left, right, up, down };
 
 class GameObject {
 public:
@@ -27,6 +28,4 @@ private:
 	sf::Vector2i m_location;
     sf::Texture m_texture;
     sf::Sprite m_sprite;
-
-	
 };
