@@ -8,6 +8,8 @@
 
 using std::vector;
 
+
+
 class GameController {
 
 public:
@@ -15,15 +17,15 @@ public:
 	GameController();
 
 	void run();
-    bool isRuning();
+    bool isRunning();
 	void handleKey();
 
-
 private:
-    bool runing=true;
+    bool running = true;
     MainMenu m_mainMenu;
 	Window m_window;
 
-	vector <GameObject> m_gameObjects;
+//		vector of all the objects in the game
+	vector <GameObject*> m_gameObjects;
 
 };

@@ -32,9 +32,44 @@ void GameObject::setLocation(const float x, const float y )
     m_sprite.setPosition(sf::Vector2f(x,y));
 }
 
-sf::Vector2<float> GameObject::getLocation( )
+sf::Vector2<float> GameObject::getLocation( ) const
 {
     return m_sprite.getPosition();
 }
 
 
+void GameObject::move(const direction dir)
+{
+
+    int x = 5, y = 5;
+
+    switch (dir)                    //check what happens diagonally
+    {
+    case left:                  
+        x *= -1;
+        y = 0;
+
+        if (m_sprite.getScale().x < 0)
+            m_sprite.scale(sf::Vector2f(-1, 1));
+        break;
+
+    case down:
+        x = 0;
+        break;
+
+    case right:
+        y = 0;
+        if (m_sprite.getScale().x > 0)
+            m_sprite.scale(sf::Vector2f(-1, 1));
+        break;
+
+    case up:
+        y *= -1;
+        x = 0;
+        break;
+    }
+
+    sf::Vector2f updatedPos(m_sprite.getPosition().x + x, m_sprite.getPosition().y + y);
+
+    m_sprite.setPosition(updatedPos);
+}

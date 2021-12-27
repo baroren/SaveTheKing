@@ -4,6 +4,8 @@
 #include "Animation.h"
 using std::string;
 
+enum direction { left, right, up, down };
+
 class GameObject {
 public:
 	GameObject(const int x=0,const int y=0,
@@ -12,16 +14,19 @@ public:
 
      void updateAndDraw(const int row,float deltaTime,sf::RenderWindow& window);
      void  setLocation(const float x, const float y );
-     sf::Vector2<float> getLocation();
+     sf::Vector2<float> getLocation() const;
+     void move(const direction dir);
 
 private:
+//      move the object on board in the appropriate direction
+
+
+
     string m_imagePath;
     Animation* m_animation;
 	sf::Vector2i m_location;
     sf::Texture m_texture;
     sf::Sprite m_sprite;
-
-	//sf::Vector2i indexToPixel(const int x, const int y);
 
 	
 };

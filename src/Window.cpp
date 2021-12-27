@@ -11,7 +11,6 @@ Window::Window(const sf::Vector2u windowSize, const string title)
 void Window::display()
 {
 
-	m_window.clear(sf::Color(34, 20, 26));
 	m_board.display(m_window);
 	m_window.display();
 
@@ -24,6 +23,8 @@ void Window::display()
 			break;
 		}
 	}
+
+	m_window.clear(sf::Color(34, 20, 26));
 }
 
 void Window::close()
