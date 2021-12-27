@@ -20,3 +20,15 @@ void Board::display(sf::RenderWindow& window)
 	window.draw(leftLine, 2, sf::Lines);
 	window.draw(rightLine, 2, sf::Lines);
 }
+
+
+sf::Vector2f Board::convertIndexToPixel(const int rowIndex, const int colIndex)
+{
+	int x = m_upperLeftDot.x + SQUARE / 2,
+		y = m_upperLeftDot.y + SQUARE / 2;
+
+	x += (colIndex - 1) * SQUARE;
+	y += (rowIndex - 1) * SQUARE;
+
+	return sf::Vector2f(x, y);
+}
