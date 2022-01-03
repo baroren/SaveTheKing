@@ -5,6 +5,7 @@
 #include "GameObject.h"
 #include "MainMenu.h"
 #include "Board.h"
+#include "Dwarf.h"
 
 using std::vector;
 
@@ -18,7 +19,7 @@ public:
 
 	void run();
     bool isRunning();
-	void handleKey(float deltaTime);
+	void handleKey(float deltaTime,int &key);
 
 private:
     bool running = true;

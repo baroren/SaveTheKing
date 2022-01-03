@@ -6,7 +6,9 @@
 //#include "GameController.h"
 #include "Animation.h"
 #include "Mage.h"
+#include "Orc.h"
 
+using std::vector;
 class MainMenu {
     public:
     MainMenu();
@@ -14,22 +16,21 @@ class MainMenu {
     void run(sf::RenderWindow & window);
 private :
 
-    void makeTitle(sf::Text&,int size,std::string text);
-    //GameController gameController;
-    Mage* mage;
-    Animation *m_animation;
-    Animation *m_animationSkel;
-    Button* m_startGameButton;
+    sf::Text makeTitle(int size,std::string text,float,float);
+
+    vector <GameObject* >m_gameObjects;
+    vector <Button*> m_buttons;
+/*    Button* m_startGameButton;
     Button* m_helpButton;
-    Button * m_quit;// need to make arr
+    Button * m_quit;// need to make arr*/
     sf:: Font m_font;
-    sf::Text m_title;
+
+    vector <sf::Text> m_titles;
+ /*   sf::Text m_title;
     sf::Text m_second_title;
-    sf::Texture m_skelTex;
+*/
     sf::Texture m_helpTex;
-    sf::Texture m_mageAnimaton;
-    sf::Sprite m_mage;
-    sf::Sprite m_skeleton;
+
     sf:: Sprite m_help ; //need to make vector
 
 };
