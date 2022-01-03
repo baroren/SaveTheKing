@@ -1,0 +1,332 @@
+Index: resources/CMakeLists.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/resources/CMakeLists.txt b/resources/CMakeLists.txt
+--- a/resources/CMakeLists.txt	(revision 94e50814197fddb8083b77b586ea2ba33298b21b)
++++ b/resources/CMakeLists.txt	(date 1640639655540)
+@@ -1,0 +1,6 @@
++configure_file ("Title.png" ${CMAKE_BINARY_DIR} COPYONLY)
++configure_file ("arcadeClassic.ttf" ${CMAKE_BINARY_DIR} COPYONLY)
++configure_file ("skeleton2_v2.png" ${CMAKE_BINARY_DIR} COPYONLY)
++configure_file ("Help.png" ${CMAKE_BINARY_DIR} COPYONLY)
++configure_file ("W_Red_Idle_SPR.png" ${CMAKE_BINARY_DIR} COPYONLY)
++configure_file ("Warioir.png" ${CMAKE_BINARY_DIR} COPYONLY)
+\ No newline at end of file
+Index: include/Warrior.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#include \"Player.h\"\n\nclass Warrior : public Player {\npublic:\n\n\nprivate:\n\n\n\n};
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/include/Warrior.h b/include/Warrior.h
+--- a/include/Warrior.h	(revision 94e50814197fddb8083b77b586ea2ba33298b21b)
++++ b/include/Warrior.h	(date 1640639649508)
+@@ -2,7 +2,7 @@
+ 
+ class Warrior : public Player {
+ public:
+-
++using Player::Player;
+ 
+ private:
+ 
+Index: include/Game.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/include/Game.h b/include/Game.h
+new file mode 100644
+--- /dev/null	(date 1640639669178)
++++ b/include/Game.h	(date 1640639669178)
+@@ -0,0 +1,25 @@
++#pragma once
++#include <vector>
++#include "Window.h"
++#include "GameObject.h"
++
++using std::vector;
++
++class Game {
++
++public:
++
++    Game();
++
++    void run(sf::RenderWindow & window);
++    bool isRuning();
++    void handleKey();
++    void runGame(sf::RenderWindow & window);
++
++
++private:
++    bool runing=true;
++    sf::RenderWindow m_window;
++    vector <GameObject> m_gameObjects;
++
++};
+\ No newline at end of file
+Index: src/Game.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Game.cpp b/src/Game.cpp
+new file mode 100644
+--- /dev/null	(date 1640639669170)
++++ b/src/Game.cpp	(date 1640639669170)
+@@ -0,0 +1,68 @@
++
++#include "Game.h"
++
++#include <iostream>
++
++using std::cout;
++using std::endl;
++
++
++Game::Game() {
++
++}
++
++
++void Game::run(sf::RenderWindow & window) {
++
++    std::cout << "in game controller";
++
++
++
++    while (window.isOpen()) {
++
++        sf::Event event;
++
++        while (window.pollEvent(event)) {
++            if (event.type == sf::Event::Closed)
++                window.close();
++        }
++        window.clear(sf::Color(34, 20, 26));
++
++
++        window.display();
++
++        handleKey();
++        if (!runing) {
++            cout<<"not runing";
++            return;
++
++
++        }
++    }
++
++
++
++}
++
++void Game::runGame(sf::RenderWindow &window) {
++
++
++}
++
++void Game::handleKey() {
++    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
++        cout << "wat" << endl;
++
++    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
++        cout << "ey" << endl;
++
++    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
++        cout <<"esxc\n";
++        runing = false;
++    }
++
++}
++
++bool Game::isRuning() {
++    return runing;
++}
+\ No newline at end of file
+Index: include/Static.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#include \"GameObject.h\"\n\nclass Static : public GameObject {\n\npublic:\n\n\nprivate:\n\n\n\n};
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/include/Static.h b/include/Static.h
+--- a/include/Static.h	(revision 94e50814197fddb8083b77b586ea2ba33298b21b)
++++ b/include/Static.h	(date 1640639669163)
+@@ -3,7 +3,7 @@
+ class Static : public GameObject {
+ 
+ public:
+-
++using GameObject:: GameObject;
+ 
+ private:
+ 
+Index: include/GameController.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#include <vector>\n#include \"Window.h\"\n\nusing std::vector;\n\nclass GameObject {\n\npublic:\n\n\nprivate:\n\n\tWindow m_window;\n\tvector <GameObject> m_gameObjects;\n\n};
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/include/GameController.h b/include/GameController.h
+--- a/include/GameController.h	(revision 94e50814197fddb8083b77b586ea2ba33298b21b)
++++ b/include/GameController.h	(date 1640639660361)
+@@ -1,16 +1,28 @@
++#pragma once
+ #include <vector>
+ #include "Window.h"
+-
++#include "GameObject.h"
++#include "MainMenu.h"
++#include "Game.h"
+ using std::vector;
+ 
+-class GameObject {
++class GameController {
+ 
+ public:
++	
++	GameController();
+ 
++	void run();
++   // bool isRuning();
++	//void handleKey();
+ 
++
+ private:
+-
+-	Window m_window;
++    bool runing=true;
++    MainMenu mainMenu;
++    Game game;
++    sf::RenderWindow m_window;
+ 	vector <GameObject> m_gameObjects;
+ 
++    void runGame(sf::RenderWindow &window);
+ };
+\ No newline at end of file
+Index: src/GameController.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#include \"GameController.h\"
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/GameController.cpp b/src/GameController.cpp
+--- a/src/GameController.cpp	(revision 94e50814197fddb8083b77b586ea2ba33298b21b)
++++ b/src/GameController.cpp	(date 1640639662939)
+@@ -1,1 +1,71 @@
+-#include "GameController.h"
+\ No newline at end of file
++
++#include "GameController.h"
++
++#include <iostream>
++
++using std::cout;
++using std::endl;
++
++
++GameController::GameController() {
++
++}
++
++
++void GameController::run() {
++
++    sf::RenderWindow window(sf::VideoMode(1400, 700), "Save The king Dungen edition");
++
++    std::cout << "in game controller";
++
++
++
++        while (window.isOpen()) {
++
++
++            sf::Event event;
++
++         while (window.pollEvent(event)) {
++                if (event.type == sf::Event::Closed)
++                    window.close();
++            }
++
++            mainMenu.run(window);
++            game.run(window);
++        }
++
++
++
++}
++/*
++void GameController::runGame(sf::RenderWindow &window) {
++    window.clear(sf::Color(34, 20, 26));
++
++
++    window.display();
++
++    handleKey();
++    if(!runing)
++    {
++        cout <<"out";
++
++    }
++}
++
++void GameController::handleKey() {
++    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
++        cout << "wat" << endl;
++
++    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
++        cout << "ey" << endl;
++
++    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
++        cout <<"esxc\n";
++        runing = false;
++    }
++
++}
++
++bool GameController::isRuning() {
++    return runing;
++}*/
+\ No newline at end of file
+Index: include/Player.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#include \"Moving.h\"\n\nclass Player : public Moving {\npublic:\n\n\nprivate:\n\n\n};
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/include/Player.h b/include/Player.h
+--- a/include/Player.h	(revision 94e50814197fddb8083b77b586ea2ba33298b21b)
++++ b/include/Player.h	(date 1640639669160)
+@@ -1,3 +1,4 @@
++#pragma once
+ #include "Moving.h"
+ 
+ class Player : public Moving {
+Index: include/Orc.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#include \"Static.h\"\n\n\nclass Orc : public Static {\npublic:\n\nprivate:\n\n\n};
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/include/Orc.h b/include/Orc.h
+--- a/include/Orc.h	(revision 94e50814197fddb8083b77b586ea2ba33298b21b)
++++ b/include/Orc.h	(date 1640639669182)
+@@ -3,7 +3,7 @@
+ 
+ class Orc : public Static {
+ public:
+-
++using Static::Static;
+ private:
+ 
+ 

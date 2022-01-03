@@ -1,0 +1,132 @@
+Index: src/MainMenu.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#include \"MainMenu.h\"\n\nMainMenu::MainMenu()\n{\n\n\n    if (!m_font.loadFromFile(\"arcadeClassic.ttf\"))\n    {\n        // error...\n        std::cout<<\"error loading font\";\n\n    }\n    if (!m_skelTex.loadFromFile(\"skeleton2_v2.png\"))\n    {\n        // error...\n        std::cout<<\"error loading font\";\n\n    }\n\n    if (!m_helpTex.loadFromFile(\"Help.png\"))\n    {\n        // error...\n        std::cout<<\"error loading font\";\n\n    }// meed to make it a function\n\n    if (!m_mageAnimaton.loadFromFile(\"W_Red_Idle_SPR.png\"))\n    {\n        // error...\n        std::cout<<\"error loading font\";\n\n    }// meed to make it a function\n    m_mage.setTexture(m_mageAnimaton);\n\n\n    m_skeleton.setTexture(m_skelTex);\n    m_help.setTexture(m_helpTex);\n    makeTitle(m_title,72,\"Save  The  King\");\n    makeTitle(m_second_title,32,\"dungeon  Edition\");\n\n    this->m_startGameButton=new Button(680,300,150,50,&this->m_font,\"New Game\",\n                                       sf::Color(70,70,70,200),sf::Color(70,3,150,200),\n                                       sf::Color(70,20,20,200));\n    this->m_helpButton=new Button(680,380,150,50,&this->m_font,\"Help\",\n                                       sf::Color(70,70,70,200),sf::Color(70,3,150,200),\n                                       sf::Color(70,20,20,200));\n    this->m_quit=new Button(680,460,150,50,&this->m_font,\"Quit\",\n                                  sf::Color(70,70,70,200),sf::Color(70,3,150,200),\n                                  sf::Color(70,20,20,200));\n    m_animation= new Animation(&m_mageAnimaton,sf::Vector2u(3,1),0.17);\n    m_animationSkel= new Animation(&m_skelTex,sf::Vector2u(4,1),0.17);\n\n}\n\n\nvoid MainMenu::run(sf::RenderWindow & window)\n{\n    //sf::RenderWindow window(sf::VideoMode(1400, 700), \"Save The king Dungen edition\");\n    sf::CircleShape shape;\n\n    m_title.setPosition(sf::Vector2f(680.f,150.f));\n    m_second_title.setPosition(sf::Vector2f(680.f,210.f));//change into not hard coded\n    m_skeleton.setPosition(sf::Vector2f(200.f,200.f));\n    m_skeleton.setScale(10.f,10.f);// need to make func\n\n    m_help.setOrigin(sf::Vector2f(m_help.getGlobalBounds().width/2.f,m_help.getGlobalBounds().height/2.f));\n    m_help.setPosition(sf::Vector2f(700.f,350.f));\n    m_help.setScale(1.5,1.5);\n    // auto bounds = m_title_sprite.getLocalBounds();\n    mage= new Mage(300.f,300.f,1,3,0.17,10,\"W_Red_Idle_SPR.png\");\n    //m_title_sprite.setOrigin( bounds.width / 2.f, bounds.height / 2.f );\n // m_title_sprite.setPosition(sf::Vector2f(680.f,200.f));\n    sf::Clock clock;\n    float deltaTime=0.0f;\n    while (window.isOpen())\n    {\n\n    deltaTime=clock.restart().asSeconds();\n        m_startGameButton->update(window.mapPixelToCoords(sf::Mouse::getPosition(window)));\n\n        m_helpButton->update(window.mapPixelToCoords(sf::Mouse::getPosition(window)));\n        m_quit->update(window.mapPixelToCoords(sf::Mouse::getPosition(window)));\n\n        sf::Event event;\n\n        while (window.pollEvent(event))\n        {\n            if (event.type == sf::Event::Closed)\n                window.close();\n        }\n\n        m_animation->update(0,deltaTime);\n        m_mage.setTextureRect(m_animation->getRect());\n        m_animationSkel->update(0,deltaTime);\n        m_skeleton.setTextureRect(m_animationSkel->getRect());\n        window.clear(sf::Color(34,20,26));\n\n        window.draw(m_title);\n        window.draw(m_second_title);\n        window.draw(m_startGameButton->render());\n        window.draw(m_startGameButton->drawText());\n        window.draw(m_helpButton->render());\n        window.draw(m_helpButton->drawText());\n        window.draw(m_quit->render());\n        window.draw(m_quit->drawText());\n\n        window.draw(m_skeleton);\n        //window.draw(m_mage);\n        mage->updateAndDraw(0,deltaTime,window);\n     //   mage->draw(window);\n\n\n        if(m_helpButton->isPressed())\n        {\n            window.draw(m_help);\n        }else\n        {\n            m_helpButton->update(window.mapPixelToCoords(sf::Mouse::getPosition(window)));\n\n        }\n        if(!m_help.getGlobalBounds().contains(window.mapPixelToCoords(sf::Mouse::getPosition(window)))\n           && sf::Mouse::isButtonPressed(sf::Mouse::Left))\n        {\n            m_helpButton->quit();\n        }\n        if(m_startGameButton->isPressed())\n        {\n            return;\n        //    std::cout << \"testtest\";\n        }\n            m_startGameButton->quit();\n\n\n        if(m_quit->isPressed())\n        {\n            window.close();\n        }\n\n\n        window.display();\n    }\n}\n\nvoid MainMenu::makeTitle(sf::Text& title,int size ,std::string text)\n{\n    title.setFont(m_font);\n    title.setFillColor(sf::Color::White);\n    title.setCharacterSize(size);\n    title.setString(text);\n    title.setOrigin(sf::Vector2f(title.getGlobalBounds().width/2.f,\n                                   title.getGlobalBounds().height/2.f));\n\n}
+===================================================================
+diff --git a/src/MainMenu.cpp b/src/MainMenu.cpp
+--- a/src/MainMenu.cpp	
++++ b/src/MainMenu.cpp	
+@@ -10,12 +10,6 @@
+         std::cout<<"error loading font";
+ 
+     }
+-    if (!m_skelTex.loadFromFile("skeleton2_v2.png"))
+-    {
+-        // error...
+-        std::cout<<"error loading font";
+-
+-    }
+ 
+     if (!m_helpTex.loadFromFile("Help.png"))
+     {
+@@ -24,16 +18,10 @@
+ 
+     }// meed to make it a function
+ 
+-    if (!m_mageAnimaton.loadFromFile("W_Red_Idle_SPR.png"))
+-    {
+-        // error...
+-        std::cout<<"error loading font";
+ 
+-    }// meed to make it a function
+-    m_mage.setTexture(m_mageAnimaton);
+ 
+ 
+-    m_skeleton.setTexture(m_skelTex);
++
+     m_help.setTexture(m_helpTex);
+     makeTitle(m_title,72,"Save  The  King");
+     makeTitle(m_second_title,32,"dungeon  Edition");
+@@ -47,8 +35,7 @@
+     this->m_quit=new Button(680,460,150,50,&this->m_font,"Quit",
+                                   sf::Color(70,70,70,200),sf::Color(70,3,150,200),
+                                   sf::Color(70,20,20,200));
+-    m_animation= new Animation(&m_mageAnimaton,sf::Vector2u(3,1),0.17);
+-    m_animationSkel= new Animation(&m_skelTex,sf::Vector2u(4,1),0.17);
++
+ 
+ }
+ 
+@@ -60,14 +47,13 @@
+ 
+     m_title.setPosition(sf::Vector2f(680.f,150.f));
+     m_second_title.setPosition(sf::Vector2f(680.f,210.f));//change into not hard coded
+-    m_skeleton.setPosition(sf::Vector2f(200.f,200.f));
+-    m_skeleton.setScale(10.f,10.f);// need to make func
+-
+     m_help.setOrigin(sf::Vector2f(m_help.getGlobalBounds().width/2.f,m_help.getGlobalBounds().height/2.f));
+     m_help.setPosition(sf::Vector2f(700.f,350.f));
+     m_help.setScale(1.5,1.5);
+     // auto bounds = m_title_sprite.getLocalBounds();
+-    mage= new Mage(300.f,300.f,1,3,0.17,10,"W_Red_Idle_SPR.png");
++    mage= new Mage(900.f,300.f,1,3,0.17,10,"W_Red_Idle_SPR.png");
++    orc =new Orc(200.f,300.f,1,4,0.17,10,"skeleton2_v2.png");
++    warrior= new Warrior(400.f,200.f,1,3,0.17,2,"W_Red_Idle_SPR.png");
+     //m_title_sprite.setOrigin( bounds.width / 2.f, bounds.height / 2.f );
+  // m_title_sprite.setPosition(sf::Vector2f(680.f,200.f));
+     sf::Clock clock;
+@@ -89,11 +75,6 @@
+                 window.close();
+         }
+ 
+-        m_animation->update(0,deltaTime);
+-        m_mage.setTextureRect(m_animation->getRect());
+-        m_animationSkel->update(0,deltaTime);
+-        m_skeleton.setTextureRect(m_animationSkel->getRect());
+-        window.clear(sf::Color(34,20,26));
+ 
+         window.draw(m_title);
+         window.draw(m_second_title);
+@@ -103,10 +84,9 @@
+         window.draw(m_helpButton->drawText());
+         window.draw(m_quit->render());
+         window.draw(m_quit->drawText());
+-
+-        window.draw(m_skeleton);
+-        //window.draw(m_mage);
++        warrior->updateAndDraw(0,deltaTime,window);
+         mage->updateAndDraw(0,deltaTime,window);
++        orc->updateAndDraw(0,deltaTime,window);
+      //   mage->draw(window);
+ 
+ 
+Index: include/MainMenu.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#pragma once\n#include <SFML/Graphics.hpp>\n#include <vector>\n#include <iostream>\n#include \"Button.h\"\n//#include \"GameController.h\"\n#include \"Animation.h\"\n#include \"Mage.h\"\n\nclass MainMenu {\n    public:\n    MainMenu();\n    //add dest\n    void run(sf::RenderWindow & window);\nprivate :\n\n    void makeTitle(sf::Text&,int size,std::string text);\n    //GameController gameController;\n    Mage* mage;\n    Animation *m_animation;\n    Animation *m_animationSkel;\n    Button* m_startGameButton;\n    Button* m_helpButton;\n    Button * m_quit;// need to make arr\n    sf:: Font m_font;\n    sf::Text m_title;\n    sf::Text m_second_title;\n    sf::Texture m_skelTex;\n    sf::Texture m_helpTex;\n    sf::Texture m_mageAnimaton;\n    sf::Sprite m_mage;\n    sf::Sprite m_skeleton;\n    sf:: Sprite m_help ; //need to make vector\n\n};
+===================================================================
+diff --git a/include/MainMenu.h b/include/MainMenu.h
+--- a/include/MainMenu.h	
++++ b/include/MainMenu.h	
+@@ -6,6 +6,8 @@
+ //#include "GameController.h"
+ #include "Animation.h"
+ #include "Mage.h"
++#include "Orc.h"
++#include "Warrior.h"
+ 
+ class MainMenu {
+     public:
+@@ -17,19 +19,15 @@
+     void makeTitle(sf::Text&,int size,std::string text);
+     //GameController gameController;
+     Mage* mage;
+-    Animation *m_animation;
+-    Animation *m_animationSkel;
++    Orc* orc;
++    Warrior* warrior;
+     Button* m_startGameButton;
+     Button* m_helpButton;
+     Button * m_quit;// need to make arr
+     sf:: Font m_font;
+     sf::Text m_title;
+     sf::Text m_second_title;
+-    sf::Texture m_skelTex;
+     sf::Texture m_helpTex;
+-    sf::Texture m_mageAnimaton;
+-    sf::Sprite m_mage;
+-    sf::Sprite m_skeleton;
+     sf:: Sprite m_help ; //need to make vector
+ 
+ };
+\ No newline at end of file

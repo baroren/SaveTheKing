@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="38447bec-1481-48d5-b9f9-a5a2745a32ca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/include/Game.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/Warioir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/GameController.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/GameController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Orc.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Orc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Player.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Static.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Static.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Warrior.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Warrior.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameController.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Main_MenuBrcanh" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="22gs3m5vWYk61SwsKGRwE3RqYjK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="cmake.loaded.for.project" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$/resources/fonts" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="38447bec-1481-48d5-b9f9-a5a2745a32ca" name="Changes" comment="" />
+      <created>1640270367538</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640270367538</updated>
+      <workItem from="1640270371773" duration="24805000" />
+      <workItem from="1640523810308" duration="4154000" />
+      <workItem from="1640539423876" duration="9652000" />
+      <workItem from="1641212744347" duration="5000" />
+    </task>
+    <task id="LOCAL-00001" summary="added main menu">
+      <created>1640361808874</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640361808875</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added main menu quit and help">
+      <created>1640364870925</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1640364870925</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added main menu quit and help">
+      <created>1640365077422</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1640365077422</updated>
+    </task>
+    <task id="LOCAL-00004" summary="need to make all of the characters as gameObjects and make them have thiere on anmation and textures (and sprites)">
+      <created>1640382980228</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1640382980228</updated>
+    </task>
+    <task id="LOCAL-00005" summary="need to make all of the characters as gameObjects and make them have thiere on anmation and textures (and sprites)עשיתי קצת שטויות אופסיייי">
+      <created>1640448635954</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640448635954</updated>
+    </task>
+    <task id="LOCAL-00006" summary="need to make all of the characters as gameObjects and make them have thiere on anmation and textures (and sprites)עשיתי קצת שטויות אופסיייי">
+      <created>1640525054324</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1640525054324</updated>
+    </task>
+    <task id="LOCAL-00007" summary="working GameObject class">
+      <created>1640538649687</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1640538649687</updated>
+    </task>
+    <task id="LOCAL-00008" summary="&#10;########################################&#10;V.0.0.1 &#10;added:&#10; set location &#10; get location &#10; (both on Gameobject class)&#10; &#10; To Do(GameObject):&#10; -add move func&#10; -fix graphics&#10; -do static objects (i dont think that there is a diffrent but i will look into it) &#10; &#10;####################&#10; To Do (netanel):&#10; -fix game controller state manger (will work on it toget&#10;call me ) &#10; -make board (for the שלד) &#10; &#10; ###############&#10; notes:&#10; working GameObject class, tried to implemnt game conroller , crashing , &#10; started gamecontroller from main and runing mainmenu , &#10; if new game selcted , &quot;return &quot; to game controller , and start game , dont know how to do that ,">
+      <created>1640540062597</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1640540062597</updated>
+    </task>
+    <task id="LOCAL-00009" summary="&#10;########################################&#10;V.0.0.1 &#10;added:&#10; set location &#10; get location &#10; (both on Gameobject class)&#10; &#10; To Do(GameObject):&#10; -add move func&#10; -fix graphics&#10; -do static objects (i dont think that there is a diffrent but i will look into it) &#10; &#10;####################&#10; To Do (netanel):&#10; -fix game controller state manger (will work on it toget&#10;call me ) &#10; -make board (for the שלד) &#10; &#10; ###############&#10; notes:&#10; working GameObject class">
+      <created>1640540765832</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1640540765832</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="2675991e-0a45-4080-8902-c26d70e08c04">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/bar/Documents/school/yearB/project_oop/resources/Valfant Ver/Villager Bonus" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="2675991e-0a45-4080-8902-c26d70e08c04" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="added main menu" />
+    <MESSAGE value="added main menu quit and help" />
+    <MESSAGE value="need to make all of the characters as gameObjects and make them have thiere on anmation and textures (and sprites)" />
+    <MESSAGE value="need to make all of the characters as gameObjects and make them have thiere on anmation and textures (and sprites)עשיתי קצת שטויות אופסיייי" />
+    <MESSAGE value="working GameObject class" />
+    <MESSAGE value="&#10;########################################&#10;V.0.0.1 &#10;added:&#10; set location &#10; get location &#10; (both on Gameobject class)&#10; &#10; To Do(GameObject):&#10; -add move func&#10; -fix graphics&#10; -do static objects (i dont think that there is a diffrent but i will look into it) &#10; &#10;####################&#10; To Do (netanel):&#10; -fix game controller state manger (will work on it toget&#10;call me ) &#10; -make board (for the שלד) &#10; &#10; ###############&#10; notes:&#10; working GameObject class, tried to implemnt game conroller , crashing , &#10; started gamecontroller from main and runing mainmenu , &#10; if new game selcted , &quot;return &quot; to game controller , and start game , dont know how to do that ," />
+    <MESSAGE value="&#10;########################################&#10;V.0.0.1 &#10;added:&#10; set location &#10; get location &#10; (both on Gameobject class)&#10; &#10; To Do(GameObject):&#10; -add move func&#10; -fix graphics&#10; -do static objects (i dont think that there is a diffrent but i will look into it) &#10; &#10;####################&#10; To Do (netanel):&#10; -fix game controller state manger (will work on it toget&#10;call me ) &#10; -make board (for the שלד) &#10; &#10; ###############&#10; notes:&#10; working GameObject class" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;########################################&#10;V.0.0.1 &#10;added:&#10; set location &#10; get location &#10; (both on Gameobject class)&#10; &#10; To Do(GameObject):&#10; -add move func&#10; -fix graphics&#10; -do static objects (i dont think that there is a diffrent but i will look into it) &#10; &#10;####################&#10; To Do (netanel):&#10; -fix game controller state manger (will work on it toget&#10;call me ) &#10; -make board (for the שלד) &#10; &#10; ###############&#10; notes:&#10; working GameObject class" />
+  </component>
+</project>
