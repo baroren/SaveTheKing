@@ -2,7 +2,7 @@
 
 class Moving : public GameObject {
 public:
-
+using GameObject::GameObject;
 	bool checkBorder();
 
 	void move();

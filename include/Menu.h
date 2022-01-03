@@ -1,6 +1,6 @@
 #include "Window.h"
 
-class Menu : public Window {
+class Menu {
 public:
 
 private:
