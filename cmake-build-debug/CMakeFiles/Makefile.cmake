@@ -43,11 +43,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../include/CMakeLists.txt"
   "../resources/CMakeLists.txt"
   "../resources/Help.png"
+  "../resources/Mage.png"
+  "../resources/Spr_Villager_Idle.png"
   "../resources/Title.png"
   "../resources/W_Red_Idle_SPR.png"
-  "../resources/Warioir.png"
   "../resources/arcadeClassic.ttf"
   "../resources/skeleton2_v2.png"
+  "../resources/skull.png"
   "../src/CMakeLists.txt"
   )
 
@@ -67,7 +69,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "skeleton2_v2.png"
   "Help.png"
   "W_Red_Idle_SPR.png"
-  "Warioir.png"
+  "Mage.png"
+  "Spr_Villager_Idle.png"
+  "skull.png"
   "resources/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

@@ -1,0 +1,11 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /Users/bar/Documents/school/yearB/project_oop_2
+CMake Warning (dev) at src/CMakeLists.txt:4:
+  Syntax Warning in cmake code at column 112
+
+  Argument not separated from preceding token by whitespace.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found SFML 2.5.1 in /Library/Frameworks/SFML.framework/Resources/CMake
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/bar/Documents/school/yearB/project_oop_2/cmake-build-debug

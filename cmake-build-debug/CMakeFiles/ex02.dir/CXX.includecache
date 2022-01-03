@@ -57,8 +57,6 @@ Mage.h
 ../include/Mage.h
 Orc.h
 ../include/Orc.h
-Warrior.h
-../include/Warrior.h
 
 ../include/Moving.h
 GameObject.h
@@ -76,13 +74,9 @@ Moving.h
 GameObject.h
 ../include/GameObject.h
 
-../include/Warrior.h
-Player.h
-../include/Player.h
-
-/Users/bar/Documents/school/yearB/project_oop/src/MainMenu.cpp
+/Users/bar/Documents/school/yearB/project_oop_2/src/MainMenu.cpp
 MainMenu.h
-/Users/bar/Documents/school/yearB/project_oop/src/MainMenu.h
+/Users/bar/Documents/school/yearB/project_oop_2/src/MainMenu.h
 
 /usr/local/include/SFML/Audio.hpp
 SFML/System.hpp

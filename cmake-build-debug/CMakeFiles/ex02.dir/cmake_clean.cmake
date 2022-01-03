@@ -6,7 +6,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ex02.dir/src/DestDwarf.cpp.o"
   "CMakeFiles/ex02.dir/src/Dwarf.cpp.o"
   "CMakeFiles/ex02.dir/src/Fire.cpp.o"
-  "CMakeFiles/ex02.dir/src/Game.cpp.o"
   "CMakeFiles/ex02.dir/src/GameController.cpp.o"
   "CMakeFiles/ex02.dir/src/GameObject.cpp.o"
   "CMakeFiles/ex02.dir/src/Gate.cpp.o"
