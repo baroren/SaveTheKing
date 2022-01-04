@@ -2,13 +2,17 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 #include <iostream>
+#include <memory>
 #include "Button.h"
-//#include "GameController.h"
 #include "Animation.h"
 #include "Mage.h"
 #include "Orc.h"
 
 using std::vector;
+using std::make_unique;
+using std::unique_ptr;
+
+
 class MainMenu {
     public:
     MainMenu();
@@ -20,6 +24,11 @@ private :
 
     vector <GameObject* >m_gameObjects;
     vector <Button*> m_buttons;
+
+//  check to see if gameObject works with unique ptr and how to solve Button
+//    vector <unique_ptr<GameObject>> m_gameObjects;
+//    vector <unique_ptr<Button>> m_buttons;
+
 /*    Button* m_startGameButton;
     Button* m_helpButton;
     Button * m_quit;// need to make arr*/

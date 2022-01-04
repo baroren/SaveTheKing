@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <memory>
 #include "Window.h"
 #include "GameObject.h"
 #include "MainMenu.h"
@@ -8,8 +9,8 @@
 #include "Dwarf.h"
 
 using std::vector;
-
-
+using std::unique_ptr;
+using std::make_unique;
 
 class GameController {
 
@@ -27,6 +28,6 @@ private:
 	Window m_window;
 
 //		vector of all the objects in the game
-	vector <GameObject*> m_gameObjects;
 
+	vector <unique_ptr<Moving>> m_movingObjects;
 };
