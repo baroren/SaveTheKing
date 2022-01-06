@@ -5,6 +5,7 @@
 
 class Mage;
 class Wall;
+class Moving;
 
 using std::string;
 
@@ -23,7 +24,7 @@ public:
 
      bool checkCollision(const GameObject& gameObject);
 
-     virtual void handleCollision(Mage& mage, const sf::Vector2f moveDirection) = 0;
+     virtual void handleCollision(Moving& movingObject, const sf::Vector2f moveDirection) = 0;
      virtual void handleCollision(Wall& wall, const sf::Vector2f moveDirection) = 0;
 
      sf::Sprite getSprite() const;

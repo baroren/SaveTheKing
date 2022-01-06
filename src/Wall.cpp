@@ -8,11 +8,11 @@ using std::endl;
 
 
 //	collision with mage
-void Wall::handleCollision(Mage& mage, const sf::Vector2f moveDirection)
+void Wall::handleCollision(Moving& movingObject, const sf::Vector2f moveDirection)
 {
 	cout << "i am wall, a mage collided with me" << endl;
 
-	mage.handleCollision(*this, moveDirection);
+	movingObject.handleCollision(*this, moveDirection);
 }
 
 //	wall cannot collide with wall so do nothing

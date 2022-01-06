@@ -17,6 +17,8 @@ public:
 //		handle the collision of all moving objects with all objects
 	virtual void handleCollision(GameObject& gameobject, const sf::Vector2f moveDirection) = 0;
 
+	virtual void handleCollision(Wall& wall, const sf::Vector2f moveDirection) override;
+
 private:
 //		true - faces right, false - faces left
 	bool m_isFacedRight;

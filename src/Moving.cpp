@@ -2,6 +2,11 @@
 
 #include "Moving.h"
 
+#include <iostream>
+
+using std::endl;
+using std::cout;
+
 Moving::Moving(const int x, const int y, const int numOfAnim, const int numOfFrames, const float animTime,
                 const float scale, const string imagePath, const bool isFacedRight)
     :GameObject(x, y, numOfAnim, numOfFrames, animTime, scale, imagePath), m_isFacedRight(isFacedRight) {}
@@ -46,6 +51,14 @@ void Moving::move(const Direction dir, float deltaTime, sf::Vector2f& moveDirect
     sf::Vector2f direction(x, y);
 
     m_sprite.move(direction * speed * deltaTime);
+}
+
+//	collision with wall
+void Moving::handleCollision(Wall& wall, const sf::Vector2f moveDirection)
+{
+    cout << "i am a mage, i collided with wall" << endl;
+    this->m_sprite.move(sf::Vector2f(moveDirection.x * -1, moveDirection.y * -1));
+
 }
 
 bool Moving::getDirection() const
