@@ -4,6 +4,6 @@
 void Dwarf::path()
 {
 
-    this->move(left,1);
-    this->move(right,1);
+    //this->move(LEFT,1);
+    //this->move(RIGHT,1);
 }

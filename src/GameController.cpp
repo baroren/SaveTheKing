@@ -10,21 +10,22 @@ using std::endl;
 
 GameController::GameController()
 {
-    m_movingObjects.push_back(make_unique<Mage> (450, 150, 2, 3, 0.17, 3, "Mage.png", false));
+    m_players.push_back(make_unique<Mage> (450, 150, 2, 3, 0.17, 3, "Mage.png", false));
 
-    
+    m_staticObjects.push_back(make_unique<Wall>(450, 400, 2, 3, 0.17, 3, "skull.png"));
 }
 
 
 void GameController::run()
 {
 
- 
     m_mainMenu.run(m_window.getWindow());
 
     sf::Clock clock;
     float deltaTime;
     int key = 0;
+    sf::Vector2f moveDirection;
+
 	while (m_window.isOpen())
 	{
 
@@ -40,22 +41,46 @@ void GameController::run()
             if (event.type == sf::Event::Closed)
                 m_window.close();
         }
-     // m_gameObjects[1]->path();
-        for (int i = 0; i < 1; i++)
-        {
-            m_movingObjects[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
 
+        handleKey(deltaTime, key, moveDirection);
+
+        for (auto& currentPlayer : m_players)
+        {
+            handleCollision(*currentPlayer, moveDirection);
+        }
+
+     
+        for (int i = 0; i < m_players.size(); i++)
+        {
+            m_players[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
+        }
+
+        for (int i = 0; i < m_staticObjects.size(); i++)
+        {
+            m_staticObjects[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
 
         m_window.display();
 
-		handleKey(deltaTime,key);
+
 	}
 }
 
-void GameController::handleKey(float deltaTime,int &key)
+//  handles collision of the moving object with everybody
+void GameController::handleCollision(Moving& movingObject, const sf::Vector2f moveDirection)
 {
+    for (auto& staticObject : m_staticObjects)
+    {
+        if (movingObject.checkCollision(*staticObject))
+        {
+            movingObject.handleCollision(*staticObject, moveDirection);
+        }
+    }
+}
 
+
+void GameController::handleKey(float deltaTime,int &key, sf::Vector2f& moveDirection)
+{
 
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::P ))
     {
@@ -86,22 +111,22 @@ void GameController::handleKey(float deltaTime,int &key)
 
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
     {
-        m_movingObjects[key]->move(left,deltaTime);
+        m_players[key]->move(LEFT,deltaTime, moveDirection);
     }
 
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
     {
-        m_movingObjects[key]->move(right,deltaTime);
+        m_players[key]->move(RIGHT,deltaTime, moveDirection);
     }
 
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
     {
-        m_movingObjects[key]->move(up,deltaTime);
+        m_players[key]->move(UP,deltaTime, moveDirection);
     }
 
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
     {
-        m_movingObjects[key]->move(down,deltaTime);
+        m_players[key]->move(DOWN,deltaTime, moveDirection);
     }
 
 }

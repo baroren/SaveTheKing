@@ -2,10 +2,13 @@
 
 #include <vector>
 #include <memory>
+
 #include "Window.h"
 #include "GameObject.h"
 #include "MainMenu.h"
 #include "Board.h"
+
+#include "Wall.h"
 #include "Dwarf.h"
 
 using std::vector;
@@ -20,14 +23,21 @@ public:
 
 	void run();
     bool isRunning();
-	void handleKey(float deltaTime,int &key);
+	void handleKey(float deltaTime,int &key, sf::Vector2f& moveDirection);
 
 private:
     bool running = true;
     MainMenu m_mainMenu;
 	Window m_window;
 
-//		vector of all the objects in the game
+	void handleCollision(Moving& movingObject, const sf::Vector2f moveDirection);
 
-	vector <unique_ptr<Moving>> m_movingObjects;
+//		vector of the player objects (mage, king etc)
+	vector <unique_ptr<Player>> m_players;
+//		vector of all dwarves in the game
+	vector <unique_ptr<Dwarf>> m_dwarves;	
+
+	vector <unique_ptr<Static>> m_staticObjects;
+
+
 };

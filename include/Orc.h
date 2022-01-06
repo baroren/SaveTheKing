@@ -3,7 +3,7 @@
 
 class Orc : public Static {
 public:
-using Static::Static;
+	using Static::Static;
 private:
 
 

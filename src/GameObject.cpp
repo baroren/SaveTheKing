@@ -19,6 +19,19 @@ GameObject::GameObject(const int x,const int y,
     m_sprite.scale(scale,scale);// need to make func
 }
 
+bool GameObject::checkCollision(const GameObject& gameObject)
+{
+    if (&gameObject == this)
+        return false;
+
+    return this->getSprite().getGlobalBounds().intersects(gameObject.getSprite().getGlobalBounds());
+}
+
+sf::Sprite GameObject::getSprite() const
+{
+    return m_sprite;
+}
+
 void GameObject:: updateAndDraw(const int row,float deltaTime,sf::RenderWindow& window)
 {
     m_animation->update(row,deltaTime);

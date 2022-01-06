@@ -2,9 +2,13 @@
 #include "SFML/Graphics.hpp"
 #include <string>
 #include "Animation.h"
+
+class Mage;
+class Wall;
+
 using std::string;
 
-enum direction { left, right, up, down };
+
 
 class GameObject {
 public:
@@ -14,10 +18,15 @@ public:
                const float animTime=0.17,const float scale=0,string imagePath="");
 
      void updateAndDraw(const int row,float deltaTime,sf::RenderWindow& window);
-     void setLocation(const float x, const float y );
+     void setLocation(const float x, const float y);
      sf::Vector2<float> getLocation() const;
 
-     sf::Sprite getSprite();
+     bool checkCollision(const GameObject& gameObject);
+
+     virtual void handleCollision(Mage& mage, const sf::Vector2f moveDirection) = 0;
+     virtual void handleCollision(Wall& wall, const sf::Vector2f moveDirection) = 0;
+
+     sf::Sprite getSprite() const;
 
 
 protected:
@@ -30,7 +39,5 @@ private:
     Animation* m_animation;
 	sf::Vector2i m_location;
     sf::Texture m_texture;
-
-
 
 };

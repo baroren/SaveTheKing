@@ -1,10 +1,16 @@
+#pragma once
+
 #include "GameObject.h"
 
 class Static : public GameObject {
 
 public:
 
-using GameObject::GameObject;
+	using GameObject::GameObject;
+
+
+
+
 private:
 
 
