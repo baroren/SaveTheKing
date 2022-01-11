@@ -10,9 +10,9 @@ using std::endl;
 
 GameController::GameController()
 {
-    m_players.push_back(make_unique<Mage> (m_window.convertIndexToPixel(1, 1), 1, 3, 0.17, 3, "Mage.png", false));
+    m_players.push_back(make_unique<Mage> (m_window.convertIndexToPixel(1, 1), 1, 3, 0.17, 3, "Dwarf.png", true));
 
-    m_staticObjects.push_back(make_unique<Wall>(m_window.convertIndexToPixel(1, 2), 1, 4, 0.17, 3, "skeleton2_v2.png"));
+    m_staticObjects.push_back(make_unique<Wall>(m_window.convertIndexToPixel(1, 2), 1, 1, 0.17, 3, "Gate.png"));
 }
 
 

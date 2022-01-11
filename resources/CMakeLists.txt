@@ -6,3 +6,21 @@ configure_file ("W_Red_Idle_SPR.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("Mage.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("Spr_Villager_Idle.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("skull.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("King.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("Thief.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("Map.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("vertWall.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("Key.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("Warrior.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("Dwarf.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("Fire.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("Gift1.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("Gift2.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("Teleport.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("Gate.png" ${CMAKE_BINARY_DIR} COPYONLY)
+
+
+
+
+
+
