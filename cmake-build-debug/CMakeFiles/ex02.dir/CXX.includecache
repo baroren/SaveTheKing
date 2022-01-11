@@ -17,6 +17,10 @@ iostream
 ../include/Board.h
 SFML/Graphics.hpp
 ../include/SFML/Graphics.hpp
+Wall.h
+../include/Wall.h
+vector
+../include/vector
 
 ../include/Button.h
 SFML/Graphics.hpp
@@ -51,6 +55,8 @@ MainMenu.h
 ../include/MainMenu.h
 Board.h
 ../include/Board.h
+King.h
+../include/King.h
 Wall.h
 ../include/Wall.h
 Dwarf.h
@@ -63,6 +69,10 @@ string
 -
 Animation.h
 ../include/Animation.h
+
+../include/King.h
+Player.h
+../include/Player.h
 
 ../include/Mage.h
 Player.h
@@ -116,9 +126,33 @@ Board.h
 string
 -
 
-/Users/bar/Documents/school/yearB/project_oop_2/src/GameController.cpp
+/Users/bar/Documents/school/yearB/project_oop/src/Board.cpp
+Board.h
+/Users/bar/Documents/school/yearB/project_oop/src/Board.h
+iostream
+-
+
+/Users/bar/Documents/school/yearB/project_oop/src/GameController.cpp
 GameController.h
-/Users/bar/Documents/school/yearB/project_oop_2/src/GameController.h
+/Users/bar/Documents/school/yearB/project_oop/src/GameController.h
+iostream
+-
+
+/Users/bar/Documents/school/yearB/project_oop/src/Window.cpp
+Window.h
+/Users/bar/Documents/school/yearB/project_oop/src/Window.h
+iostream
+-
+
+/Users/bar/Documents/school/yearB/project_oop/src/main.cpp
+GameController.h
+/Users/bar/Documents/school/yearB/project_oop/src/GameController.h
+MainMenu.h
+/Users/bar/Documents/school/yearB/project_oop/src/MainMenu.h
+SFML/Graphics.hpp
+-
+Window.h
+/Users/bar/Documents/school/yearB/project_oop/src/Window.h
 iostream
 -
 

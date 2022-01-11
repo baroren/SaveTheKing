@@ -11,7 +11,7 @@ public:
 
     virtual void handleCollision(Wall& wall, const sf::Vector2f moveDirection) override;
 
-    
+
 
 private:
 //string m_imagePath="W_Red_Idle_SPR.png";

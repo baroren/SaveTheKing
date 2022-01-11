@@ -11,7 +11,7 @@ Window::Window(const sf::Vector2u windowSize, const string title)
 void Window::display()
 {
 
-	m_board.display(m_window);
+
 	m_window.display();
 
 	if (sf::Event event; m_window.pollEvent(event))
@@ -27,6 +27,10 @@ void Window::display()
 	m_window.clear(sf::Color(34, 20, 26));
 }
 
+void Window::displayBoard()
+{
+    m_board.display(m_window);
+}
 sf::Vector2f Window::convertIndexToPixel(const int rowIndex, const int colIndex)
 {
 	return m_board.convertIndexToPixel(rowIndex, colIndex);

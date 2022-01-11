@@ -8,7 +8,7 @@ using std::endl;
 
 void Mage::handleCollision(GameObject& gameObject, const sf::Vector2f moveDirection)
 {
-	gameObject.handleCollision(*this, moveDirection);
+    gameObject.handleCollision(*this, moveDirection);
 }
 
 //	collision with wall
@@ -19,4 +19,3 @@ void Mage::handleCollision(Wall& wall, const sf::Vector2f moveDirection)
 }
 
 void Mage::handleCollision(Mage& mage, const sf::Vector2f moveDirection) {}
-

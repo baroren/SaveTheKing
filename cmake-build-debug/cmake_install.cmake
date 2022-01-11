@@ -1,4 +1,4 @@
-# Install script for directory: /Users/bar/Documents/school/yearB/project_oop_2
+# Install script for directory: /Users/bar/Documents/school/yearB/project_oop
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,17 +39,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/bar/Documents/school/yearB/project_oop_2/cmake-build-debug/include/cmake_install.cmake")
+  include("/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/include/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/bar/Documents/school/yearB/project_oop_2/cmake-build-debug/src/cmake_install.cmake")
+  include("/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/src/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/bar/Documents/school/yearB/project_oop_2/cmake-build-debug/resources/cmake_install.cmake")
+  include("/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/resources/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -60,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/bar/Documents/school/yearB/project_oop_2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

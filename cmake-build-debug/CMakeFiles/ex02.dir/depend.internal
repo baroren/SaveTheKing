@@ -7,7 +7,7 @@ CMakeFiles/ex02.dir/src/AddTime.cpp.o
  ../include/GameObject.h
  ../include/Gift.h
  ../include/Static.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/AddTime.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/AddTime.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -84,7 +84,7 @@ CMakeFiles/ex02.dir/src/AddTime.cpp.o
  /usr/local/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/ex02.dir/src/Animation.cpp.o
  ../include/Animation.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/Animation.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/Animation.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -160,8 +160,15 @@ CMakeFiles/ex02.dir/src/Animation.cpp.o
  /usr/local/include/SFML/Window/WindowHandle.hpp
  /usr/local/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/ex02.dir/src/Board.cpp.o
+ ../include/Animation.h
  ../include/Board.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/Board.cpp
+ ../include/GameObject.h
+ ../include/Mage.h
+ ../include/Moving.h
+ ../include/Player.h
+ ../include/Static.h
+ ../include/Wall.h
+ /Users/bar/Documents/school/yearB/project_oop/src/Board.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -238,7 +245,7 @@ CMakeFiles/ex02.dir/src/Board.cpp.o
  /usr/local/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/ex02.dir/src/Button.cpp.o
  ../include/Button.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/Button.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/Button.cpp
  /usr/local/include/SFML/Audio.hpp
  /usr/local/include/SFML/Audio/AlResource.hpp
  /usr/local/include/SFML/Audio/Export.hpp
@@ -336,7 +343,7 @@ CMakeFiles/ex02.dir/src/DestDwarf.cpp.o
  ../include/GameObject.h
  ../include/Gift.h
  ../include/Static.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/DestDwarf.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/DestDwarf.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -416,7 +423,7 @@ CMakeFiles/ex02.dir/src/Dwarf.cpp.o
  ../include/Dwarf.h
  ../include/GameObject.h
  ../include/Moving.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/Dwarf.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/Dwarf.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -496,7 +503,7 @@ CMakeFiles/ex02.dir/src/Fire.cpp.o
  ../include/Fire.h
  ../include/GameObject.h
  ../include/Static.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/Fire.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/Fire.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -578,6 +585,7 @@ CMakeFiles/ex02.dir/src/GameController.cpp.o
  ../include/Dwarf.h
  ../include/GameController.h
  ../include/GameObject.h
+ ../include/King.h
  ../include/Mage.h
  ../include/MainMenu.h
  ../include/Moving.h
@@ -586,7 +594,7 @@ CMakeFiles/ex02.dir/src/GameController.cpp.o
  ../include/Static.h
  ../include/Wall.h
  ../include/Window.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/GameController.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/GameController.cpp
  /usr/local/include/SFML/Audio.hpp
  /usr/local/include/SFML/Audio/AlResource.hpp
  /usr/local/include/SFML/Audio/Export.hpp
@@ -681,7 +689,7 @@ CMakeFiles/ex02.dir/src/GameController.cpp.o
 CMakeFiles/ex02.dir/src/GameObject.cpp.o
  ../include/Animation.h
  ../include/GameObject.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/GameObject.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/GameObject.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -761,7 +769,7 @@ CMakeFiles/ex02.dir/src/Gate.cpp.o
  ../include/GameObject.h
  ../include/Gate.h
  ../include/Static.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/Gate.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/Gate.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -841,7 +849,7 @@ CMakeFiles/ex02.dir/src/Gift.cpp.o
  ../include/GameObject.h
  ../include/Gift.h
  ../include/Static.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/Gift.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/Gift.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -921,7 +929,7 @@ CMakeFiles/ex02.dir/src/Key.cpp.o
  ../include/GameObject.h
  ../include/Key.h
  ../include/Static.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/Key.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/Key.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -1002,7 +1010,7 @@ CMakeFiles/ex02.dir/src/King.cpp.o
  ../include/King.h
  ../include/Moving.h
  ../include/Player.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/King.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/King.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -1085,7 +1093,7 @@ CMakeFiles/ex02.dir/src/Mage.cpp.o
  ../include/Player.h
  ../include/Static.h
  ../include/Wall.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/Mage.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/Mage.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -1170,7 +1178,7 @@ CMakeFiles/ex02.dir/src/MainMenu.cpp.o
  ../include/Orc.h
  ../include/Player.h
  ../include/Static.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/MainMenu.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/MainMenu.cpp
  /usr/local/include/SFML/Audio.hpp
  /usr/local/include/SFML/Audio/AlResource.hpp
  /usr/local/include/SFML/Audio/Export.hpp
@@ -1263,12 +1271,12 @@ CMakeFiles/ex02.dir/src/MainMenu.cpp.o
  /usr/local/include/SFML/Window/WindowHandle.hpp
  /usr/local/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/ex02.dir/src/Menu.cpp.o
- /Users/bar/Documents/school/yearB/project_oop_2/src/Menu.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/Menu.cpp
 CMakeFiles/ex02.dir/src/Moving.cpp.o
  ../include/Animation.h
  ../include/GameObject.h
  ../include/Moving.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/Moving.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/Moving.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -1348,7 +1356,7 @@ CMakeFiles/ex02.dir/src/Orc.cpp.o
  ../include/GameObject.h
  ../include/Static.h
  ../include/orc.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/Orc.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/Orc.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -1428,7 +1436,7 @@ CMakeFiles/ex02.dir/src/Player.cpp.o
  ../include/GameObject.h
  ../include/Moving.h
  ../include/Player.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/Player.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/Player.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -1507,7 +1515,7 @@ CMakeFiles/ex02.dir/src/Static.cpp.o
  ../include/Animation.h
  ../include/GameObject.h
  ../include/Static.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/Static.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/Static.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -1588,7 +1596,7 @@ CMakeFiles/ex02.dir/src/SubTime.cpp.o
  ../include/Gift.h
  ../include/Static.h
  ../include/SubTime.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/SubTime.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/SubTime.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -1669,7 +1677,7 @@ CMakeFiles/ex02.dir/src/Thief.cpp.o
  ../include/Moving.h
  ../include/Player.h
  ../include/Thief.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/Thief.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/Thief.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -1749,7 +1757,7 @@ CMakeFiles/ex02.dir/src/Throne.cpp.o
  ../include/GameObject.h
  ../include/Static.h
  ../include/Throne.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/Throne.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/Throne.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -1832,7 +1840,7 @@ CMakeFiles/ex02.dir/src/Wall.cpp.o
  ../include/Player.h
  ../include/Static.h
  ../include/Wall.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/Wall.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/Wall.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -1913,7 +1921,7 @@ CMakeFiles/ex02.dir/src/Warrior.cpp.o
  ../include/Moving.h
  ../include/Player.h
  ../include/Warrior.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/Warrior.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/Warrior.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -1989,9 +1997,16 @@ CMakeFiles/ex02.dir/src/Warrior.cpp.o
  /usr/local/include/SFML/Window/WindowHandle.hpp
  /usr/local/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/ex02.dir/src/Window.cpp.o
+ ../include/Animation.h
  ../include/Board.h
+ ../include/GameObject.h
+ ../include/Mage.h
+ ../include/Moving.h
+ ../include/Player.h
+ ../include/Static.h
+ ../include/Wall.h
  ../include/Window.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/Window.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/Window.cpp
  /usr/local/include/SFML/Config.hpp
  /usr/local/include/SFML/Graphics.hpp
  /usr/local/include/SFML/Graphics/BlendMode.hpp
@@ -2073,6 +2088,7 @@ CMakeFiles/ex02.dir/src/main.cpp.o
  ../include/Dwarf.h
  ../include/GameController.h
  ../include/GameObject.h
+ ../include/King.h
  ../include/Mage.h
  ../include/MainMenu.h
  ../include/Moving.h
@@ -2081,7 +2097,7 @@ CMakeFiles/ex02.dir/src/main.cpp.o
  ../include/Static.h
  ../include/Wall.h
  ../include/Window.h
- /Users/bar/Documents/school/yearB/project_oop_2/src/main.cpp
+ /Users/bar/Documents/school/yearB/project_oop/src/main.cpp
  /usr/local/include/SFML/Audio.hpp
  /usr/local/include/SFML/Audio/AlResource.hpp
  /usr/local/include/SFML/Audio/Export.hpp
