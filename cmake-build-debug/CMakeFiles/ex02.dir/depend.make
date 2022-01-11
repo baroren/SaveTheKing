@@ -584,6 +584,7 @@ CMakeFiles/ex02.dir/src/GameController.cpp.o: \
  ../include/Orc.h \
  ../include/Player.h \
  ../include/Static.h \
+ ../include/Wall.h \
  ../include/Window.h \
  ../src/GameController.cpp \
  /usr/local/include/SFML/Audio.hpp \
@@ -1082,6 +1083,8 @@ CMakeFiles/ex02.dir/src/Mage.cpp.o: \
  ../include/Mage.h \
  ../include/Moving.h \
  ../include/Player.h \
+ ../include/Static.h \
+ ../include/Wall.h \
  ../src/Mage.cpp \
  /usr/local/include/SFML/Config.hpp \
  /usr/local/include/SFML/Graphics.hpp \
@@ -1824,6 +1827,9 @@ CMakeFiles/ex02.dir/src/Throne.cpp.o: \
 CMakeFiles/ex02.dir/src/Wall.cpp.o: \
  ../include/Animation.h \
  ../include/GameObject.h \
+ ../include/Mage.h \
+ ../include/Moving.h \
+ ../include/Player.h \
  ../include/Static.h \
  ../include/Wall.h \
  ../src/Wall.cpp \
@@ -2073,6 +2079,7 @@ CMakeFiles/ex02.dir/src/main.cpp.o: \
  ../include/Orc.h \
  ../include/Player.h \
  ../include/Static.h \
+ ../include/Wall.h \
  ../include/Window.h \
  ../src/main.cpp \
  /usr/local/include/SFML/Audio.hpp \

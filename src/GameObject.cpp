@@ -22,7 +22,8 @@ GameObject::GameObject(const const sf::Vector2f position,
 
 
 
-    m_sprite.setOrigin(m_sprite.getGlobalBounds().width/(numOfFrames) /2.f,m_sprite.getGlobalBounds().height / (numOfFrames - 1) /2.f);
+    m_sprite.setOrigin(m_sprite.getGlobalBounds().width/(numOfFrames) /2.f,m_sprite.getGlobalBounds().height / (numOfFrames) /2.f+
+    m_sprite.getGlobalBounds().height / 2.f);
 
     m_sprite.setPosition(position);
 

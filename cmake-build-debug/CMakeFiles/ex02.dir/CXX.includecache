@@ -14,6 +14,10 @@ vector
 iostream
 -
 
+../include/Board.h
+SFML/Graphics.hpp
+../include/SFML/Graphics.hpp
+
 ../include/Button.h
 SFML/Graphics.hpp
 -
@@ -29,6 +33,28 @@ iostream
 -
 SFML/Audio.hpp
 ../include/SFML/Audio.hpp
+
+../include/Dwarf.h
+Moving.h
+../include/Moving.h
+
+../include/GameController.h
+vector
+-
+memory
+-
+Window.h
+../include/Window.h
+GameObject.h
+../include/GameObject.h
+MainMenu.h
+../include/MainMenu.h
+Board.h
+../include/Board.h
+Wall.h
+../include/Wall.h
+Dwarf.h
+../include/Dwarf.h
 
 ../include/GameObject.h
 SFML/Graphics.hpp
@@ -48,6 +74,8 @@ SFML/Graphics.hpp
 vector
 -
 iostream
+-
+memory
 -
 Button.h
 ../include/Button.h
@@ -74,9 +102,25 @@ Moving.h
 GameObject.h
 ../include/GameObject.h
 
-/Users/bar/Documents/school/yearB/project_oop_2/src/MainMenu.cpp
-MainMenu.h
-/Users/bar/Documents/school/yearB/project_oop_2/src/MainMenu.h
+../include/Wall.h
+Static.h
+../include/Static.h
+Mage.h
+../include/Mage.h
+
+../include/Window.h
+SFML/Graphics.hpp
+../include/SFML/Graphics.hpp
+Board.h
+../include/Board.h
+string
+-
+
+/Users/bar/Documents/school/yearB/project_oop_2/src/GameController.cpp
+GameController.h
+/Users/bar/Documents/school/yearB/project_oop_2/src/GameController.h
+iostream
+-
 
 /usr/local/include/SFML/Audio.hpp
 SFML/System.hpp
