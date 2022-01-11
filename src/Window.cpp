@@ -27,6 +27,11 @@ void Window::display()
 	m_window.clear(sf::Color(34, 20, 26));
 }
 
+sf::Vector2f Window::convertIndexToPixel(const int rowIndex, const int colIndex)
+{
+	return m_board.convertIndexToPixel(rowIndex, colIndex);
+}
+
 void Window::close()
 {
 	m_window.close();

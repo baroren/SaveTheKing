@@ -10,9 +10,9 @@ using std::endl;
 
 GameController::GameController()
 {
-    m_players.push_back(make_unique<Mage> (450, 150, 2, 3, 0.17, 3, "Mage.png", false));
+    m_players.push_back(make_unique<Mage> (m_window.convertIndexToPixel(1, 1), 2, 3, 0.17, 3, "Mage.png", false));
 
-    m_staticObjects.push_back(make_unique<Wall>(450, 400, 2, 3, 0.17, 3, "skull.png"));
+    m_staticObjects.push_back(make_unique<Wall>(m_window.convertIndexToPixel(1, 2), 1, 2, 0.17, 3, "skeleton2_v2.png"));
 }
 
 
@@ -53,6 +53,7 @@ void GameController::run()
         for (int i = 0; i < m_players.size(); i++)
         {
             m_players[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
+
         }
 
         for (int i = 0; i < m_staticObjects.size(); i++)
@@ -61,6 +62,7 @@ void GameController::run()
         }
 
         m_window.display();
+
 
 
 	}

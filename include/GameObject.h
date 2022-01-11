@@ -15,7 +15,7 @@ class GameObject {
 public:
 
 
-    GameObject(const int x=0,const int y=0, const int numOfAnim=0,const int numOfFrames=0,
+    GameObject(const sf::Vector2f position, const int numOfAnim=0,const int numOfFrames=0,
                const float animTime=0.17,const float scale=0,string imagePath="");
 
      void updateAndDraw(const int row,float deltaTime,sf::RenderWindow& window);

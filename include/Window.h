@@ -19,6 +19,8 @@ public:
 //		check if window is open
 	bool isOpen() const;
 
+	sf::Vector2f convertIndexToPixel(const int rowIndex, const int colIndex);
+
 	sf::RenderWindow& getWindow();
 
 private:

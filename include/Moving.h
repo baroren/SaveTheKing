@@ -6,7 +6,7 @@ enum Direction { LEFT, RIGHT, UP, DOWN };
 class Moving : public GameObject {
 public:
 
-	Moving(const int x, const int y, const int numOfAnim, const int numOfFrames, const float animTime, 
+	Moving(const sf::Vector2f position, const int numOfAnim, const int numOfFrames, const float animTime, 
 				const float scale, const string imagePath, const bool isFacedRight);
 
 	bool checkBorder();

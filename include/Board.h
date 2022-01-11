@@ -9,7 +9,7 @@ class Board {
 
 public:
 //		where the actual game will take place
-	Board(const int rowNum = 5, const int colNum = 6);
+	Board(const int rowNum = 4, const int colNum = 6);
 
 //		display the game board on window
 	void display(sf::RenderWindow& window);
