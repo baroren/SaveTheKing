@@ -160,14 +160,7 @@ CMakeFiles/ex02.dir/src/Animation.cpp.o: \
  /usr/local/include/SFML/Window/WindowHandle.hpp \
  /usr/local/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/ex02.dir/src/Board.cpp.o: \
- ../include/Animation.h \
  ../include/Board.h \
- ../include/GameObject.h \
- ../include/Mage.h \
- ../include/Moving.h \
- ../include/Player.h \
- ../include/Static.h \
- ../include/Wall.h \
  ../src/Board.cpp \
  /usr/local/include/SFML/Config.hpp \
  /usr/local/include/SFML/Graphics.hpp \
@@ -585,7 +578,6 @@ CMakeFiles/ex02.dir/src/GameController.cpp.o: \
  ../include/Dwarf.h \
  ../include/GameController.h \
  ../include/GameObject.h \
- ../include/King.h \
  ../include/Mage.h \
  ../include/MainMenu.h \
  ../include/Moving.h \
@@ -1997,14 +1989,7 @@ CMakeFiles/ex02.dir/src/Warrior.cpp.o: \
  /usr/local/include/SFML/Window/WindowHandle.hpp \
  /usr/local/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/ex02.dir/src/Window.cpp.o: \
- ../include/Animation.h \
  ../include/Board.h \
- ../include/GameObject.h \
- ../include/Mage.h \
- ../include/Moving.h \
- ../include/Player.h \
- ../include/Static.h \
- ../include/Wall.h \
  ../include/Window.h \
  ../src/Window.cpp \
  /usr/local/include/SFML/Config.hpp \
@@ -2088,7 +2073,6 @@ CMakeFiles/ex02.dir/src/main.cpp.o: \
  ../include/Dwarf.h \
  ../include/GameController.h \
  ../include/GameObject.h \
- ../include/King.h \
  ../include/Mage.h \
  ../include/MainMenu.h \
  ../include/Moving.h \
