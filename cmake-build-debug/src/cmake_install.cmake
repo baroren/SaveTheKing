@@ -1,4 +1,4 @@
-# Install script for directory: /Users/bar/Documents/school/yearB/project_oop_2/src
+# Install script for directory: /Users/bar/Documents/school/yearB/project_oop/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
