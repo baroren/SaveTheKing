@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ex02.dir/src/Animation.cpp.o"
   "CMakeFiles/ex02.dir/src/Board.cpp.o"
   "CMakeFiles/ex02.dir/src/Button.cpp.o"
+  "CMakeFiles/ex02.dir/src/Clock.cpp.o"
   "CMakeFiles/ex02.dir/src/DestDwarf.cpp.o"
   "CMakeFiles/ex02.dir/src/Dwarf.cpp.o"
   "CMakeFiles/ex02.dir/src/Fire.cpp.o"

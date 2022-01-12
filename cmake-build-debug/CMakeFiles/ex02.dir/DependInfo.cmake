@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/bar/Documents/school/yearB/project_oop/src/Animation.cpp" "/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles/ex02.dir/src/Animation.cpp.o"
   "/Users/bar/Documents/school/yearB/project_oop/src/Board.cpp" "/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles/ex02.dir/src/Board.cpp.o"
   "/Users/bar/Documents/school/yearB/project_oop/src/Button.cpp" "/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles/ex02.dir/src/Button.cpp.o"
+  "/Users/bar/Documents/school/yearB/project_oop/src/Clock.cpp" "/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles/ex02.dir/src/Clock.cpp.o"
   "/Users/bar/Documents/school/yearB/project_oop/src/DestDwarf.cpp" "/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles/ex02.dir/src/DestDwarf.cpp.o"
   "/Users/bar/Documents/school/yearB/project_oop/src/Dwarf.cpp" "/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles/ex02.dir/src/Dwarf.cpp.o"
   "/Users/bar/Documents/school/yearB/project_oop/src/Fire.cpp" "/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles/ex02.dir/src/Fire.cpp.o"

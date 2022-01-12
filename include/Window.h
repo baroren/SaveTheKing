@@ -12,7 +12,7 @@ public:
 //		create window using size and title, default size is 50 50 and title ""
 	Window(const sf::Vector2u windowSize = sf::Vector2u(1400,700), const string title = "Save The King: Dungeon Edition");
     void displayBoard();
-
+    void drawText(sf::Text);
 //		displays window
 	void display();
 //		close window

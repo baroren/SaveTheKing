@@ -165,6 +165,9 @@
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Button.cpp">
 			<Option target="ex02"/>
 		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Clock.cpp">
+			<Option target="ex02"/>
+		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/DestDwarf.cpp">
 			<Option target="ex02"/>
 		</Unit>

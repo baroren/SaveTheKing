@@ -35,6 +35,10 @@ sf::Vector2f Window::convertIndexToPixel(const int rowIndex, const int colIndex)
 {
 	return m_board.convertIndexToPixel(rowIndex, colIndex);
 }
+void Window:: drawText(sf::Text text)
+{
+    m_window.draw(text);
+}
 
 void Window::close()
 {

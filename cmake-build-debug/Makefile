@@ -225,6 +225,30 @@ src/Button.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Button.cpp.s
 .PHONY : src/Button.cpp.s
 
+src/Clock.o: src/Clock.cpp.o
+.PHONY : src/Clock.o
+
+# target to build an object file
+src/Clock.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Clock.cpp.o
+.PHONY : src/Clock.cpp.o
+
+src/Clock.i: src/Clock.cpp.i
+.PHONY : src/Clock.i
+
+# target to preprocess a source file
+src/Clock.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Clock.cpp.i
+.PHONY : src/Clock.cpp.i
+
+src/Clock.s: src/Clock.cpp.s
+.PHONY : src/Clock.s
+
+# target to generate assembly for a file
+src/Clock.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Clock.cpp.s
+.PHONY : src/Clock.cpp.s
+
 src/DestDwarf.o: src/DestDwarf.cpp.o
 .PHONY : src/DestDwarf.o
 
@@ -798,6 +822,9 @@ help:
 	@echo "... src/Button.o"
 	@echo "... src/Button.i"
 	@echo "... src/Button.s"
+	@echo "... src/Clock.o"
+	@echo "... src/Clock.i"
+	@echo "... src/Clock.s"
 	@echo "... src/DestDwarf.o"
 	@echo "... src/DestDwarf.i"
 	@echo "... src/DestDwarf.s"

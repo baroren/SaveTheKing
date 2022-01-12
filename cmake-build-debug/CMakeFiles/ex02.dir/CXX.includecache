@@ -36,6 +36,14 @@ iostream
 SFML/Audio.hpp
 ../include/SFML/Audio.hpp
 
+../include/Clock.h
+SFML/Graphics.hpp
+../include/SFML/Graphics.hpp
+string
+-
+iostream
+-
+
 ../include/Dwarf.h
 Moving.h
 ../include/Moving.h
@@ -57,6 +65,8 @@ Wall.h
 ../include/Wall.h
 Dwarf.h
 ../include/Dwarf.h
+Clock.h
+../include/Clock.h
 
 ../include/GameObject.h
 SFML/Graphics.hpp
@@ -118,53 +128,9 @@ Board.h
 string
 -
 
-/Users/bar/Documents/school/yearB/project_oop/src/Board.cpp
-Board.h
-/Users/bar/Documents/school/yearB/project_oop/src/Board.h
-iostream
--
-
 /Users/bar/Documents/school/yearB/project_oop/src/GameController.cpp
 GameController.h
 /Users/bar/Documents/school/yearB/project_oop/src/GameController.h
-iostream
--
-
-/Users/bar/Documents/school/yearB/project_oop/src/Mage.cpp
-Mage.h
-/Users/bar/Documents/school/yearB/project_oop/src/Mage.h
-iostream
--
-Wall.h
-/Users/bar/Documents/school/yearB/project_oop/src/Wall.h
-
-/Users/bar/Documents/school/yearB/project_oop/src/MainMenu.cpp
-MainMenu.h
-/Users/bar/Documents/school/yearB/project_oop/src/MainMenu.h
-
-/Users/bar/Documents/school/yearB/project_oop/src/Wall.cpp
-Wall.h
-/Users/bar/Documents/school/yearB/project_oop/src/Wall.h
-iostream
--
-Player.h
-/Users/bar/Documents/school/yearB/project_oop/src/Player.h
-
-/Users/bar/Documents/school/yearB/project_oop/src/Window.cpp
-Window.h
-/Users/bar/Documents/school/yearB/project_oop/src/Window.h
-iostream
--
-
-/Users/bar/Documents/school/yearB/project_oop/src/main.cpp
-GameController.h
-/Users/bar/Documents/school/yearB/project_oop/src/GameController.h
-MainMenu.h
-/Users/bar/Documents/school/yearB/project_oop/src/MainMenu.h
-SFML/Graphics.hpp
--
-Window.h
-/Users/bar/Documents/school/yearB/project_oop/src/Window.h
 iostream
 -
 

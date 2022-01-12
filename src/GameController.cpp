@@ -8,15 +8,22 @@ using std::cout;
 using std::endl;
 
 
-GameController::GameController()
-{
-    m_players.push_back(make_unique<Mage> (m_window.convertIndexToPixel(1, 1), 1, 3, 0.17, 3, "Dwarf.png", true));
-    m_players.push_back(make_unique<Mage> (m_window.convertIndexToPixel(1, 4), 2, 4, 0.17, 3, "King.png", true));
+GameController::GameController() {
+    m_players.push_back(make_unique<Mage>(m_window.convertIndexToPixel(1, 1), 1, 3, 0.17, 3, "Dwarf.png", true));
+    m_players.push_back(make_unique<Mage>(m_window.convertIndexToPixel(1, 4), 2, 4, 0.17, 3, "King.png", true));
 
     m_staticObjects.push_back(make_unique<Wall>(m_window.convertIndexToPixel(1, 2), 1, 1, 0.17, 3, "Gate.png"));
+    if (!m_font.loadFromFile("arcadeClassic.ttf")) {
+        // error...
+        std::cout << "error loading font";
+
+    }
+    m_timer.setFont(m_font);
+    m_timer.setOrigin(sf::Vector2f(m_timer.getGlobalBounds().width / 2.f,
+                                   m_timer.getGlobalBounds().height / 2.f));
+    m_timer.setPosition(sf::Vector2f(150, 50));
+
 }
-
-
 void GameController::run()
 {
 
@@ -26,7 +33,8 @@ void GameController::run()
     float deltaTime;
     int key = 0;
     sf::Vector2f moveDirection;
-
+    m_clock =new Clock(234);
+    m_clock->reset();
 	while (m_window.isOpen())
 	{
 
@@ -36,7 +44,8 @@ void GameController::run()
         sf::Event event;
 
         deltaTime = clock.restart().asSeconds();
-
+        m_timer.setString(m_clock->countDown());
+       cout <<m_clock->countDown()<<endl;
         while (m_window.getWindow().pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
@@ -62,7 +71,7 @@ void GameController::run()
         {
             m_staticObjects[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
-
+        m_window.drawText(m_timer);
         m_window.display();
 
 
