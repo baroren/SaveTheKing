@@ -22,7 +22,7 @@ private :
 
     sf::Text makeTitle(int size,std::string text,float,float);
 
-    vector <GameObject* >m_gameObjects;
+    vector <unique_ptr <GameObject> >m_gameObjects;
     vector <Button*> m_buttons;
 
 //  check to see if gameObject works with unique ptr and how to solve Button

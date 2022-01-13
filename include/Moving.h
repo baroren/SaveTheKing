@@ -6,8 +6,6 @@ enum Direction { LEFT, RIGHT, UP, DOWN };
 class Moving : public GameObject {
 public:
 
-	//using GameObject::GameObject;
-
 	Moving(const sf::Vector2f position, const int numOfAnim, const int numOfFrames, const float animTime,
 				const float scale, const string imagePath, const bool isFacedRight);
 

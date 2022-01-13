@@ -21,10 +21,20 @@ GameController::GameController() {
         std::cout << "error loading font";
 
     }
+    m_buttons.push_back(new Button(100, 150, 150, 50, &this->m_font, "New Game",
+                                   sf::Color(70, 70, 70, 200), sf::Color(70, 3, 150, 200),
+                                   sf::Color(70, 20, 20, 200)));
+    m_buttons.push_back(new Button(100, 225, 150, 50, &this->m_font, "Help",
+                                   sf::Color(70, 70, 70, 200), sf::Color(70, 3, 150, 200),
+                                   sf::Color(70, 20, 20, 200)));
+    m_buttons.push_back(new Button(100, 300, 150, 50, &this->m_font, "quit",
+                                   sf::Color(70, 70, 70, 200), sf::Color(70, 3, 150, 200),
+                                   sf::Color(70, 20, 20, 200)));
+
     m_timer.setFont(m_font);
     m_timer.setOrigin(sf::Vector2f(m_timer.getGlobalBounds().width / 2.f,
                                    m_timer.getGlobalBounds().height / 2.f));
-    m_timer.setPosition(sf::Vector2f(150, 50));
+    m_timer.setPosition(sf::Vector2f(50, 75));
 
 }
 void GameController::run()
@@ -36,7 +46,7 @@ void GameController::run()
     float deltaTime;
     int key = 0;
     sf::Vector2f moveDirection;
-    m_clock =new Clock(234);
+    m_clock =new Clock(80);
     m_clock->reset();
 	while (m_window.isOpen())
 	{
@@ -57,7 +67,16 @@ void GameController::run()
 
         handleKey(deltaTime, key, moveDirection);
 
-        for (auto& currentPlayer : m_players)
+        for (int i = 0; i < 3; i++) {
+            m_window.getWindow().draw(m_buttons[i]->render());
+            m_window.getWindow().draw(m_buttons[i]->drawText());
+
+            m_buttons[i]->update(m_window.getWindow().mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())));
+        }
+
+
+
+            for (auto& currentPlayer : m_players)
         {
             handleCollision(*currentPlayer, moveDirection);
         }

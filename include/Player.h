@@ -9,5 +9,5 @@ public:
 private:
 
 
-
+    Player() : Moving(sf::Vector2f(), 0, 0, 0, 0, std::string(), false) {}
 };
