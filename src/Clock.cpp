@@ -2,6 +2,8 @@
 
 Clock::Clock(int time)
 {
+    addedTime=0;
+    m_subTime=0; //temps
     if(time>60) {
         m_extraTime=0;
         deltaTime=time%60;
@@ -64,6 +66,39 @@ std::string Clock::countDown() {
     m_sTime=st_min+':'+st_sec;
   // std::cout << m_min<<":"<<m_sec<<std::endl;
    return m_sTime;
+}
+void Clock :: addTime()
+{
+    if(addedTime<1) {
+        std::cout<<"clock add time"<<addedTime<<std::endl;
+
+        m_time += 10;
+        m_sec += 10;
+        deltaTime+=10;
+        if (m_sec > 59) {
+            m_min++;
+            deltaTime = m_sec = m_sec % 60;
+            m_time = m_time % 60;
+        }
+    }
+    addedTime++;
+
+}
+void Clock:: subTime()
+{
+    if(m_subTime<1) {
+        std::cout<<"clock sub time"<<addedTime<<std::endl;
+
+        m_time -= 10;
+        m_sec -= 10;
+        deltaTime-=10;
+        if (m_sec < 0) {
+            m_min--;
+            deltaTime = m_sec = 60+m_sec % 60;
+            m_time = 60+m_time % 60;
+        }
+    }
+    m_subTime++;
 }
 void Clock:: reset() {
 

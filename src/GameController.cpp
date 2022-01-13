@@ -33,7 +33,7 @@ void GameController::run()
     float deltaTime;
     int key = 0;
     sf::Vector2f moveDirection;
-    m_clock =new Clock(234);
+    m_clock =new Clock(80);
     m_clock->reset();
 	while (m_window.isOpen())
 	{
@@ -95,8 +95,14 @@ void GameController::handleCollision(Moving& movingObject, const sf::Vector2f mo
 void GameController::handleKey(float deltaTime,int &key, sf::Vector2f& moveDirection)
 {
 
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::P ))
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::K))
     {
+        m_clock->addTime();
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::P))
+    {
+        m_clock->subTime();
+
        // cout <<"test";
        // if(key==0)
        // {
@@ -107,7 +113,7 @@ void GameController::handleKey(float deltaTime,int &key, sf::Vector2f& moveDirec
        //     key = 0;
        //     cout << key << "0\n";
        // }
-    }
+   }
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
     {
