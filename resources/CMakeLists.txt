@@ -18,9 +18,6 @@ configure_file ("Gift1.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("Gift2.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("Teleport.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("Gate.png" ${CMAKE_BINARY_DIR} COPYONLY)
-
-
-
-
-
-
+configure_file ("Level_1.txt" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("Level_2.txt" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("Level_3.txt" ${CMAKE_BINARY_DIR} COPYONLY)

@@ -7,7 +7,7 @@ class Moving : public GameObject {
 public:
 
 	Moving(const sf::Vector2f position, const int numOfAnim, const int numOfFrames, const float animTime,
-           const float scale, const string imagePath, const bool isFacedRight);
+				const float scale, const string imagePath, const bool isFacedRight);
 
 	bool checkBorder();
 

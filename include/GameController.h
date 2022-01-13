@@ -10,6 +10,11 @@
 #include "Wall.h"
 #include "Dwarf.h"
 #include "Clock.h"
+#include "Teleporter.h"
+#include "Gate.h"
+#include "King.h"
+#include "Warrior.h"
+#include "Thief.h"
 
 using std::vector;
 using std::unique_ptr;
@@ -25,6 +30,8 @@ public:
     bool isRunning();
 	void handleKey(float deltaTime,int &key, sf::Vector2f& moveDirection);
 
+	void storeTeleproters();
+
 private:
     bool running = true;
     MainMenu m_mainMenu;
@@ -38,8 +45,9 @@ private:
 	vector <unique_ptr<Player>> m_players;
 //		vector of all dwarves in the game
 	vector <unique_ptr<Dwarf>> m_dwarves;	
-
-	vector <unique_ptr<Static>> m_staticObjects;
-
-
+//		vector of walls, gates, orc, keys, fire, gifts and throne
+	vector <unique_ptr<Static>> m_static;
+//		vector of all teleports
+//		lists of size 2 vectors, each pair of teleports link together
+	vector <vector<unique_ptr<Teleporter>>> m_teleporters;
 };

@@ -16,7 +16,7 @@ public:
 
 
     GameObject(const sf::Vector2f position, const int numOfAnim=0,const int numOfFrames=0,
-               const float animTime=0.17,const float scale=0,string imagePath="");
+               const float animTime=0.17,const float scale=0, string imagePath="");
 
      void updateAndDraw(const int row,float deltaTime,sf::RenderWindow& window);
      void setLocation(const float x, const float y);
@@ -34,11 +34,9 @@ protected:
     sf::Sprite m_sprite;
 
 private:
-
-    int m_row;
     string m_imagePath;
     Animation* m_animation;
-	sf::Vector2i m_location;
+//	sf::Vector2i m_location;
     sf::Texture m_texture;
 
 };

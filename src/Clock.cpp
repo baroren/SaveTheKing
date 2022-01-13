@@ -9,7 +9,7 @@ Clock::Clock(int time)
         deltaTime=time%60;
         m_min = time / 60;
         m_sec = time % 60;
-        std::cout<<"ctor"<<m_sec<<deltaTime<<std::endl;
+//        std::cout<<"ctor"<<m_sec<<deltaTime<<std::endl;
     }
     else if(time<60)
     {
@@ -23,7 +23,7 @@ Clock::Clock(int time)
         m_sec = 0;
     }
 
-  std::  cout <<m_sec;
+//  std::  cout <<m_sec;
 
 }
 
@@ -36,7 +36,7 @@ std::string Clock::countDown() {
         return "Game Over";
 
     }
-    std::cout <<" time"<<m_time<<":"<<m_sec<<"delta:"<<deltaTime<<std::endl;
+//    std::cout <<" time"<<m_time<<":"<<m_sec<<"delta:"<<deltaTime<<std::endl;
    if ((int)(m_time)%60<60 && ((m_time%60-m_extraTime+m_sec)!=deltaTime ))
    {
      // std::cout<<"time : "<<m_time<<"::"<<m_sec<<std::endl;
@@ -49,7 +49,7 @@ std::string Clock::countDown() {
        m_extraTime=(m_time%60);
        deltaTime=59;
        m_sec=59;
-        std::cout <<"test "<<m_min <<deltaTime<<std::endl;
+//        std::cout <<"test "<<m_min <<deltaTime<<std::endl;
        m_min--;
    }
 

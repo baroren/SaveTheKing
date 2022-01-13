@@ -9,10 +9,13 @@ using std::endl;
 
 
 GameController::GameController() {
-    m_players.push_back(make_unique<Mage>(m_window.convertIndexToPixel(1, 1), 1, 3, 0.17, 3, "Dwarf.png", true));
-    m_players.push_back(make_unique<Mage>(m_window.convertIndexToPixel(1, 4), 2, 4, 0.17, 3, "King.png", true));
+    m_players.push_back(make_unique<King>(m_window.calculatePos('K'), 2, 4, 0.17, 3, "King.png", true));
+    m_players.push_back(make_unique<Mage>(m_window.calculatePos('M'), 1, 3, 0.17, 3, "Mage.png", false));
+    m_players.push_back(make_unique<Warrior>(m_window.calculatePos('W'), 1, 3, 0.17, 3, "Warrior.png", false));
+    m_players.push_back(make_unique<Thief>(m_window.calculatePos('T'), 1, 3, 0.17, 3, "Thief.png", true));
 
-    m_staticObjects.push_back(make_unique<Wall>(m_window.convertIndexToPixel(1, 2), 1, 1, 0.17, 3, "Gate.png"));
+
+
     if (!m_font.loadFromFile("arcadeClassic.ttf")) {
         // error...
         std::cout << "error loading font";
@@ -82,13 +85,14 @@ void GameController::run()
 
         for (int i = 0; i < m_players.size(); i++)
         {
-            m_players[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
-
+            if (i != key)
+                m_players[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
+        m_players[key]->updateAndDraw(0, deltaTime, m_window.getWindow());
 
-        for (int i = 0; i < m_staticObjects.size(); i++)
+        for (int i = 0; i < m_static.size(); i++)
         {
-            m_staticObjects[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
+            m_static[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
         m_window.drawText(m_timer);
         m_window.display();
@@ -98,10 +102,24 @@ void GameController::run()
 	}
 }
 
+//void GameController::storeTeleproters()
+//{
+//    vector<unique_ptr<Teleporter>> currTeleporter_1, currTeleporter_2;
+//    sf::Vector2f foundPos_1, foundPos_2;
+//    while (true)
+//    {
+//        foundPos_1 = m_window.calculatePos('X');
+//        foundPos_2 = m_window.calculatePos('X');
+//
+//        currTeleporter_1.push_back(make_unique<Teleporter>(m_window.calculatePos('X'), 1, 4, 0.17, 3, "Teleport.png"));
+//        m_teleporters.push_back(currTeleporter_1);
+//    }
+//}
+
 //  handles collision of the moving object with everybody
 void GameController::handleCollision(Moving& movingObject, const sf::Vector2f moveDirection)
 {
-    for (auto& staticObject : m_staticObjects)
+    for (auto& staticObject : m_static)
     {
         if (movingObject.checkCollision(*staticObject))
         {
@@ -114,25 +132,10 @@ void GameController::handleCollision(Moving& movingObject, const sf::Vector2f mo
 void GameController::handleKey(float deltaTime,int &key, sf::Vector2f& moveDirection)
 {
 
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::K))
+    if(sf::Keyboard::isKeyPressed (sf::Keyboard::P))
     {
-        m_clock->addTime();
+        (key == m_players.size() - 1) ? key = 0 : key++;
     }
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::P))
-    {
-        m_clock->subTime();
-
-       // cout <<"test";
-       // if(key==0)
-       // {
-       //     key=1;
-       //     cout << key<<"1\n";
-       // }
-       //else if(key ==1) {
-       //     key = 0;
-       //     cout << key << "0\n";
-       // }
-   }
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
     {

@@ -6,8 +6,8 @@
 using std::cout;
 using std::endl;
 
-GameObject::GameObject(const const sf::Vector2f position,
-                       const int numOfAnim,const int numOfFrames,const float animTime, float scale, string imagePath)
+GameObject::GameObject(const const sf::Vector2f position, const int numOfAnim,
+                    const int numOfFrames,const float animTime, float scale, string imagePath)
                        :m_imagePath(imagePath)
 
 {
@@ -20,20 +20,18 @@ GameObject::GameObject(const const sf::Vector2f position,
     m_sprite.setTexture(m_texture);
     m_animation =new Animation(&m_texture,sf::Vector2u(numOfFrames,numOfAnim),animTime);
 
-
-
     m_sprite.setOrigin(m_sprite.getGlobalBounds().width/(numOfFrames) /2.f,m_sprite.getGlobalBounds().height / (numOfAnim) /2.f);
 
     m_sprite.setPosition(position);
 
     m_sprite.scale(scale, scale);// need to make func
 
-    cout << "scale x: " << m_sprite.getScale().x << " y: " << m_sprite.getScale().y << endl;
+    //cout << "scale x: " << m_sprite.getScale().x << " y: " << m_sprite.getScale().y << endl;
 
-    cout << "origin x: " << m_sprite.getOrigin().x << " y: " << m_sprite.getOrigin().y << endl;
-
-
+    //cout << "origin x: " << m_sprite.getOrigin().x << " y: " << m_sprite.getOrigin().y << endl;
 }
+
+
 
 bool GameObject::checkCollision(const GameObject& gameObject)
 {
