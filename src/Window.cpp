@@ -27,6 +27,11 @@ void Window::display()
 	m_window.clear(sf::Color(34, 20, 26));
 }
 
+sf::Vector2f Window::calculatePos(const char tag)
+{
+	return m_board.calculatePos(tag);
+}
+
 void Window::displayBoard()
 {
     m_board.display(m_window);
