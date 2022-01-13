@@ -53,6 +53,23 @@ void Moving::move(const Direction dir, float deltaTime, sf::Vector2f& moveDirect
     m_sprite.move(direction * speed * deltaTime);
 }
 
+void Moving::handleCollision(GameObject& gameObject)
+{
+    gameObject.handleCollision(*this);
+}
+
+void Moving::handleCollision(Static& staticObject, const sf::Vector2f moveDirection)
+{
+    staticObject.handleCollision(*this, moveDirection);
+}
+
+
+//	collision with wall
+//void Moving::handleCollision(Wall& wall, const sf::Vector2f moveDirection)
+//{
+//
+//}
+
 
 
 bool Moving::getDirection() const

@@ -6,6 +6,7 @@
 class Mage;
 class Wall;
 class Moving;
+class Player;
 
 using std::string;
 
@@ -19,13 +20,16 @@ public:
                const float animTime=0.17,const float scale=0, string imagePath="");
 
      void updateAndDraw(const int row,float deltaTime,sf::RenderWindow& window);
-     void setLocation(const float x, const float y);
+     void setLocation(const sf::Vector2f position);
      sf::Vector2<float> getLocation() const;
 
      bool checkCollision(const GameObject& gameObject);
 
+
+     virtual void handleCollision(Moving& moving, const sf::Vector2f moveDirection) = 0;
+     virtual void handleCollision(GameObject& gameobject) = 0;
+
      virtual void handleCollision(Mage& mage, const sf::Vector2f moveDirection) = 0;
-     virtual void handleCollision(Wall& wall, const sf::Vector2f moveDirection) = 0;
 
      sf::Sprite getSprite() const;
 
