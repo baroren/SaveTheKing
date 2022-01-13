@@ -33,10 +33,9 @@ MainMenu::MainMenu() {
     m_buttons.push_back(new Button(680, 460, 150, 50, &this->m_font, "Quit",
                                    sf::Color(70, 70, 70, 200), sf::Color(70, 3, 150, 200),
                                    sf::Color(70, 20, 20, 200)));
-
-    //m_gameObjects.push_back(new Mage(1000.f, 350.f, 1, 3, 0.17, 10,"W_Red_Idle_SPR.png", false));
-    //m_gameObjects.push_back(new Orc(230.f, 300.f, 1, 4, 0.17, 12,true, "skeleton2_v2.png"));
-    //m_gameObjects.push_back(new Orc(80.f, 300.f, 1, 4, 0.17, 13,true, "skull.png"));
+    m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(100,200), 1, 3, 0.17, 5, "Dwarf.png", true));
+   m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(900,300), 2, 4, 0.17, 5, "King.png", false));
+    m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(100,400) ,1, 3, 0.17, 5, "Mage.png", true));
 
 }
 

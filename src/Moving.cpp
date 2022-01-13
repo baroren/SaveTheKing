@@ -8,7 +8,7 @@ using std::endl;
 using std::cout;
 
 Moving::Moving(const sf::Vector2f position, const int numOfAnim, const int numOfFrames, const float animTime,
-                const float scale, const string imagePath, const bool isFacedRight)
+               const float scale, const string imagePath, const bool isFacedRight)
     :GameObject(position, numOfAnim, numOfFrames, animTime, scale, imagePath), m_isFacedRight(isFacedRight) {}
 
 void Moving::move(const Direction dir, float deltaTime, sf::Vector2f& moveDirection)

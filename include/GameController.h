@@ -32,7 +32,7 @@ private:
     Clock *m_clock;
 	void handleCollision(Moving& movingObject, const sf::Vector2f moveDirection);
     sf:: Font m_font;
-
+    vector<Button*> m_buttons;
    sf::Text m_timer;
 //		vector of the player objects (mage, king etc)
 	vector <unique_ptr<Player>> m_players;
