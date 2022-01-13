@@ -93,7 +93,7 @@ void GameController::run()
             cout<<"event.type"<<event.type<<endl;
 
         cout <<sf::Event::TextEntered<<endl;
-        cout <<sf::Keyboard::K<<":"<<event.key.code<<endl;
+        cout <<sf::Keyboard::K<<":"<<event.text.unicode<<endl;
 
             switch(event.type) {
                 case sf::Event::KeyReleased: {
