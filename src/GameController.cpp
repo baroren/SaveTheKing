@@ -52,25 +52,14 @@ void GameController::run()
     sf::Vector2f moveDirection;
     m_clock =new Clock(80);
     m_clock->reset();
-	while (m_window.isOpen())
-	{
+	while (m_window.isOpen()) {
 
         m_window.getWindow().clear(sf::Color(34, 20, 26));
 
 
-        sf::Event event;
-
         deltaTime = clock.restart().asSeconds();
         m_timer.setString(m_clock->countDown());
-       cout <<m_clock->countDown()<<endl;
-        while (m_window.getWindow().pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                m_window.close();
 
-        }
-
-        handleKey(deltaTime, key, moveDirection);
 
         for (int i = 0; i < 3; i++) {
             m_window.getWindow().draw(m_buttons[i]->render());
@@ -80,30 +69,52 @@ void GameController::run()
         }
 
 
-
-            for (auto& currentPlayer : m_players)
-        {
+        for (auto &currentPlayer: m_players) {
             handleCollision(*currentPlayer, moveDirection);
         }
 
         m_window.displayBoard();
 
-        for (int i = 0; i < m_players.size(); i++)
-        {
+        for (int i = 0; i < m_players.size(); i++) {
             if (i != key)
                 m_players[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
         m_players[key]->updateAndDraw(0, deltaTime, m_window.getWindow());
-        for (int i = 0; i < m_static.size(); i++)
-        {
+        for (int i = 0; i < m_static.size(); i++) {
             m_static[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
         m_players_show[key]->updateAndDraw(0, deltaTime, m_window.getWindow());
 
         m_window.drawText(m_timer);
         m_window.display();
+       sf::Event event;
+        if (m_window.getWindow().pollEvent(event))
+        {
+            cout<<"event.type"<<event.type<<endl;
 
-	}
+        cout <<sf::Event::TextEntered<<endl;
+        cout <<sf::Keyboard::K<<":"<<event.key.code<<endl;
+
+            switch(event.type) {
+                case sf::Event::KeyReleased: {
+
+                    if (event.key.code == sf::Keyboard::K) {
+                        (key == m_players.size() - 1) ? key = 0 : key++;
+                        std::cout << "the escape key was pressed" << std::endl;
+                    }
+                    break;
+                }
+
+                case sf::Event::Closed: {
+                    m_window.close();
+                    break;
+                }
+            }
+
+        }
+        handleKey(deltaTime, key, moveDirection);
+    }
+
 }
 
 //void GameController::storeTeleproters()
