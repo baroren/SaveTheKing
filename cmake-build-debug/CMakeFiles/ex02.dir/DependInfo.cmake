@@ -30,6 +30,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/bar/Documents/school/yearB/project_oop/src/Player.cpp" "/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles/ex02.dir/src/Player.cpp.o"
   "/Users/bar/Documents/school/yearB/project_oop/src/Static.cpp" "/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles/ex02.dir/src/Static.cpp.o"
   "/Users/bar/Documents/school/yearB/project_oop/src/SubTime.cpp" "/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles/ex02.dir/src/SubTime.cpp.o"
+  "/Users/bar/Documents/school/yearB/project_oop/src/Teleporter.cpp" "/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles/ex02.dir/src/Teleporter.cpp.o"
   "/Users/bar/Documents/school/yearB/project_oop/src/Thief.cpp" "/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles/ex02.dir/src/Thief.cpp.o"
   "/Users/bar/Documents/school/yearB/project_oop/src/Throne.cpp" "/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles/ex02.dir/src/Throne.cpp.o"
   "/Users/bar/Documents/school/yearB/project_oop/src/Wall.cpp" "/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles/ex02.dir/src/Wall.cpp.o"

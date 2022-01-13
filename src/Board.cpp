@@ -28,6 +28,7 @@ Board::Board(int rowNum, int colNum)
 	}
 
 	inputFile >> m_rowNum >> m_colNum;       //stores board size from file input
+    m_upperLeftDot=sf::Vector2f(((14-m_colNum+1)/2)*SQUARE,SQUARE);
 
 	inputFile.ignore();
 

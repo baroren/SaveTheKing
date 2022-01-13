@@ -657,6 +657,30 @@ src/SubTime.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/SubTime.cpp.s
 .PHONY : src/SubTime.cpp.s
 
+src/Teleporter.o: src/Teleporter.cpp.o
+.PHONY : src/Teleporter.o
+
+# target to build an object file
+src/Teleporter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Teleporter.cpp.o
+.PHONY : src/Teleporter.cpp.o
+
+src/Teleporter.i: src/Teleporter.cpp.i
+.PHONY : src/Teleporter.i
+
+# target to preprocess a source file
+src/Teleporter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Teleporter.cpp.i
+.PHONY : src/Teleporter.cpp.i
+
+src/Teleporter.s: src/Teleporter.cpp.s
+.PHONY : src/Teleporter.s
+
+# target to generate assembly for a file
+src/Teleporter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Teleporter.cpp.s
+.PHONY : src/Teleporter.cpp.s
+
 src/Thief.o: src/Thief.cpp.o
 .PHONY : src/Thief.o
 
@@ -876,6 +900,9 @@ help:
 	@echo "... src/SubTime.o"
 	@echo "... src/SubTime.i"
 	@echo "... src/SubTime.s"
+	@echo "... src/Teleporter.o"
+	@echo "... src/Teleporter.i"
+	@echo "... src/Teleporter.s"
 	@echo "... src/Thief.o"
 	@echo "... src/Thief.i"
 	@echo "... src/Thief.s"

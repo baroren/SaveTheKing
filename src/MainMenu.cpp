@@ -20,17 +20,17 @@ MainMenu::MainMenu() {
 
 
     m_help.setTexture(m_helpTex);
-    m_titles.push_back(makeTitle(72, "Save  The  King",680.f,150.f));
-    m_titles.push_back(makeTitle(32, "Dungeon  Edition",680.f,210.f));
+    m_titles.push_back(makeTitle(72, "Save  The  King",700.f,150.f));
+    m_titles.push_back(makeTitle(32, "Dungeon  Edition",700.f,210.f));
 
 
-    m_buttons.push_back(new Button(680, 300, 150, 50, &this->m_font, "New Game",
+    m_buttons.push_back(new Button(700, 300, 150, 50, &this->m_font, "New Game",
                                    sf::Color(70, 70, 70, 200), sf::Color(70, 3, 150, 200),
                                    sf::Color(70, 20, 20, 200)));
-    m_buttons.push_back(new Button(680, 380, 150, 50, &this->m_font, "Help",
+    m_buttons.push_back(new Button(700, 380, 150, 50, &this->m_font, "Help",
                                    sf::Color(70, 70, 70, 200), sf::Color(70, 3, 150, 200),
                                    sf::Color(70, 20, 20, 200)));
-    m_buttons.push_back(new Button(680, 460, 150, 50, &this->m_font, "Quit",
+    m_buttons.push_back(new Button(700, 460, 150, 50, &this->m_font, "Quit",
                                    sf::Color(70, 70, 70, 200), sf::Color(70, 3, 150, 200),
                                    sf::Color(70, 20, 20, 200)));
     m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(100,200), 1, 3, 0.17, 5, "Dwarf.png", true));

@@ -43,7 +43,9 @@ private:
    sf::Text m_timer;
 //		vector of the player objects (mage, king etc)
 	vector <unique_ptr<Player>> m_players;
-//		vector of all dwarves in the game
+    vector <unique_ptr<Player>> m_players_show;
+
+    //		vector of all dwarves in the game
 	vector <unique_ptr<Dwarf>> m_dwarves;	
 //		vector of walls, gates, orc, keys, fire, gifts and throne
 	vector <unique_ptr<Static>> m_static;

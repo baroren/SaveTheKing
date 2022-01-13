@@ -30,7 +30,7 @@ private:
     sf::Texture m_boardTexture; //temp
     sf::RectangleShape m_sprite;//temp
 //		default upper left dot, depends on SQUARE. currently is 400 200
-	const sf::Vector2f m_upperLeftDot = sf::Vector2f(4 * SQUARE, SQUARE);
+	 sf::Vector2f m_upperLeftDot;
 	int m_rowNum, m_colNum;
 
 	vector<string> m_btsBoard;

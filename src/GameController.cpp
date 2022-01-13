@@ -15,6 +15,10 @@ GameController::GameController() {
     m_players.push_back(make_unique<Thief>(m_window.calculatePos('T'), 1, 3, 0.17, 3, "Thief.png", true));
 
 
+    m_players_show.push_back(make_unique<King>(sf::Vector2f(100 ,800), 2, 4, 0.17, 5, "King.png", true));
+    m_players_show.push_back(make_unique<Mage>(sf::Vector2f(100 ,800), 1, 3, 0.17, 5, "Mage.png", false));
+    m_players_show.push_back(make_unique<Warrior>(sf::Vector2f(100 ,800), 1, 3, 0.17, 5, "Warrior.png", false));
+    m_players_show.push_back(make_unique<Thief>(sf::Vector2f(100 ,800), 1, 3, 0.17, 5, "Thief.png", true));
 
     if (!m_font.loadFromFile("arcadeClassic.ttf")) {
         // error...
@@ -63,6 +67,7 @@ void GameController::run()
         {
             if (event.type == sf::Event::Closed)
                 m_window.close();
+
         }
 
         handleKey(deltaTime, key, moveDirection);
@@ -89,15 +94,14 @@ void GameController::run()
                 m_players[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
         m_players[key]->updateAndDraw(0, deltaTime, m_window.getWindow());
-
         for (int i = 0; i < m_static.size(); i++)
         {
             m_static[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
+        m_players_show[key]->updateAndDraw(0, deltaTime, m_window.getWindow());
+
         m_window.drawText(m_timer);
         m_window.display();
-
-
 
 	}
 }

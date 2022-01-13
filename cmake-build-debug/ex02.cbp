@@ -138,6 +138,9 @@
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/SubTime.h">
 			<Option target="ex02"/>
 		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Teleporter.h">
+			<Option target="ex02"/>
+		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Thief.h">
 			<Option target="ex02"/>
 		</Unit>
@@ -219,6 +222,9 @@
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/SubTime.cpp">
 			<Option target="ex02"/>
 		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Teleporter.cpp">
+			<Option target="ex02"/>
+		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Thief.cpp">
 			<Option target="ex02"/>
 		</Unit>
@@ -286,6 +292,15 @@
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/King.png">
+			<Option virtualFolder="CMake Files\resources\"/>
+		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/Level_1.txt">
+			<Option virtualFolder="CMake Files\resources\"/>
+		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/Level_2.txt">
+			<Option virtualFolder="CMake Files\resources\"/>
+		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/Level_3.txt">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/Mage.png">
