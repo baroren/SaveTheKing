@@ -129,6 +129,12 @@ void GameController::run()
             if (event.type == sf::Event::MouseButtonPressed) {
                 if (event.mouseButton.button == sf::Mouse::Left) {
                     if(  m_menu.handleClick(m_window.getWindow().
+                            mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==0) {
+                        cout<<"run";
+                        run();
+
+                    }
+                    if(  m_menu.handleClick(m_window.getWindow().
                       mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==2)
                         m_mainMenu.run(m_window.getWindow());
 
@@ -143,7 +149,6 @@ void GameController::run()
 
                     if (event.key.code == sf::Keyboard::K) {
                         (key == m_players.size() - 1) ? key = 0 : key++;
-                        std::cout << "the escape key was pressed" << std::endl;
                     }
                     if (event.key.code == sf::Keyboard::T) {
                         //          check collisions special for the player objects (throne, teleporters etc)
@@ -222,6 +227,7 @@ void GameController::handleCollision(const int key)
         if (m_players[key]->checkCollision(*teleporter))
         {
             m_players[key]->handleCollision(*teleporter);
+            return;
         }
     }
 }

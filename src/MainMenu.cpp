@@ -20,9 +20,12 @@ MainMenu::MainMenu() {
     m_menu.createButton("NewGame",700,300);
     m_menu.createButton("Help",700,380);
     m_menu.createButton("Quit",700,460);
-    m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(100,200), 1, 3, 0.17, 5, "Dwarf.png", true));
-   m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(900,300), 2, 4, 0.17, 5, "King.png", false));
-    m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(100,400) ,1, 3, 0.17, 5, "Mage.png", true));
+    m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(300,600), 1, 3, 0.17, 5, "Dwarf.png", true));
+   m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(300,300), 2, 4, 0.17, 5, "King.png", false));
+    m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(300,400) ,1, 3, 0.17, 5, "Mage.png", true));
+    m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(300,500) ,1, 3, 0.17, 5, "Warrior.png", true));
+    m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(950,210) ,1, 3, 0.17, 5, "Fire.png", true));
+
 
 }
 

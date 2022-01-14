@@ -15,7 +15,7 @@ Menu::Menu(){
 
     m_help.setTexture(m_helpTex);
     m_help.setOrigin(sf::Vector2f(m_help.getGlobalBounds().width / 2.f, m_help.getGlobalBounds().height / 2.f));
-    m_help.setPosition(sf::Vector2f(700.f, 350.f));
+    m_help.setPosition(sf::Vector2f(700.f, 450.f));
     m_help.setScale(1.5, 1.5);
     m_helpPressed =false;
     /* m_buttons.push_back(new Button(700, 300, 150, 50, &this->m_font, "New Game",
@@ -53,8 +53,10 @@ int Menu::handleClick(sf::Vector2f mousePos,sf::RenderWindow& window)
 for(int i=0; i<m_buttons.size();i++)
 {
     if(i!=1)
-        if(checkBt(i, mousePos, window))
+        if(checkBt(i, mousePos, window)) {
+            std::cout << i<<std::endl;
             return i;
+        }
     if(i==1)
     {
         std::cout<<"Help";
