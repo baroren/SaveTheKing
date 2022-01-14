@@ -14,7 +14,7 @@ void Window::display()
 
 	m_window.display();
 
-	if (sf::Event event; m_window.pollEvent(event))
+/*	if (sf::Event event; m_window.pollEvent(event))
 	{
 		switch (event.type)
 		{
@@ -23,7 +23,7 @@ void Window::display()
 			break;
 		}
 	}
-
+*/
 	m_window.clear(sf::Color(34, 20, 26));
 }
 

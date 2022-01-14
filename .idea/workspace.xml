@@ -11,25 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38447bec-1481-48d5-b9f9-a5a2745a32ca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Dwarf.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Dwarf.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/GameController.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/GameController.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Mage.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Mage.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/MainMenu.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/MainMenu.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Wall.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Wall.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ex02" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ex02" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Dwarf.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Dwarf.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/GameController.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/GameController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/MainMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/MainMenu.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Moving.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Moving.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Player.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Moving.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Moving.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="38447bec-1481-48d5-b9f9-a5a2745a32ca" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +31,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -206,7 +187,35 @@
       <option name="project" value="LOCAL" />
       <updated>1642085417921</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="working clock with sub and add time func">
+      <created>1642094358827</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1642094358827</updated>
+    </task>
+    <task id="LOCAL-00015" summary="working clock with sub and add time func">
+      <created>1642097122183</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1642097122183</updated>
+    </task>
+    <task id="LOCAL-00016" summary="working clock with sub and add time func">
+      <created>1642102952493</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1642102952493</updated>
+    </task>
+    <task id="LOCAL-00017" summary="charecter switch working">
+      <created>1642105497491</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1642105497491</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +270,7 @@
     <MESSAGE value="board , window and game controller should be good, &#10;dont know whay but double dis not compiling" />
     <MESSAGE value="working clock" />
     <MESSAGE value="working clock with sub and add time func" />
-    <option name="LAST_COMMIT_MESSAGE" value="working clock with sub and add time func" />
+    <MESSAGE value="charecter switch working" />
+    <option name="LAST_COMMIT_MESSAGE" value="charecter switch working" />
   </component>
 </project>

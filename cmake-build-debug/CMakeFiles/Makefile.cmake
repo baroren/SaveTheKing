@@ -50,6 +50,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../resources/Help.png"
   "../resources/Key.png"
   "../resources/King.png"
+  "../resources/Level_1.txt"
+  "../resources/Level_2.txt"
+  "../resources/Level_3.txt"
   "../resources/Mage.png"
   "../resources/Map.png"
   "../resources/Spr_Villager_Idle.png"
@@ -96,6 +99,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "Gift2.png"
   "Teleport.png"
   "Gate.png"
+  "Level_1.txt"
+  "Level_2.txt"
+  "Level_3.txt"
   "resources/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

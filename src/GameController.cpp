@@ -15,12 +15,17 @@ GameController::GameController() {
     m_players.push_back(make_unique<Thief>(m_window.calculatePos('T'), 1, 3, 0.17, 3, "Thief.png", true));
 
 
+    m_players_show.push_back(make_unique<King>(sf::Vector2f(100 ,800), 2, 4, 0.17, 5, "King.png", true));
+    m_players_show.push_back(make_unique<Mage>(sf::Vector2f(100 ,800), 1, 3, 0.17, 5, "Mage.png", false));
+    m_players_show.push_back(make_unique<Warrior>(sf::Vector2f(100 ,800), 1, 3, 0.17, 5, "Warrior.png", false));
+    m_players_show.push_back(make_unique<Thief>(sf::Vector2f(100 ,800), 1, 3, 0.17, 5, "Thief.png", true));
     m_blockObjects.push_back(make_unique<Wall>(m_window.calculatePos('='), 1, 4, 0.17, 3, "skeleton2_v2.png"));
 
     storeTeleproters();
 
     //cout << m_teleporters[1]->getLinkdedTeleporter()->getLocation().x << ' ' << m_teleporters[1]->getLinkdedTeleporter()->getLocation().y << endl;
     //cout << m_teleporters[0]->getLinkdedTeleporter()->getLocation().x << ' ' << m_teleporters[0]->getLinkdedTeleporter()->getLocation().y;
+
 
     if (!m_font.loadFromFile("arcadeClassic.ttf")) {
         // error...
@@ -54,24 +59,15 @@ void GameController::run()
     sf::Vector2f moveDirection;
     m_clock =new Clock(80);
     m_clock->reset();
-	while (m_window.isOpen())
-	{
+	while (m_window.isOpen()) {
 
         m_window.getWindow().clear(sf::Color(34, 20, 26));
 
 
-        sf::Event event;
-
         deltaTime = clock.restart().asSeconds();
         m_timer.setString(m_clock->countDown());
-//       cout <<m_clock->countDown()<<endl;
-        while (m_window.getWindow().pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                m_window.close();
-        }
 
-        handleKey(deltaTime, key, moveDirection);
+
 
         for (int i = 0; i < 3; i++) {
             m_window.getWindow().draw(m_buttons[i]->render());
@@ -80,9 +76,10 @@ void GameController::run()
             m_buttons[i]->update(m_window.getWindow().mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())));
         }
 
-//          check collisions with any blocking object
+
         for (auto& currentPlayer : m_players)
         {
+
             handleCollision(*currentPlayer, moveDirection);
         }
 
@@ -93,6 +90,8 @@ void GameController::run()
         }
 
         m_window.displayBoard();
+
+
 
 //          draw all teleporters
         for (int i = 0; i < m_teleporters.size(); i++)
@@ -109,18 +108,50 @@ void GameController::run()
 //          draw all players
         for (int i = 0; i < m_players.size(); i++)
         {
+
             if (i != key)
                 m_players[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
         m_players[key]->updateAndDraw(0, deltaTime, m_window.getWindow());
 
+        for (int i = 0; i < m_static.size(); i++) {
+            m_static[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
+        }
+        m_players_show[key]->updateAndDraw(0, deltaTime, m_window.getWindow());
+
+
+
 
         m_window.drawText(m_timer);
         m_window.display();
+       sf::Event event;
+        if (m_window.getWindow().pollEvent(event))
+        {
+            cout<<"event.type"<<event.type<<endl;
 
+        cout <<sf::Event::TextEntered<<endl;
+        cout <<sf::Keyboard::K<<":"<<event.text.unicode<<endl;
 
+            switch(event.type) {
+                case sf::Event::KeyReleased: {
 
-	}
+                    if (event.key.code == sf::Keyboard::K) {
+                        (key == m_players.size() - 1) ? key = 0 : key++;
+                        std::cout << "the escape key was pressed" << std::endl;
+                    }
+                    break;
+                }
+
+                case sf::Event::Closed: {
+                    m_window.close();
+                    break;
+                }
+            }
+
+        }
+        handleKey(deltaTime, key, moveDirection);
+    }
+
 }
 
 void GameController::storeTeleproters()
