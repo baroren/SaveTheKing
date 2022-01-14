@@ -7,16 +7,20 @@ using std::cout;
 using std::endl;
 
 
-//	collision with a moving object
-void Wall::handleCollision(Moving& moving, const sf::Vector2f moveDirection)
+
+void Wall::handleCollision(Player& player)
 {
 	cout << "i am wall, a moving object collided with me" << endl;
 
-//	moving.getSprite().move(sf::Vector2f(moveDirection.x * -1, moveDirection.y * -1));
+	sf::Vector2f newPos(player.getLocation().x - player.getMoveDirection().x,
+						player.getLocation().y - player.getMoveDirection().y);
 
-	sf::Vector2f newPos(moving.getLocation().x - moveDirection.x, moving.getLocation().y - moveDirection.y);
+	player.setLocation(newPos);
+}
 
-	moving.setLocation(newPos);
+void Wall::handleCollision(Dwarf& dwarf)
+{
+	dwarf.invertMove();
 }
 
 //	wall cannot collide with wall so do nothing

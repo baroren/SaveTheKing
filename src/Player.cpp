@@ -19,3 +19,9 @@ void Player::handleCollision(Teleporter& teleporter)
 	}
 }
 
+ void Player::handleCollision(Static& staticObject)
+{
+	 staticObject.handleCollision(*this);
+}
+
+

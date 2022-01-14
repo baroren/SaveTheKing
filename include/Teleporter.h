@@ -10,12 +10,16 @@ public:
 
 	using Static::Static;
 
-	virtual void handleCollision(Moving& moving, const sf::Vector2f moveDirection)override {};
-	virtual void handleCollision(GameObject& gameobject) override {};
-//	virtual void handleCollision(Player& player, const sf::Vector2f moveDirection) {};
-	virtual void handleCollision(Mage& mage, const sf::Vector2f moveDirection) override {};
+
+	virtual void handleCollision(Player& player)override {};
+	virtual void handleCollision(Mage& mage) override {};
+	virtual void handleCollision(Dwarf& dwarf) override {};
+
+
 
 	void setLinkedTeleporter(Teleporter& const otherTeleporter);
+
+
 
 	Teleporter* getLinkdedTeleporter() const;
 

@@ -1,7 +1,10 @@
 #pragma once
 
 #include "Static.h"
-#include "Mage.h"
+#include "Player.h"
+#include "Dwarf.h"
+
+class Mage;
 
 class Wall : public Static {
 
@@ -10,10 +13,10 @@ public:
 	using Static::Static;
 
 
-	virtual void handleCollision(Moving& moving, const sf::Vector2f moveDirection)override;
-	virtual void handleCollision(GameObject& gameobject) override {};
+	virtual void handleCollision(Player& player)override;
+	virtual void handleCollision(Dwarf& dwarf)override;
 
-	virtual void handleCollision(Mage& mage, const sf::Vector2f moveDirection) override {};
+	virtual void handleCollision(Mage& mage) override {};
 
 
 private:

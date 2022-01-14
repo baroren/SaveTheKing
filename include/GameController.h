@@ -38,14 +38,14 @@ private:
 	Window m_window;
     Clock *m_clock;
 
-//  handles collision that have the same affect on the moving object
-	void handleCollision(Moving& movingObject, const sf::Vector2f moveDirection);
+//  handles collision that have a block affect on the moving object
+	void handleCollision(Moving& movingObject);
 
-//  handle collisions special for the player objects (throne, teleporters etc)
+//  handle collisions of current player with static objects special for the player (throne, teleporters, key)
 	void handleCollision(const int key);
     sf:: Font m_font;
     vector<Button*> m_buttons;
-   sf::Text m_timer;
+	sf::Text m_timer;
 //		vector of the player objects (mage, king etc)
 	vector <unique_ptr<Player>> m_players;
 //		vector of all dwarves in the game
@@ -53,9 +53,8 @@ private:
 
 //	vector of static objects that block the moving objects (wall, fire, gate, orc)
 	vector <unique_ptr<Static>> m_blockObjects;
-//		vector of walls, gates, orc, keys, fire, gifts and throne
+//		vector of other static objects that affect only the player objects (throne, key)
 	vector <unique_ptr<Static>> m_static;
 //		vector of all teleports
-//		lists of size 2 vectors, each pair of teleports link together
 	vector <unique_ptr<Teleporter>> m_teleporters;
 };

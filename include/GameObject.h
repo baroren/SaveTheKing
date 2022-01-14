@@ -3,10 +3,16 @@
 #include <string>
 #include "Animation.h"
 
+#include <iostream>
+
+using std::cout;
+using std::endl;
+
 class Mage;
 class Wall;
 class Moving;
 class Player;
+class Dwarf;
 
 using std::string;
 
@@ -25,11 +31,13 @@ public:
 
      bool checkCollision(const GameObject& gameObject);
 
+     void handleCollision(GameObject& gameobject) { cout << "unknown object" << endl; };
 
-     virtual void handleCollision(Moving& moving, const sf::Vector2f moveDirection) = 0;
-     virtual void handleCollision(GameObject& gameobject) = 0;
+     virtual void handleCollision(Player& player) = 0;
+     virtual void handleCollision(Dwarf& Dwarf) = 0;
 
-     virtual void handleCollision(Mage& mage, const sf::Vector2f moveDirection) = 0;
+
+     virtual void handleCollision(Mage& mage) = 0;
 
      sf::Sprite getSprite() const;
 
