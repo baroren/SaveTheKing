@@ -11,13 +11,8 @@ GameObject::GameObject(const const sf::Vector2f position, const int numOfAnim,
                        :m_imagePath(imagePath)
 
 {
-    if (!m_texture.loadFromFile(m_imagePath))
-    {
-        // error...
-        std::cout<<"error loading font";
 
-    }
-    m_sprite.setTexture(m_texture);
+    m_sprite.setTexture(texture);
     m_animation =new Animation(&m_texture,sf::Vector2u(numOfFrames,numOfAnim),animTime);
 
     m_sprite.setOrigin(m_sprite.getGlobalBounds().width/(numOfFrames) /2.f,m_sprite.getGlobalBounds().height / (numOfAnim) /2.f);

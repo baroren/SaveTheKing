@@ -12,17 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38447bec-1481-48d5-b9f9-a5a2745a32ca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/include/Resources.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Resources.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/GameController.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/GameController.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/MainMenu.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/MainMenu.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Menu.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Menu.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Help.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Help.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ex02" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ex02" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Help.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Help.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Level_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Level_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameObject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameObject.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="working_menu" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -107,7 +101,7 @@
       <workItem from="1640539423876" duration="9652000" />
       <workItem from="1641212744347" duration="5000" />
       <workItem from="1641930807466" duration="3819000" />
-      <workItem from="1642180498426" duration="11927000" />
+      <workItem from="1642180498426" duration="15735000" />
     </task>
     <task id="LOCAL-00001" summary="added main menu">
       <created>1640361808874</created>
@@ -242,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642193480551</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="working teleport">
+      <created>1642194960393</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1642194960393</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,6 +300,7 @@
     <MESSAGE value="working clock with sub and add time func" />
     <MESSAGE value="charecter switch working" />
     <MESSAGE value="improved menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved menu" />
+    <MESSAGE value="working teleport" />
+    <option name="LAST_COMMIT_MESSAGE" value="working teleport" />
   </component>
 </project>
