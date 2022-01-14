@@ -8,7 +8,6 @@ class Player : public Moving {
 public:
 
     using Moving::Moving;
-
     void handleCollision(Teleporter& teleport);
 
 

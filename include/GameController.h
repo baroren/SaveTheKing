@@ -2,7 +2,7 @@
 
 #include <vector>
 #include <memory>
-
+#include "Menu.h"
 #include "Window.h"
 #include "GameObject.h"
 #include "MainMenu.h"
@@ -44,11 +44,14 @@ private:
 //  handle collisions special for the player objects (throne, teleporters etc)
 	void handleCollision(const int key);
     sf:: Font m_font;
-    vector<Button*> m_buttons;
+    Menu m_menu;
    sf::Text m_timer;
+   sf::RectangleShape m_currPlayer;
 //		vector of the player objects (mage, king etc)
 	vector <unique_ptr<Player>> m_players;
-
+    vector <unique_ptr<Player>> m_playerShow;
+//	vector of static objects that block the moving objects (wall, fire, gate, orc)
+    vector <unique_ptr<Static>> m_blockObjects;
 //		vector of walls, gates, orc, keys, fire, gifts and throne
 	vector <unique_ptr<Static>> m_static;
 //		vector of all teleports

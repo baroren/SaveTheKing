@@ -7,7 +7,7 @@
 using std::cout;
 using std::endl;
 
-void Teleporter::setLinkedTeleporter(Teleporter& const otherTeleporter)
+void Teleporter::setLinkedTeleporter(Teleporter&  otherTeleporter)
 {
 	m_linkedTeleporter = &otherTeleporter;
 }

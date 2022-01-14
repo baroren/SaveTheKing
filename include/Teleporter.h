@@ -15,7 +15,7 @@ public:
 //	virtual void handleCollision(Player& player, const sf::Vector2f moveDirection) {};
 	virtual void handleCollision(Mage& mage, const sf::Vector2f moveDirection) override {};
 
-	void setLinkedTeleporter(Teleporter& const otherTeleporter);
+	void setLinkedTeleporter(Teleporter&  otherTeleporter);
 
 	Teleporter* getLinkdedTeleporter() const;
 

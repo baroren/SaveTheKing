@@ -493,6 +493,7 @@ CMakeFiles/ex02.dir/src/Dwarf.cpp.o: \
  ../include/Dwarf.h \
  ../include/GameObject.h \
  ../include/Moving.h \
+ ../include/Static.h \
  ../src/Dwarf.cpp \
  /usr/local/include/SFML/Config.hpp \
  /usr/local/include/SFML/Graphics.hpp \
@@ -660,6 +661,7 @@ CMakeFiles/ex02.dir/src/GameController.cpp.o: \
  ../include/King.h \
  ../include/Mage.h \
  ../include/MainMenu.h \
+ ../include/Menu.h \
  ../include/Moving.h \
  ../include/Orc.h \
  ../include/Player.h \
@@ -1085,6 +1087,7 @@ CMakeFiles/ex02.dir/src/King.cpp.o: \
  ../include/King.h \
  ../include/Moving.h \
  ../include/Player.h \
+ ../include/Static.h \
  ../src/King.cpp \
  /usr/local/include/SFML/Config.hpp \
  /usr/local/include/SFML/Graphics.hpp \
@@ -1245,14 +1248,17 @@ CMakeFiles/ex02.dir/src/Mage.cpp.o: \
  /usr/local/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/ex02.dir/src/MainMenu.cpp.o: \
  ../include/Animation.h \
+ ../include/Board.h \
  ../include/Button.h \
  ../include/GameObject.h \
  ../include/Mage.h \
  ../include/MainMenu.h \
+ ../include/Menu.h \
  ../include/Moving.h \
  ../include/Orc.h \
  ../include/Player.h \
  ../include/Static.h \
+ ../include/Window.h \
  ../src/MainMenu.cpp \
  /usr/local/include/SFML/Audio.hpp \
  /usr/local/include/SFML/Audio/AlResource.hpp \
@@ -1346,11 +1352,107 @@ CMakeFiles/ex02.dir/src/MainMenu.cpp.o: \
  /usr/local/include/SFML/Window/WindowHandle.hpp \
  /usr/local/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/ex02.dir/src/Menu.cpp.o: \
- ../src/Menu.cpp
+ ../include/Board.h \
+ ../include/Button.h \
+ ../include/Menu.h \
+ ../include/Window.h \
+ ../src/Menu.cpp \
+ /usr/local/include/SFML/Audio.hpp \
+ /usr/local/include/SFML/Audio/AlResource.hpp \
+ /usr/local/include/SFML/Audio/Export.hpp \
+ /usr/local/include/SFML/Audio/InputSoundFile.hpp \
+ /usr/local/include/SFML/Audio/Listener.hpp \
+ /usr/local/include/SFML/Audio/Music.hpp \
+ /usr/local/include/SFML/Audio/OutputSoundFile.hpp \
+ /usr/local/include/SFML/Audio/Sound.hpp \
+ /usr/local/include/SFML/Audio/SoundBuffer.hpp \
+ /usr/local/include/SFML/Audio/SoundBufferRecorder.hpp \
+ /usr/local/include/SFML/Audio/SoundFileFactory.hpp \
+ /usr/local/include/SFML/Audio/SoundFileFactory.inl \
+ /usr/local/include/SFML/Audio/SoundFileReader.hpp \
+ /usr/local/include/SFML/Audio/SoundFileWriter.hpp \
+ /usr/local/include/SFML/Audio/SoundRecorder.hpp \
+ /usr/local/include/SFML/Audio/SoundSource.hpp \
+ /usr/local/include/SFML/Audio/SoundStream.hpp \
+ /usr/local/include/SFML/Config.hpp \
+ /usr/local/include/SFML/Graphics.hpp \
+ /usr/local/include/SFML/Graphics/BlendMode.hpp \
+ /usr/local/include/SFML/Graphics/CircleShape.hpp \
+ /usr/local/include/SFML/Graphics/Color.hpp \
+ /usr/local/include/SFML/Graphics/ConvexShape.hpp \
+ /usr/local/include/SFML/Graphics/Drawable.hpp \
+ /usr/local/include/SFML/Graphics/Export.hpp \
+ /usr/local/include/SFML/Graphics/Font.hpp \
+ /usr/local/include/SFML/Graphics/Glsl.hpp \
+ /usr/local/include/SFML/Graphics/Glsl.inl \
+ /usr/local/include/SFML/Graphics/Glyph.hpp \
+ /usr/local/include/SFML/Graphics/Image.hpp \
+ /usr/local/include/SFML/Graphics/PrimitiveType.hpp \
+ /usr/local/include/SFML/Graphics/Rect.hpp \
+ /usr/local/include/SFML/Graphics/Rect.inl \
+ /usr/local/include/SFML/Graphics/RectangleShape.hpp \
+ /usr/local/include/SFML/Graphics/RenderStates.hpp \
+ /usr/local/include/SFML/Graphics/RenderTarget.hpp \
+ /usr/local/include/SFML/Graphics/RenderTexture.hpp \
+ /usr/local/include/SFML/Graphics/RenderWindow.hpp \
+ /usr/local/include/SFML/Graphics/Shader.hpp \
+ /usr/local/include/SFML/Graphics/Shape.hpp \
+ /usr/local/include/SFML/Graphics/Sprite.hpp \
+ /usr/local/include/SFML/Graphics/Text.hpp \
+ /usr/local/include/SFML/Graphics/Texture.hpp \
+ /usr/local/include/SFML/Graphics/Transform.hpp \
+ /usr/local/include/SFML/Graphics/Transformable.hpp \
+ /usr/local/include/SFML/Graphics/Vertex.hpp \
+ /usr/local/include/SFML/Graphics/VertexArray.hpp \
+ /usr/local/include/SFML/Graphics/VertexBuffer.hpp \
+ /usr/local/include/SFML/Graphics/View.hpp \
+ /usr/local/include/SFML/System.hpp \
+ /usr/local/include/SFML/System/Clock.hpp \
+ /usr/local/include/SFML/System/Err.hpp \
+ /usr/local/include/SFML/System/Export.hpp \
+ /usr/local/include/SFML/System/FileInputStream.hpp \
+ /usr/local/include/SFML/System/InputStream.hpp \
+ /usr/local/include/SFML/System/Lock.hpp \
+ /usr/local/include/SFML/System/MemoryInputStream.hpp \
+ /usr/local/include/SFML/System/Mutex.hpp \
+ /usr/local/include/SFML/System/NonCopyable.hpp \
+ /usr/local/include/SFML/System/Sleep.hpp \
+ /usr/local/include/SFML/System/String.hpp \
+ /usr/local/include/SFML/System/String.inl \
+ /usr/local/include/SFML/System/Thread.hpp \
+ /usr/local/include/SFML/System/Thread.inl \
+ /usr/local/include/SFML/System/ThreadLocal.hpp \
+ /usr/local/include/SFML/System/ThreadLocalPtr.hpp \
+ /usr/local/include/SFML/System/ThreadLocalPtr.inl \
+ /usr/local/include/SFML/System/Time.hpp \
+ /usr/local/include/SFML/System/Utf.hpp \
+ /usr/local/include/SFML/System/Utf.inl \
+ /usr/local/include/SFML/System/Vector2.hpp \
+ /usr/local/include/SFML/System/Vector2.inl \
+ /usr/local/include/SFML/System/Vector3.hpp \
+ /usr/local/include/SFML/System/Vector3.inl \
+ /usr/local/include/SFML/Window.hpp \
+ /usr/local/include/SFML/Window/Clipboard.hpp \
+ /usr/local/include/SFML/Window/Context.hpp \
+ /usr/local/include/SFML/Window/ContextSettings.hpp \
+ /usr/local/include/SFML/Window/Cursor.hpp \
+ /usr/local/include/SFML/Window/Event.hpp \
+ /usr/local/include/SFML/Window/Export.hpp \
+ /usr/local/include/SFML/Window/GlResource.hpp \
+ /usr/local/include/SFML/Window/Joystick.hpp \
+ /usr/local/include/SFML/Window/Keyboard.hpp \
+ /usr/local/include/SFML/Window/Mouse.hpp \
+ /usr/local/include/SFML/Window/Sensor.hpp \
+ /usr/local/include/SFML/Window/Touch.hpp \
+ /usr/local/include/SFML/Window/VideoMode.hpp \
+ /usr/local/include/SFML/Window/Window.hpp \
+ /usr/local/include/SFML/Window/WindowHandle.hpp \
+ /usr/local/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/ex02.dir/src/Moving.cpp.o: \
  ../include/Animation.h \
  ../include/GameObject.h \
  ../include/Moving.h \
+ ../include/Static.h \
  ../src/Moving.cpp \
  /usr/local/include/SFML/Config.hpp \
  /usr/local/include/SFML/Graphics.hpp \
@@ -1511,6 +1613,8 @@ CMakeFiles/ex02.dir/src/Player.cpp.o: \
  ../include/GameObject.h \
  ../include/Moving.h \
  ../include/Player.h \
+ ../include/Static.h \
+ ../include/Teleporter.h \
  ../src/Player.cpp \
  /usr/local/include/SFML/Config.hpp \
  /usr/local/include/SFML/Graphics.hpp \
@@ -1749,6 +1853,8 @@ CMakeFiles/ex02.dir/src/SubTime.cpp.o: \
 CMakeFiles/ex02.dir/src/Teleporter.cpp.o: \
  ../include/Animation.h \
  ../include/GameObject.h \
+ ../include/Moving.h \
+ ../include/Player.h \
  ../include/Static.h \
  ../include/Teleporter.h \
  ../src/Teleporter.cpp \
@@ -1831,6 +1937,7 @@ CMakeFiles/ex02.dir/src/Thief.cpp.o: \
  ../include/GameObject.h \
  ../include/Moving.h \
  ../include/Player.h \
+ ../include/Static.h \
  ../include/Thief.h \
  ../src/Thief.cpp \
  /usr/local/include/SFML/Config.hpp \
@@ -2075,6 +2182,7 @@ CMakeFiles/ex02.dir/src/Warrior.cpp.o: \
  ../include/GameObject.h \
  ../include/Moving.h \
  ../include/Player.h \
+ ../include/Static.h \
  ../include/Warrior.h \
  ../src/Warrior.cpp \
  /usr/local/include/SFML/Config.hpp \
@@ -2241,6 +2349,7 @@ CMakeFiles/ex02.dir/src/main.cpp.o: \
  ../include/King.h \
  ../include/Mage.h \
  ../include/MainMenu.h \
+ ../include/Menu.h \
  ../include/Moving.h \
  ../include/Orc.h \
  ../include/Player.h \

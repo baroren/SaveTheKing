@@ -14,14 +14,24 @@ GameController::GameController() {
     m_players.push_back(make_unique<Warrior>(m_window.calculatePos('W'), 1, 3, 0.17, 3, "Warrior.png", false));
     m_players.push_back(make_unique<Thief>(m_window.calculatePos('T'), 1, 3, 0.17, 3, "Thief.png", true));
 
+    m_currPlayer.setSize(sf::Vector2f(30, 3));
+    m_currPlayer.setOutlineColor(sf::Color::Transparent);
+    m_currPlayer.setOutlineThickness(1);
+    m_currPlayer.setOrigin(sf::Vector2f(m_currPlayer.getGlobalBounds().width-30.f,
+                                        m_currPlayer.getGlobalBounds().height-40.f));
 
-    m_players_show.push_back(make_unique<King>(sf::Vector2f(100 ,800), 2, 4, 0.17, 5, "King.png", true));
-    m_players_show.push_back(make_unique<Mage>(sf::Vector2f(100 ,800), 1, 3, 0.17, 5, "Mage.png", false));
-    m_players_show.push_back(make_unique<Warrior>(sf::Vector2f(100 ,800), 1, 3, 0.17, 5, "Warrior.png", false));
-    m_players_show.push_back(make_unique<Thief>(sf::Vector2f(100 ,800), 1, 3, 0.17, 5, "Thief.png", true));
+    m_playerShow.push_back(make_unique<King>(sf::Vector2f(100 ,800), 2, 4, 0.17, 5, "King.png", true));
+    m_playerShow.push_back(make_unique<Mage>(sf::Vector2f(100 ,800), 1, 3, 0.17, 5, "Mage.png", false));
+    m_playerShow.push_back(make_unique<Warrior>(sf::Vector2f(100 ,800), 1, 3, 0.17, 5, "Warrior.png", false));
+    m_playerShow.push_back(make_unique<Thief>(sf::Vector2f(100 ,800), 1, 3, 0.17, 5, "Thief.png", true));
     m_blockObjects.push_back(make_unique<Wall>(m_window.calculatePos('='), 1, 4, 0.17, 3, "skeleton2_v2.png"));
 
     storeTeleproters();
+    m_menu.createButton("New Game",100,150);
+    m_menu.createButton("Help",100,225);
+    m_menu.createButton("Main Menu",100,300);
+    m_menu.createButton("Quit",100,375);
+
 
     //cout << m_teleporters[1]->getLinkdedTeleporter()->getLocation().x << ' ' << m_teleporters[1]->getLinkdedTeleporter()->getLocation().y << endl;
     //cout << m_teleporters[0]->getLinkdedTeleporter()->getLocation().x << ' ' << m_teleporters[0]->getLinkdedTeleporter()->getLocation().y;
@@ -32,15 +42,7 @@ GameController::GameController() {
         std::cout << "error loading font";
 
     }
-    m_buttons.push_back(new Button(100, 150, 150, 50, &this->m_font, "New Game",
-                                   sf::Color(70, 70, 70, 200), sf::Color(70, 3, 150, 200),
-                                   sf::Color(70, 20, 20, 200)));
-    m_buttons.push_back(new Button(100, 225, 150, 50, &this->m_font, "Help",
-                                   sf::Color(70, 70, 70, 200), sf::Color(70, 3, 150, 200),
-                                   sf::Color(70, 20, 20, 200)));
-    m_buttons.push_back(new Button(100, 300, 150, 50, &this->m_font, "quit",
-                                   sf::Color(70, 70, 70, 200), sf::Color(70, 3, 150, 200),
-                                   sf::Color(70, 20, 20, 200)));
+
 
     m_timer.setFont(m_font);
     m_timer.setOrigin(sf::Vector2f(m_timer.getGlobalBounds().width / 2.f,
@@ -69,13 +71,8 @@ void GameController::run()
 
 
 
-        for (int i = 0; i < 3; i++) {
-            m_window.getWindow().draw(m_buttons[i]->render());
-            m_window.getWindow().draw(m_buttons[i]->drawText());
 
-            m_buttons[i]->update(m_window.getWindow().mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())));
-        }
-
+       // m_mainMenu.printHelp(m_window.getWindow(),m_buttons[1]);
 
         for (auto& currentPlayer : m_players)
         {
@@ -83,11 +80,7 @@ void GameController::run()
             handleCollision(*currentPlayer, moveDirection);
         }
 
-//          check collisions special for the player objects (throne, teleporters etc)
-        for (auto& currentPlayer : m_players)
-        {
-            handleCollision(key);
-        }
+
 
         m_window.displayBoard();
 
@@ -112,26 +105,38 @@ void GameController::run()
             if (i != key)
                 m_players[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
+
+        m_currPlayer.setPosition(m_players[key]->getLocation());
+
         m_players[key]->updateAndDraw(0, deltaTime, m_window.getWindow());
+        m_window.getWindow().draw(m_currPlayer);
 
         for (int i = 0; i < m_static.size(); i++) {
             m_static[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
-        m_players_show[key]->updateAndDraw(0, deltaTime, m_window.getWindow());
+
+        m_playerShow[key]->updateAndDraw(0, deltaTime, m_window.getWindow());
 
 
 
 
         m_window.drawText(m_timer);
-        m_window.display();
+        m_menu.updateBt(m_window.getWindow());
        sf::Event event;
         if (m_window.getWindow().pollEvent(event))
         {
-            cout<<"event.type"<<event.type<<endl;
 
-        cout <<sf::Event::TextEntered<<endl;
-        cout <<sf::Keyboard::K<<":"<<event.text.unicode<<endl;
-
+            if (event.type == sf::Event::MouseButtonPressed) {
+                if (event.mouseButton.button == sf::Mouse::Left) {
+                    //if(  m_menu.handleClick(m_window.getWindow().
+                    //mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==0)
+                      //  cout<<"new Game "<<endl;
+                    if(  m_menu.handleClick(m_window.getWindow().
+                    mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==3)
+                        m_mainMenu.run(m_window.getWindow());
+                    std::cout<<"yeah";
+                }
+            }
             switch(event.type) {
                 case sf::Event::KeyReleased: {
 
@@ -139,7 +144,15 @@ void GameController::run()
                         (key == m_players.size() - 1) ? key = 0 : key++;
                         std::cout << "the escape key was pressed" << std::endl;
                     }
+                    if (event.key.code == sf::Keyboard::T) {
+                        //          check collisions special for the player objects (throne, teleporters etc)
+
+                            handleCollision(key);
+
+                      cout<<"test"<<endl;
+                    }
                     break;
+
                 }
 
                 case sf::Event::Closed: {
@@ -147,8 +160,14 @@ void GameController::run()
                     break;
                 }
             }
-
         }
+
+        if(m_menu.helpPressed() ) {
+            std::cout<<"help pressed"<<endl;
+            m_window.getWindow().draw(m_menu.getHelp());
+        }
+        m_window.display();
+
         handleKey(deltaTime, key, moveDirection);
     }
 

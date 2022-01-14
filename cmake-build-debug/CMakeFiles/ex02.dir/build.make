@@ -53,10 +53,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bar/Documents/school/yearB/project_oop
+CMAKE_SOURCE_DIR = /Users/bar/Documents/school/yearB/project_oop2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bar/Documents/school/yearB/project_oop/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ex02.dir/depend.make
@@ -68,380 +68,380 @@ include CMakeFiles/ex02.dir/flags.make
 
 CMakeFiles/ex02.dir/src/main.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ex02.dir/src/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/main.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ex02.dir/src/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/main.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/main.cpp
 
 CMakeFiles/ex02.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/main.cpp > CMakeFiles/ex02.dir/src/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/main.cpp > CMakeFiles/ex02.dir/src/main.cpp.i
 
 CMakeFiles/ex02.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/main.cpp -o CMakeFiles/ex02.dir/src/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/main.cpp -o CMakeFiles/ex02.dir/src/main.cpp.s
 
 CMakeFiles/ex02.dir/src/GameObject.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/GameObject.cpp.o: ../src/GameObject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ex02.dir/src/GameObject.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/GameObject.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/GameObject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ex02.dir/src/GameObject.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/GameObject.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/GameObject.cpp
 
 CMakeFiles/ex02.dir/src/GameObject.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/GameObject.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/GameObject.cpp > CMakeFiles/ex02.dir/src/GameObject.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/GameObject.cpp > CMakeFiles/ex02.dir/src/GameObject.cpp.i
 
 CMakeFiles/ex02.dir/src/GameObject.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/GameObject.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/GameObject.cpp -o CMakeFiles/ex02.dir/src/GameObject.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/GameObject.cpp -o CMakeFiles/ex02.dir/src/GameObject.cpp.s
 
 CMakeFiles/ex02.dir/src/Moving.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Moving.cpp.o: ../src/Moving.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ex02.dir/src/Moving.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Moving.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Moving.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ex02.dir/src/Moving.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Moving.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Moving.cpp
 
 CMakeFiles/ex02.dir/src/Moving.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Moving.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Moving.cpp > CMakeFiles/ex02.dir/src/Moving.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Moving.cpp > CMakeFiles/ex02.dir/src/Moving.cpp.i
 
 CMakeFiles/ex02.dir/src/Moving.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Moving.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Moving.cpp -o CMakeFiles/ex02.dir/src/Moving.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Moving.cpp -o CMakeFiles/ex02.dir/src/Moving.cpp.s
 
 CMakeFiles/ex02.dir/src/Dwarf.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Dwarf.cpp.o: ../src/Dwarf.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ex02.dir/src/Dwarf.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Dwarf.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Dwarf.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ex02.dir/src/Dwarf.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Dwarf.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Dwarf.cpp
 
 CMakeFiles/ex02.dir/src/Dwarf.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Dwarf.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Dwarf.cpp > CMakeFiles/ex02.dir/src/Dwarf.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Dwarf.cpp > CMakeFiles/ex02.dir/src/Dwarf.cpp.i
 
 CMakeFiles/ex02.dir/src/Dwarf.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Dwarf.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Dwarf.cpp -o CMakeFiles/ex02.dir/src/Dwarf.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Dwarf.cpp -o CMakeFiles/ex02.dir/src/Dwarf.cpp.s
 
 CMakeFiles/ex02.dir/src/Player.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Player.cpp.o: ../src/Player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ex02.dir/src/Player.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Player.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ex02.dir/src/Player.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Player.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Player.cpp
 
 CMakeFiles/ex02.dir/src/Player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Player.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Player.cpp > CMakeFiles/ex02.dir/src/Player.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Player.cpp > CMakeFiles/ex02.dir/src/Player.cpp.i
 
 CMakeFiles/ex02.dir/src/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Player.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Player.cpp -o CMakeFiles/ex02.dir/src/Player.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Player.cpp -o CMakeFiles/ex02.dir/src/Player.cpp.s
 
 CMakeFiles/ex02.dir/src/King.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/King.cpp.o: ../src/King.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ex02.dir/src/King.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/King.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/King.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ex02.dir/src/King.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/King.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/King.cpp
 
 CMakeFiles/ex02.dir/src/King.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/King.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/King.cpp > CMakeFiles/ex02.dir/src/King.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/King.cpp > CMakeFiles/ex02.dir/src/King.cpp.i
 
 CMakeFiles/ex02.dir/src/King.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/King.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/King.cpp -o CMakeFiles/ex02.dir/src/King.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/King.cpp -o CMakeFiles/ex02.dir/src/King.cpp.s
 
 CMakeFiles/ex02.dir/src/Thief.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Thief.cpp.o: ../src/Thief.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ex02.dir/src/Thief.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Thief.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Thief.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ex02.dir/src/Thief.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Thief.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Thief.cpp
 
 CMakeFiles/ex02.dir/src/Thief.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Thief.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Thief.cpp > CMakeFiles/ex02.dir/src/Thief.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Thief.cpp > CMakeFiles/ex02.dir/src/Thief.cpp.i
 
 CMakeFiles/ex02.dir/src/Thief.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Thief.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Thief.cpp -o CMakeFiles/ex02.dir/src/Thief.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Thief.cpp -o CMakeFiles/ex02.dir/src/Thief.cpp.s
 
 CMakeFiles/ex02.dir/src/Warrior.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Warrior.cpp.o: ../src/Warrior.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ex02.dir/src/Warrior.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Warrior.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Warrior.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ex02.dir/src/Warrior.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Warrior.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Warrior.cpp
 
 CMakeFiles/ex02.dir/src/Warrior.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Warrior.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Warrior.cpp > CMakeFiles/ex02.dir/src/Warrior.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Warrior.cpp > CMakeFiles/ex02.dir/src/Warrior.cpp.i
 
 CMakeFiles/ex02.dir/src/Warrior.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Warrior.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Warrior.cpp -o CMakeFiles/ex02.dir/src/Warrior.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Warrior.cpp -o CMakeFiles/ex02.dir/src/Warrior.cpp.s
 
 CMakeFiles/ex02.dir/src/Mage.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Mage.cpp.o: ../src/Mage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ex02.dir/src/Mage.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Mage.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Mage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ex02.dir/src/Mage.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Mage.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Mage.cpp
 
 CMakeFiles/ex02.dir/src/Mage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Mage.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Mage.cpp > CMakeFiles/ex02.dir/src/Mage.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Mage.cpp > CMakeFiles/ex02.dir/src/Mage.cpp.i
 
 CMakeFiles/ex02.dir/src/Mage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Mage.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Mage.cpp -o CMakeFiles/ex02.dir/src/Mage.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Mage.cpp -o CMakeFiles/ex02.dir/src/Mage.cpp.s
 
 CMakeFiles/ex02.dir/src/Static.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Static.cpp.o: ../src/Static.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ex02.dir/src/Static.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Static.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Static.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ex02.dir/src/Static.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Static.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Static.cpp
 
 CMakeFiles/ex02.dir/src/Static.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Static.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Static.cpp > CMakeFiles/ex02.dir/src/Static.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Static.cpp > CMakeFiles/ex02.dir/src/Static.cpp.i
 
 CMakeFiles/ex02.dir/src/Static.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Static.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Static.cpp -o CMakeFiles/ex02.dir/src/Static.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Static.cpp -o CMakeFiles/ex02.dir/src/Static.cpp.s
 
 CMakeFiles/ex02.dir/src/Key.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Key.cpp.o: ../src/Key.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ex02.dir/src/Key.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Key.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Key.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ex02.dir/src/Key.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Key.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Key.cpp
 
 CMakeFiles/ex02.dir/src/Key.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Key.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Key.cpp > CMakeFiles/ex02.dir/src/Key.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Key.cpp > CMakeFiles/ex02.dir/src/Key.cpp.i
 
 CMakeFiles/ex02.dir/src/Key.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Key.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Key.cpp -o CMakeFiles/ex02.dir/src/Key.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Key.cpp -o CMakeFiles/ex02.dir/src/Key.cpp.s
 
 CMakeFiles/ex02.dir/src/Throne.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Throne.cpp.o: ../src/Throne.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ex02.dir/src/Throne.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Throne.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Throne.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ex02.dir/src/Throne.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Throne.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Throne.cpp
 
 CMakeFiles/ex02.dir/src/Throne.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Throne.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Throne.cpp > CMakeFiles/ex02.dir/src/Throne.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Throne.cpp > CMakeFiles/ex02.dir/src/Throne.cpp.i
 
 CMakeFiles/ex02.dir/src/Throne.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Throne.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Throne.cpp -o CMakeFiles/ex02.dir/src/Throne.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Throne.cpp -o CMakeFiles/ex02.dir/src/Throne.cpp.s
 
 CMakeFiles/ex02.dir/src/Wall.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Wall.cpp.o: ../src/Wall.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ex02.dir/src/Wall.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Wall.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Wall.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ex02.dir/src/Wall.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Wall.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Wall.cpp
 
 CMakeFiles/ex02.dir/src/Wall.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Wall.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Wall.cpp > CMakeFiles/ex02.dir/src/Wall.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Wall.cpp > CMakeFiles/ex02.dir/src/Wall.cpp.i
 
 CMakeFiles/ex02.dir/src/Wall.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Wall.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Wall.cpp -o CMakeFiles/ex02.dir/src/Wall.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Wall.cpp -o CMakeFiles/ex02.dir/src/Wall.cpp.s
 
 CMakeFiles/ex02.dir/src/Fire.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Fire.cpp.o: ../src/Fire.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ex02.dir/src/Fire.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Fire.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Fire.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ex02.dir/src/Fire.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Fire.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Fire.cpp
 
 CMakeFiles/ex02.dir/src/Fire.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Fire.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Fire.cpp > CMakeFiles/ex02.dir/src/Fire.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Fire.cpp > CMakeFiles/ex02.dir/src/Fire.cpp.i
 
 CMakeFiles/ex02.dir/src/Fire.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Fire.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Fire.cpp -o CMakeFiles/ex02.dir/src/Fire.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Fire.cpp -o CMakeFiles/ex02.dir/src/Fire.cpp.s
 
 CMakeFiles/ex02.dir/src/Orc.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Orc.cpp.o: ../src/Orc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ex02.dir/src/Orc.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Orc.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Orc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ex02.dir/src/Orc.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Orc.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Orc.cpp
 
 CMakeFiles/ex02.dir/src/Orc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Orc.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Orc.cpp > CMakeFiles/ex02.dir/src/Orc.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Orc.cpp > CMakeFiles/ex02.dir/src/Orc.cpp.i
 
 CMakeFiles/ex02.dir/src/Orc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Orc.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Orc.cpp -o CMakeFiles/ex02.dir/src/Orc.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Orc.cpp -o CMakeFiles/ex02.dir/src/Orc.cpp.s
 
 CMakeFiles/ex02.dir/src/Gate.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Gate.cpp.o: ../src/Gate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/ex02.dir/src/Gate.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Gate.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Gate.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/ex02.dir/src/Gate.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Gate.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Gate.cpp
 
 CMakeFiles/ex02.dir/src/Gate.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Gate.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Gate.cpp > CMakeFiles/ex02.dir/src/Gate.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Gate.cpp > CMakeFiles/ex02.dir/src/Gate.cpp.i
 
 CMakeFiles/ex02.dir/src/Gate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Gate.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Gate.cpp -o CMakeFiles/ex02.dir/src/Gate.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Gate.cpp -o CMakeFiles/ex02.dir/src/Gate.cpp.s
 
 CMakeFiles/ex02.dir/src/Gift.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Gift.cpp.o: ../src/Gift.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/ex02.dir/src/Gift.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Gift.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Gift.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/ex02.dir/src/Gift.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Gift.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Gift.cpp
 
 CMakeFiles/ex02.dir/src/Gift.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Gift.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Gift.cpp > CMakeFiles/ex02.dir/src/Gift.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Gift.cpp > CMakeFiles/ex02.dir/src/Gift.cpp.i
 
 CMakeFiles/ex02.dir/src/Gift.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Gift.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Gift.cpp -o CMakeFiles/ex02.dir/src/Gift.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Gift.cpp -o CMakeFiles/ex02.dir/src/Gift.cpp.s
 
 CMakeFiles/ex02.dir/src/AddTime.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/AddTime.cpp.o: ../src/AddTime.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/ex02.dir/src/AddTime.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/AddTime.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/AddTime.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/ex02.dir/src/AddTime.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/AddTime.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/AddTime.cpp
 
 CMakeFiles/ex02.dir/src/AddTime.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/AddTime.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/AddTime.cpp > CMakeFiles/ex02.dir/src/AddTime.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/AddTime.cpp > CMakeFiles/ex02.dir/src/AddTime.cpp.i
 
 CMakeFiles/ex02.dir/src/AddTime.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/AddTime.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/AddTime.cpp -o CMakeFiles/ex02.dir/src/AddTime.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/AddTime.cpp -o CMakeFiles/ex02.dir/src/AddTime.cpp.s
 
 CMakeFiles/ex02.dir/src/SubTime.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/SubTime.cpp.o: ../src/SubTime.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/ex02.dir/src/SubTime.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/SubTime.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/SubTime.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/ex02.dir/src/SubTime.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/SubTime.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/SubTime.cpp
 
 CMakeFiles/ex02.dir/src/SubTime.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/SubTime.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/SubTime.cpp > CMakeFiles/ex02.dir/src/SubTime.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/SubTime.cpp > CMakeFiles/ex02.dir/src/SubTime.cpp.i
 
 CMakeFiles/ex02.dir/src/SubTime.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/SubTime.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/SubTime.cpp -o CMakeFiles/ex02.dir/src/SubTime.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/SubTime.cpp -o CMakeFiles/ex02.dir/src/SubTime.cpp.s
 
 CMakeFiles/ex02.dir/src/DestDwarf.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/DestDwarf.cpp.o: ../src/DestDwarf.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/ex02.dir/src/DestDwarf.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/DestDwarf.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/DestDwarf.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/ex02.dir/src/DestDwarf.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/DestDwarf.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/DestDwarf.cpp
 
 CMakeFiles/ex02.dir/src/DestDwarf.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/DestDwarf.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/DestDwarf.cpp > CMakeFiles/ex02.dir/src/DestDwarf.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/DestDwarf.cpp > CMakeFiles/ex02.dir/src/DestDwarf.cpp.i
 
 CMakeFiles/ex02.dir/src/DestDwarf.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/DestDwarf.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/DestDwarf.cpp -o CMakeFiles/ex02.dir/src/DestDwarf.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/DestDwarf.cpp -o CMakeFiles/ex02.dir/src/DestDwarf.cpp.s
 
 CMakeFiles/ex02.dir/src/Window.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Window.cpp.o: ../src/Window.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/ex02.dir/src/Window.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Window.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Window.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/ex02.dir/src/Window.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Window.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Window.cpp
 
 CMakeFiles/ex02.dir/src/Window.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Window.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Window.cpp > CMakeFiles/ex02.dir/src/Window.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Window.cpp > CMakeFiles/ex02.dir/src/Window.cpp.i
 
 CMakeFiles/ex02.dir/src/Window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Window.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Window.cpp -o CMakeFiles/ex02.dir/src/Window.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Window.cpp -o CMakeFiles/ex02.dir/src/Window.cpp.s
 
 CMakeFiles/ex02.dir/src/Board.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Board.cpp.o: ../src/Board.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/ex02.dir/src/Board.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Board.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Board.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/ex02.dir/src/Board.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Board.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Board.cpp
 
 CMakeFiles/ex02.dir/src/Board.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Board.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Board.cpp > CMakeFiles/ex02.dir/src/Board.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Board.cpp > CMakeFiles/ex02.dir/src/Board.cpp.i
 
 CMakeFiles/ex02.dir/src/Board.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Board.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Board.cpp -o CMakeFiles/ex02.dir/src/Board.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Board.cpp -o CMakeFiles/ex02.dir/src/Board.cpp.s
 
 CMakeFiles/ex02.dir/src/Menu.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Menu.cpp.o: ../src/Menu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/ex02.dir/src/Menu.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Menu.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Menu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/ex02.dir/src/Menu.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Menu.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Menu.cpp
 
 CMakeFiles/ex02.dir/src/Menu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Menu.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Menu.cpp > CMakeFiles/ex02.dir/src/Menu.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Menu.cpp > CMakeFiles/ex02.dir/src/Menu.cpp.i
 
 CMakeFiles/ex02.dir/src/Menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Menu.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Menu.cpp -o CMakeFiles/ex02.dir/src/Menu.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Menu.cpp -o CMakeFiles/ex02.dir/src/Menu.cpp.s
 
 CMakeFiles/ex02.dir/src/GameController.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/GameController.cpp.o: ../src/GameController.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/ex02.dir/src/GameController.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/GameController.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/GameController.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/ex02.dir/src/GameController.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/GameController.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/GameController.cpp
 
 CMakeFiles/ex02.dir/src/GameController.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/GameController.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/GameController.cpp > CMakeFiles/ex02.dir/src/GameController.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/GameController.cpp > CMakeFiles/ex02.dir/src/GameController.cpp.i
 
 CMakeFiles/ex02.dir/src/GameController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/GameController.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/GameController.cpp -o CMakeFiles/ex02.dir/src/GameController.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/GameController.cpp -o CMakeFiles/ex02.dir/src/GameController.cpp.s
 
 CMakeFiles/ex02.dir/src/Teleporter.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Teleporter.cpp.o: ../src/Teleporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/ex02.dir/src/Teleporter.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Teleporter.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Teleporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/ex02.dir/src/Teleporter.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Teleporter.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Teleporter.cpp
 
 CMakeFiles/ex02.dir/src/Teleporter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Teleporter.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Teleporter.cpp > CMakeFiles/ex02.dir/src/Teleporter.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Teleporter.cpp > CMakeFiles/ex02.dir/src/Teleporter.cpp.i
 
 CMakeFiles/ex02.dir/src/Teleporter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Teleporter.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Teleporter.cpp -o CMakeFiles/ex02.dir/src/Teleporter.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Teleporter.cpp -o CMakeFiles/ex02.dir/src/Teleporter.cpp.s
 
 CMakeFiles/ex02.dir/src/MainMenu.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/MainMenu.cpp.o: ../src/MainMenu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/ex02.dir/src/MainMenu.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/MainMenu.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/MainMenu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/ex02.dir/src/MainMenu.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/MainMenu.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/MainMenu.cpp
 
 CMakeFiles/ex02.dir/src/MainMenu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/MainMenu.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/MainMenu.cpp > CMakeFiles/ex02.dir/src/MainMenu.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/MainMenu.cpp > CMakeFiles/ex02.dir/src/MainMenu.cpp.i
 
 CMakeFiles/ex02.dir/src/MainMenu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/MainMenu.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/MainMenu.cpp -o CMakeFiles/ex02.dir/src/MainMenu.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/MainMenu.cpp -o CMakeFiles/ex02.dir/src/MainMenu.cpp.s
 
 CMakeFiles/ex02.dir/src/Button.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Button.cpp.o: ../src/Button.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/ex02.dir/src/Button.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Button.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Button.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/ex02.dir/src/Button.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Button.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Button.cpp
 
 CMakeFiles/ex02.dir/src/Button.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Button.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Button.cpp > CMakeFiles/ex02.dir/src/Button.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Button.cpp > CMakeFiles/ex02.dir/src/Button.cpp.i
 
 CMakeFiles/ex02.dir/src/Button.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Button.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Button.cpp -o CMakeFiles/ex02.dir/src/Button.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Button.cpp -o CMakeFiles/ex02.dir/src/Button.cpp.s
 
 CMakeFiles/ex02.dir/src/Animation.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Animation.cpp.o: ../src/Animation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/ex02.dir/src/Animation.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Animation.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Animation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/ex02.dir/src/Animation.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Animation.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Animation.cpp
 
 CMakeFiles/ex02.dir/src/Animation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Animation.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Animation.cpp > CMakeFiles/ex02.dir/src/Animation.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Animation.cpp > CMakeFiles/ex02.dir/src/Animation.cpp.i
 
 CMakeFiles/ex02.dir/src/Animation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Animation.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Animation.cpp -o CMakeFiles/ex02.dir/src/Animation.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Animation.cpp -o CMakeFiles/ex02.dir/src/Animation.cpp.s
 
 CMakeFiles/ex02.dir/src/Clock.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Clock.cpp.o: ../src/Clock.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/ex02.dir/src/Clock.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Clock.cpp.o -c /Users/bar/Documents/school/yearB/project_oop/src/Clock.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/ex02.dir/src/Clock.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Clock.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Clock.cpp
 
 CMakeFiles/ex02.dir/src/Clock.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/src/Clock.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop/src/Clock.cpp > CMakeFiles/ex02.dir/src/Clock.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/src/Clock.cpp > CMakeFiles/ex02.dir/src/Clock.cpp.i
 
 CMakeFiles/ex02.dir/src/Clock.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Clock.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop/src/Clock.cpp -o CMakeFiles/ex02.dir/src/Clock.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Clock.cpp -o CMakeFiles/ex02.dir/src/Clock.cpp.s
 
 # Object files for target ex02
 ex02_OBJECTS = \
@@ -514,7 +514,7 @@ ex02: /Library/Frameworks/./sfml-network.framework/Versions/2.5.1/sfml-network
 ex02: /Library/Frameworks/./sfml-window.framework/Versions/2.5.1/sfml-window
 ex02: /Library/Frameworks/./sfml-system.framework/Versions/2.5.1/sfml-system
 ex02: CMakeFiles/ex02.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX executable ex02"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX executable ex02"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ex02.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -526,6 +526,6 @@ CMakeFiles/ex02.dir/clean:
 .PHONY : CMakeFiles/ex02.dir/clean
 
 CMakeFiles/ex02.dir/depend:
-	cd /Users/bar/Documents/school/yearB/project_oop/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/bar/Documents/school/yearB/project_oop /Users/bar/Documents/school/yearB/project_oop /Users/bar/Documents/school/yearB/project_oop/cmake-build-debug /Users/bar/Documents/school/yearB/project_oop/cmake-build-debug /Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles/ex02.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/bar/Documents/school/yearB/project_oop2 /Users/bar/Documents/school/yearB/project_oop2 /Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug /Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug /Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles/ex02.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ex02.dir/depend
 

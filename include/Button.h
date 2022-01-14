@@ -19,7 +19,7 @@ public:
     void update (sf::Vector2f mousePos);
 
     //Accessors
-    const bool isPressed() const;
+    bool isPressed(sf::Vector2f mousePos) ;
     void quit();
 
 private:
@@ -28,7 +28,7 @@ private:
     sf::Color m_hoverColor;
     sf::Color m_activeColor;
 
-    bool m_pressed =false;
+    bool m_pressed ;
     sf::RectangleShape m_shape;
     sf::Font * m_font;
     sf::Text m_button_text;
