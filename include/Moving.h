@@ -1,7 +1,12 @@
 #pragma once
+
 #include "GameObject.h"
+#include "Static.h"
 
 enum Direction { LEFT, RIGHT, UP, DOWN };
+
+class Dwarf;
+class Static;
 
 class Moving : public GameObject {
 public:
@@ -15,7 +20,10 @@ public:
 	void move(const Direction dir, float, sf::Vector2f&);
 
 //		handle the collision of all moving objects with all objects
-	virtual void handleCollision(GameObject& gameobject, const sf::Vector2f moveDirection) = 0;
+//	void handleCollision(Dwarf& dwarf, const sf::Vector2f moveDirection);
+	void handleCollision(GameObject& gameobject) override;
+	void handleCollision(Static& staticObject, const sf::Vector2f moveDirection);
+
 
 private:
 //		true - faces right, false - faces left

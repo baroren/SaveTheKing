@@ -54,9 +54,9 @@ void GameObject:: updateAndDraw(const int row,float deltaTime,sf::RenderWindow& 
     
 }
 
-void GameObject::setLocation(const float x, const float y )
+void GameObject::setLocation(const sf::Vector2f position)
 {
-    m_sprite.setPosition(sf::Vector2f(x,y));
+    m_sprite.setPosition(position);
 }
 
 sf::Vector2<float> GameObject::getLocation( ) const

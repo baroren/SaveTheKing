@@ -9,7 +9,7 @@ using std::string;
 class Window {
 public:
 
-//		create window using size and title, default size is 50 50 and title ""
+//		create window using size and title, default size is 1400 1000 and title "Save The King: Dungeon Edition"
 	Window(const sf::Vector2u windowSize = sf::Vector2u(1400, 1000), 
 				const string title = "Save The King: Dungeon Edition");
     void displayBoard();

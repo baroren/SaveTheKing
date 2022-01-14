@@ -2,12 +2,18 @@
 
 #include "Moving.h"
 
+class Teleporter;
+
 class Player : public Moving {
 public:
 
     using Moving::Moving;
+
+    void handleCollision(Teleporter& teleport);
+
+
+
 private:
 
 
-    Player() : Moving(sf::Vector2f(), 0, 0, 0, 0, std::string(), false) {}
 };
