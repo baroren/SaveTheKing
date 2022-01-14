@@ -50,27 +50,25 @@ int Menu::handleClick(sf::Vector2f mousePos,sf::RenderWindow& window)
     {
         switch (i) {
             case 0:*/
-
-              if(  startGame(0, mousePos,window))
-                  return 0;
-              //  break;
-        //    case 1:
-              if(!  helpBt(1, mousePos,window))
-                  if(!m_help.getGlobalBounds().contains(window.mapPixelToCoords(sf::Mouse::getPosition(window)))) {
-                      std::cout<<"out of bounce "<<std::endl;
-                      m_helpPressed = false;
-                  }
-        //        break;
-       //     case 2:
-               if( quitBt(2,mousePos,window))
-                   return 2;
-
-
-        //        break;
+for(int i=0; i<m_buttons.size();i++)
+{
+    if(i!=1)
+        if(checkBt(i, mousePos, window))
+            return i;
+    if(i==1)
+    {
+        std::cout<<"Help";
+        if(!  helpBt(1, mousePos,window))
+            if(!m_help.getGlobalBounds().contains(window.mapPixelToCoords(sf::Mouse::getPosition(window)))) {
+                std::cout<<"out of bounce "<<std::endl;
+                m_helpPressed = false;
+                }
+            }
+}
     return -1;
 
 }
-bool Menu:: startGame(int i,sf::Vector2f mousePos,sf::RenderWindow& window)
+bool Menu:: checkBt(int i, sf::Vector2f mousePos, sf::RenderWindow& window)
 {
     if(m_buttons[i]->isPressed(mousePos))
     {
@@ -91,16 +89,7 @@ bool Menu:: helpBt(int i,sf::Vector2f mousePos,sf::RenderWindow& window)
     }
     return false;
 }
-bool Menu:: quitBt(int i,sf::Vector2f mousePos,sf::RenderWindow& window)
-{
-    if(m_buttons[i]->isPressed(mousePos))
-    {
 
-        return true;
-
-    }
-    return false;
-}
 bool Menu ::helpPressed(){
     return m_helpPressed;
 };

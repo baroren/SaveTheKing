@@ -15,9 +15,8 @@ public:
     void  updateBt(sf::RenderWindow& window);
     void setHelp(bool help);
 
-        bool startGame(int i,sf::Vector2f mousePos,sf::RenderWindow& window);
+        bool checkBt(int i,sf::Vector2f mousePos,sf::RenderWindow& window);
         bool helpBt(int i,sf::Vector2f mousePos,sf::RenderWindow& window);
-        bool quitBt(int i,sf::Vector2f mousePos,sf::RenderWindow& window);
         bool helpPressed();
 private:
     vector <Button*> m_buttons;

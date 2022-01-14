@@ -128,12 +128,13 @@ void GameController::run()
 
             if (event.type == sf::Event::MouseButtonPressed) {
                 if (event.mouseButton.button == sf::Mouse::Left) {
-                    //if(  m_menu.handleClick(m_window.getWindow().
-                    //mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==0)
-                      //  cout<<"new Game "<<endl;
+                    if(  m_menu.handleClick(m_window.getWindow().
+                      mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==2)
+                        m_mainMenu.run(m_window.getWindow());
+
                     if(  m_menu.handleClick(m_window.getWindow().
                     mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==3)
-                        m_mainMenu.run(m_window.getWindow());
+                        m_window.getWindow().close();
                     std::cout<<"yeah";
                 }
             }
