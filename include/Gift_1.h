@@ -1,13 +1,13 @@
 #pragma once
 
-#include "Static.h"
+#include "Gift.h"
 
 
-class Gift : public Static {
+class Gift_1 : public Gift {
 
 public:
 
-	using Static::Static;
+	using Gift::Gift;
 
 
 	virtual void handleCollision(Player& player) = 0;

@@ -18,6 +18,7 @@ GameController::GameController() {
     m_blockObjects.push_back(make_unique<Fire>(m_window.calculatePos('*'), fire, 3));
 
 
+
     storeSurroundWall();
 
 

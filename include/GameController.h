@@ -16,6 +16,9 @@
 #include "Warrior.h"
 #include "Thief.h"
 #include "Fire.h"
+#include "Gift_1.h"
+#include "Gift_2.h"
+
 
 using std::vector;
 using std::unique_ptr;
@@ -33,6 +36,11 @@ public:
 
 	void storeTeleproters();
 
+
+	friend void Gift_1::handleCollision(Player&);
+	friend void Gift_2::handleCollision(Player&);
+
+
 private:
     bool running = true;
     MainMenu m_mainMenu;
@@ -49,6 +57,8 @@ private:
 	void handleTeleporters(const int key);
 
 	void storeSurroundWall();
+
+	void replaceOrcWithKey();
 
     sf:: Font m_font;
     Menu m_menu;
