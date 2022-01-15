@@ -12,7 +12,7 @@ Menu::Menu(){
         std::cout << "error loading font";
 
     }// meed to make it a function
-
+    m_music=true;
     m_help.setTexture(m_helpTex);
     m_help.setOrigin(sf::Vector2f(m_help.getGlobalBounds().width / 2.f, m_help.getGlobalBounds().height / 2.f));
     m_help.setPosition(sf::Vector2f(700.f, 450.f));
@@ -66,6 +66,7 @@ for(int i=0; i<m_buttons.size();i++)
                 m_helpPressed = false;
                 }
             }
+
 }
     return -1;
 
@@ -107,4 +108,8 @@ void Menu:: updateBt(sf::RenderWindow& window)
         m_buttons[i]->update(window.mapPixelToCoords(sf::Mouse::getPosition(window)));
 
     }
+}
+void Menu::changeText(string text)
+{
+    m_buttons[3]->changeText(text);
 }

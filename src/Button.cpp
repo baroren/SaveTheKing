@@ -86,3 +86,7 @@ bool Button::isPressed(sf::Vector2f mousePos)
 }
 
 
+void Button::changeText(string text)
+{
+    m_button_text.setString(text);
+}

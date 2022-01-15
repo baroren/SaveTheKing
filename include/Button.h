@@ -7,6 +7,7 @@
 #include <sstream>
 #include <iostream>
 #include "SFML/Audio.hpp"
+using std::string;
 enum buttonState{BTN_IDLE=0,BTN_PRESSED,BTN_HOVER};
 class Button
 {
@@ -17,7 +18,7 @@ public:
     sf::RectangleShape render ();
     sf::Text drawText ();
     void update (sf::Vector2f mousePos);
-
+    void changeText(string text);
     //Accessors
     bool isPressed(sf::Vector2f mousePos) ;
     void quit();

@@ -14,11 +14,12 @@ public:
         sf::Sprite getHelp();
     void  updateBt(sf::RenderWindow& window);
     void setHelp(bool help);
-
+    void changeText(string );
         bool checkBt(int i,sf::Vector2f mousePos,sf::RenderWindow& window);
         bool helpBt(int i,sf::Vector2f mousePos,sf::RenderWindow& window);
         bool helpPressed();
 private:
+    bool m_music;
     vector <Button*> m_buttons;
     sf::Texture m_helpTex;
     sf:: Font m_font;

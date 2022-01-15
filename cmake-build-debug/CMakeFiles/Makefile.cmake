@@ -57,6 +57,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../resources/MainMenuMusic.ogg"
   "../resources/Map.png"
   "../resources/Orc.png"
+  "../resources/Shrek.ogg"
   "../resources/Spr_Villager_Idle.png"
   "../resources/Teleport.png"
   "../resources/Thief.png"
@@ -104,6 +105,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "Level_2.txt"
   "Level_3.txt"
   "MainMenuMusic.ogg"
+  "Shrek.ogg"
   "resources/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

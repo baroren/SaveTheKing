@@ -8,17 +8,18 @@ MainMenu::MainMenu() {
         std::cout << "error loading font";
 
     }
-
-
- //  testSprite=Resources::instance().getSprite(0);
-    testSprite.setPosition(sf::Vector2f(100,100));
-
-  // m_music = Resources::instance().getMusic(king);
-    if (!m_music.openFromFile("MainMenuMusic.ogg")) {
+///
+    if (!m_music.openFromFile("Shrek.ogg")) {
         // error...
         std::cout << "error loading music";
 
     }
+    //
+ //  testSprite=Resources::instance().getSprite(0);
+    testSprite.setPosition(sf::Vector2f(100,100));
+
+  // m_music = Resources::instance().getMusic(king);
+
     //m_help.setTexture(m_helpTex);
     m_titles.push_back(makeTitle(72, "Save  The  King",700.f,150.f));
     m_titles.push_back(makeTitle(32, "Dungeon  Edition",700.f,210.f));
@@ -38,12 +39,11 @@ MainMenu::MainMenu() {
 
 void MainMenu::run(sf::RenderWindow &window) {
 
-
     sf::Clock clock;
     float deltaTime = 0.0f;
     while (window.isOpen()) {
 
-    m_music.play();
+
         deltaTime = clock.restart().asSeconds();
         window.clear(sf::Color(34, 20, 26));
 

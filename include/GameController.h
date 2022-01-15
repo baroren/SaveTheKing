@@ -1,4 +1,5 @@
 #pragma once
+#include <SFML/Audio.hpp>
 #include <vector>
 #include <memory>
 #include "Menu.h"
@@ -47,6 +48,7 @@ private:
     Menu m_menu;
    sf::Text m_timer;
    sf::RectangleShape m_currPlayer;
+   sf::Music m_music;
 //		vector of the player objects (mage, king etc)
 	vector <unique_ptr<Player>> m_players;
     vector <unique_ptr<Player>> m_playerShow;

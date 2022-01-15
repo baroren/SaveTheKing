@@ -38,6 +38,52 @@ iostream
 SFML/Audio.hpp
 ../include/SFML/Audio.hpp
 
+../include/Clock.h
+SFML/Graphics.hpp
+../include/SFML/Graphics.hpp
+string
+-
+iostream
+-
+
+../include/Dwarf.h
+Moving.h
+../include/Moving.h
+
+../include/GameController.h
+SFML/Audio.hpp
+-
+vector
+-
+memory
+-
+Menu.h
+../include/Menu.h
+Window.h
+../include/Window.h
+GameObject.h
+../include/GameObject.h
+MainMenu.h
+../include/MainMenu.h
+Board.h
+../include/Board.h
+Wall.h
+../include/Wall.h
+Dwarf.h
+../include/Dwarf.h
+Clock.h
+../include/Clock.h
+Teleporter.h
+../include/Teleporter.h
+Gate.h
+../include/Gate.h
+King.h
+../include/King.h
+Warrior.h
+../include/Warrior.h
+Thief.h
+../include/Thief.h
+
 ../include/GameObject.h
 SFML/Graphics.hpp
 ../include/SFML/Graphics.hpp
@@ -49,6 +95,14 @@ Resources.h
 ../include/Resources.h
 Macros.h
 ../include/Macros.h
+
+../include/Gate.h
+Static.h
+../include/Static.h
+
+../include/King.h
+Player.h
+../include/Player.h
 
 ../include/Macros.h
 
@@ -126,6 +180,24 @@ Macros.h
 GameObject.h
 ../include/GameObject.h
 
+../include/Teleporter.h
+Static.h
+-
+
+../include/Thief.h
+Player.h
+../include/Player.h
+
+../include/Wall.h
+Static.h
+../include/Static.h
+Mage.h
+../include/Mage.h
+
+../include/Warrior.h
+Player.h
+../include/Player.h
+
 ../include/Window.h
 SFML/Graphics.hpp
 ../include/SFML/Graphics.hpp
@@ -134,9 +206,11 @@ Board.h
 string
 -
 
-/Users/bar/Documents/school/yearB/project_oop2/src/MainMenu.cpp
-MainMenu.h
-/Users/bar/Documents/school/yearB/project_oop2/src/MainMenu.h
+/Users/bar/Documents/school/yearB/project_oop2/src/GameController.cpp
+GameController.h
+/Users/bar/Documents/school/yearB/project_oop2/src/GameController.h
+iostream
+-
 
 /usr/local/include/SFML/Audio.hpp
 SFML/System.hpp

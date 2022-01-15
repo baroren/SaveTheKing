@@ -30,12 +30,18 @@ GameController::GameController() {
     m_menu.createButton("New Game",100,150);
     m_menu.createButton("Help",100,225);
     m_menu.createButton("Main Menu",100,300);
-    m_menu.createButton("Quit",100,375);
+    m_menu.createButton("music on",100,375);
+
+    m_menu.createButton("Quit",100,450);
 
     //cout << m_teleporters[1]->getLinkdedTeleporter()->getLocation().x << ' ' << m_teleporters[1]->getLinkdedTeleporter()->getLocation().y << endl;
     //cout << m_teleporters[0]->getLinkdedTeleporter()->getLocation().x << ' ' << m_teleporters[0]->getLinkdedTeleporter()->getLocation().y;
 
+    if (!m_music.openFromFile("Shrek.ogg")) {
+        // error...
+        std::cout << "error loading music";
 
+    }
      m_font=Resources::instance().getFont();
 
 
@@ -48,6 +54,7 @@ GameController::GameController() {
 void GameController::run()
 {
 
+    m_music.play();
     m_mainMenu.run(m_window.getWindow());
 
     sf::Clock clock;
@@ -134,8 +141,22 @@ void GameController::run()
                         m_mainMenu.run(m_window.getWindow());
 
                     if(  m_menu.handleClick(m_window.getWindow().
-                    mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==3)
+                    mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==4)
                         m_window.getWindow().close();
+                    if(  m_menu.handleClick(m_window.getWindow().
+                            mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==3) {
+                        if(m_music.getVolume()>0) {
+                            m_music.setVolume(0.f);
+                            m_menu.changeText("Music off");
+
+                        }
+                        else {
+                            m_music.setVolume(100.f);
+                            m_menu.changeText("Music on");
+                        }
+
+
+                    }
                     std::cout<<"yeah";
                 }
             }
