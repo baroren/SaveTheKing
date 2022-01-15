@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ex02.dir/include/Macros.cpp.o"
   "CMakeFiles/ex02.dir/src/AddTime.cpp.o"
   "CMakeFiles/ex02.dir/src/Animation.cpp.o"
   "CMakeFiles/ex02.dir/src/Board.cpp.o"
@@ -19,8 +20,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/ex02.dir/src/Moving.cpp.o"
   "CMakeFiles/ex02.dir/src/Orc.cpp.o"
   "CMakeFiles/ex02.dir/src/Player.cpp.o"
+  "CMakeFiles/ex02.dir/src/Resources.cpp.o"
   "CMakeFiles/ex02.dir/src/Static.cpp.o"
   "CMakeFiles/ex02.dir/src/SubTime.cpp.o"
+  "CMakeFiles/ex02.dir/src/Teleporter.cpp.o"
   "CMakeFiles/ex02.dir/src/Thief.cpp.o"
   "CMakeFiles/ex02.dir/src/Throne.cpp.o"
   "CMakeFiles/ex02.dir/src/Wall.cpp.o"

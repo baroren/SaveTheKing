@@ -21,7 +21,7 @@ Button::Button(float x, float y ,float width ,float height,sf::Font* font,std::s
     this->m_activeColor=activeColor;
 
     this->m_shape.setFillColor(this->m_idleColor);
-
+    m_pressed=false;
 }
 sf::RectangleShape Button:: render()
 {
@@ -33,7 +33,7 @@ sf::RectangleShape Button:: render()
 void Button::update(sf::Vector2f mousePos)
 {
     //idle
-    if(!m_pressed) {
+
         this->m_bState = BTN_IDLE;
         this->m_shape.setFillColor(this->m_idleColor);
 
@@ -41,9 +41,18 @@ void Button::update(sf::Vector2f mousePos)
         if (m_shape.getGlobalBounds().contains(mousePos)) {
             this->m_bState = BTN_HOVER;
             //pressed
-            if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-                this->m_bState = BTN_PRESSED;
-            }
+
+        /*    if (event.type == sf::Event::MouseButtonPressed)
+            {
+                if (event.mouseButton.button == sf::Mouse::Left)
+                {
+                    this->m_bState = BTN_PRESSED;
+                    std::cout<<"pressed"<<m_pressed<<std::endl;
+                    m_pressed=true;
+                }
+            }*/
+
+
             switch (this->m_bState) {
                 case BTN_IDLE:
                     this->m_shape.setFillColor(this->m_idleColor);
@@ -53,24 +62,31 @@ void Button::update(sf::Vector2f mousePos)
                     break;
                 case BTN_PRESSED:
                     this->m_shape.setFillColor(this->m_activeColor);
-                    m_pressed=true;
+                    m_pressed = true;
                 default:
                     break;
             }
+
         }
-    }
 
 }
 void Button::quit()
 {
     m_pressed=false;
 }
-const bool Button::isPressed()const
+bool Button::isPressed(sf::Vector2f mousePos)
 {
-    if(this->m_bState==BTN_PRESSED)
+    if (m_shape.getGlobalBounds().contains(mousePos)) {
+        this->m_bState = BTN_PRESSED;
         return true;
+    }
     return false;
+
+
 }
 
 
-
+void Button::changeText(string text)
+{
+    m_button_text.setString(text);
+}

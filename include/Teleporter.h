@@ -17,7 +17,7 @@ public:
 
 
 
-	void setLinkedTeleporter(Teleporter& const otherTeleporter);
+	void setLinkedTeleporter(Teleporter&  otherTeleporter);
 
 
 

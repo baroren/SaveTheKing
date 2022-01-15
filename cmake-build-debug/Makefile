@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/bar/Documents/school/yearB/project_oop
+CMAKE_SOURCE_DIR = /Users/bar/Documents/school/yearB/project_oop2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/bar/Documents/school/yearB/project_oop/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles /Users/bar/Documents/school/yearB/project_oop/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles /Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,30 @@ ex02: cmake_check_build_system
 ex02/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/build
 .PHONY : ex02/fast
+
+include/Macros.o: include/Macros.cpp.o
+.PHONY : include/Macros.o
+
+# target to build an object file
+include/Macros.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/include/Macros.cpp.o
+.PHONY : include/Macros.cpp.o
+
+include/Macros.i: include/Macros.cpp.i
+.PHONY : include/Macros.i
+
+# target to preprocess a source file
+include/Macros.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/include/Macros.cpp.i
+.PHONY : include/Macros.cpp.i
+
+include/Macros.s: include/Macros.cpp.s
+.PHONY : include/Macros.s
+
+# target to generate assembly for a file
+include/Macros.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/include/Macros.cpp.s
+.PHONY : include/Macros.cpp.s
 
 src/AddTime.o: src/AddTime.cpp.o
 .PHONY : src/AddTime.o
@@ -609,6 +633,30 @@ src/Player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Player.cpp.s
 .PHONY : src/Player.cpp.s
 
+src/Resources.o: src/Resources.cpp.o
+.PHONY : src/Resources.o
+
+# target to build an object file
+src/Resources.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Resources.cpp.o
+.PHONY : src/Resources.cpp.o
+
+src/Resources.i: src/Resources.cpp.i
+.PHONY : src/Resources.i
+
+# target to preprocess a source file
+src/Resources.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Resources.cpp.i
+.PHONY : src/Resources.cpp.i
+
+src/Resources.s: src/Resources.cpp.s
+.PHONY : src/Resources.s
+
+# target to generate assembly for a file
+src/Resources.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Resources.cpp.s
+.PHONY : src/Resources.cpp.s
+
 src/Static.o: src/Static.cpp.o
 .PHONY : src/Static.o
 
@@ -656,6 +704,30 @@ src/SubTime.s: src/SubTime.cpp.s
 src/SubTime.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/SubTime.cpp.s
 .PHONY : src/SubTime.cpp.s
+
+src/Teleporter.o: src/Teleporter.cpp.o
+.PHONY : src/Teleporter.o
+
+# target to build an object file
+src/Teleporter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Teleporter.cpp.o
+.PHONY : src/Teleporter.cpp.o
+
+src/Teleporter.i: src/Teleporter.cpp.i
+.PHONY : src/Teleporter.i
+
+# target to preprocess a source file
+src/Teleporter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Teleporter.cpp.i
+.PHONY : src/Teleporter.cpp.i
+
+src/Teleporter.s: src/Teleporter.cpp.s
+.PHONY : src/Teleporter.s
+
+# target to generate assembly for a file
+src/Teleporter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Teleporter.cpp.s
+.PHONY : src/Teleporter.cpp.s
 
 src/Thief.o: src/Thief.cpp.o
 .PHONY : src/Thief.o
@@ -810,6 +882,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ex02"
+	@echo "... include/Macros.o"
+	@echo "... include/Macros.i"
+	@echo "... include/Macros.s"
 	@echo "... src/AddTime.o"
 	@echo "... src/AddTime.i"
 	@echo "... src/AddTime.s"
@@ -870,12 +945,18 @@ help:
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"
+	@echo "... src/Resources.o"
+	@echo "... src/Resources.i"
+	@echo "... src/Resources.s"
 	@echo "... src/Static.o"
 	@echo "... src/Static.i"
 	@echo "... src/Static.s"
 	@echo "... src/SubTime.o"
 	@echo "... src/SubTime.i"
 	@echo "... src/SubTime.s"
+	@echo "... src/Teleporter.o"
+	@echo "... src/Teleporter.i"
+	@echo "... src/Teleporter.s"
 	@echo "... src/Thief.o"
 	@echo "... src/Thief.i"
 	@echo "... src/Thief.s"

@@ -1,10 +1,12 @@
 #pragma once
 
 #include "Static.h"
+
 #include "Player.h"
 #include "Dwarf.h"
 
 class Mage;
+
 
 class Wall : public Static {
 

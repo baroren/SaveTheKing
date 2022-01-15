@@ -1,8 +1,8 @@
 #pragma once
-
+#include <SFML/Audio.hpp>
 #include <vector>
 #include <memory>
-
+#include "Menu.h"
 #include "Window.h"
 #include "GameObject.h"
 #include "MainMenu.h"
@@ -15,6 +15,7 @@
 #include "King.h"
 #include "Warrior.h"
 #include "Thief.h"
+#include "Fire.h"
 
 using std::vector;
 using std::unique_ptr;
@@ -44,16 +45,20 @@ private:
 //  handle collisions of current player with static objects special for the player (throne, teleporters, key)
 	void handleCollision(const int key);
     sf:: Font m_font;
-    vector<Button*> m_buttons;
-	sf::Text m_timer;
+    Menu m_menu;
+   sf::Text m_timer;
+   sf::RectangleShape m_currPlayer;
+    unique_ptr<Static> m_keyShow;
+    sf::Music m_music;
+
 //		vector of the player objects (mage, king etc)
 	vector <unique_ptr<Player>> m_players;
-//		vector of all dwarves in the game
-	vector <unique_ptr<Dwarf>> m_dwarves;
-
+    vector <unique_ptr<Player>> m_playerShow;
 //	vector of static objects that block the moving objects (wall, fire, gate, orc)
+
 	vector <unique_ptr<Static>> m_blockObjects;
 //		vector of other static objects that affect only the player objects (throne, key)
+
 	vector <unique_ptr<Static>> m_static;
 //		vector of all teleports
 	vector <unique_ptr<Teleporter>> m_teleporters;

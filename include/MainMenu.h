@@ -1,5 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
+
 #include <vector>
 #include <iostream>
 #include <memory>
@@ -7,6 +9,8 @@
 #include "Animation.h"
 #include "Mage.h"
 #include "Orc.h"
+#include "Menu.h"
+#include "Resources.h"
 
 using std::vector;
 using std::make_unique;
@@ -18,13 +22,17 @@ class MainMenu {
     MainMenu();
     //add dest
     void run(sf::RenderWindow & window);
+   //void printHelp(sf::RenderWindow & window,Button *button);
+
 private :
 
     sf::Text makeTitle(int size,std::string text,float,float);
-
+    sf::Sprite testSprite;
+    sf::Texture testTexture;
     vector <unique_ptr <GameObject> >m_gameObjects;
-    vector <Button*> m_buttons;
-
+  //  vector <Button*> m_buttons;
+    Menu m_menu;
+    sf::Music m_music;
 //  check to see if gameObject works with unique ptr and how to solve Button
 //    vector <unique_ptr<GameObject>> m_gameObjects;
 //    vector <unique_ptr<Button>> m_buttons;
@@ -38,8 +46,8 @@ private :
  /*   sf::Text m_title;
     sf::Text m_second_title;
 */
-    sf::Texture m_helpTex;
+ //   sf::Texture m_helpTex;
 
-    sf:: Sprite m_help ; //need to make vector
+//    sf:: Sprite m_help ; //need to make vector
 
 };

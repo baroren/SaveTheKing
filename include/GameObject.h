@@ -3,10 +3,16 @@
 #include <string>
 #include "Animation.h"
 
+
 #include <iostream>
 
 using std::cout;
 using std::endl;
+
+
+//#include "Resources.h"
+#include "Resources.h"
+#include "Macros.h"
 
 class Mage;
 class Wall;
@@ -22,8 +28,7 @@ class GameObject {
 public:
 
 
-    GameObject(const sf::Vector2f position, const int numOfAnim=0,const int numOfFrames=0,
-               const float animTime=0.17,const float scale=0, string imagePath="");
+    GameObject(const sf::Vector2f position,gameObjectId id=king,float scale=0);
 
      void updateAndDraw(const int row,float deltaTime,sf::RenderWindow& window);
      void setLocation(const sf::Vector2f position);

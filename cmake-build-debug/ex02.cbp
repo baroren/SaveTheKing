@@ -8,43 +8,43 @@
 		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\Library\;CMake Files\..\..\..\..\..\..\Library\Frameworks\;CMake Files\..\..\..\..\..\..\Library\Frameworks\SFML.framework\;CMake Files\..\..\..\..\..\..\Library\Frameworks\SFML.framework\Resources\;CMake Files\..\..\..\..\..\..\Library\Frameworks\SFML.framework\Resources\CMake\;CMake Files\include\;CMake Files\src\;CMake Files\resources\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug"/>
+				<Option working_dir="/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug"/>
+				<Option working_dir="/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug"/>
+				<Option working_dir="/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ex02">
-				<Option output="/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/ex02" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug"/>
+				<Option output="/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/ex02" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/bar/Documents/school/yearB/project_oop/include"/>
+					<Add directory="/Users/bar/Documents/school/yearB/project_oop2/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Frameworks/SFML.framework"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
@@ -54,20 +54,20 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex02"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex02"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ex02/fast">
-				<Option output="/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/ex02" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug"/>
+				<Option output="/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/ex02" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/bar/Documents/school/yearB/project_oop/include"/>
+					<Add directory="/Users/bar/Documents/school/yearB/project_oop2/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Frameworks/SFML.framework"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
@@ -77,251 +77,281 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex02/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex02/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/AddTime.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/AddTime.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Board.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Board.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/DestDwarf.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/DestDwarf.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Dwarf.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Dwarf.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Fire.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Fire.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/GameController.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/GameController.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/GameObject.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/GameObject.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Gate.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Gate.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Gift.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Gift.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Key.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Key.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/King.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/King.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Mage.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Macros.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Menu.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Macros.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Moving.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Mage.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Orc.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Menu.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Player.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Moving.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Static.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Orc.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/SubTime.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Player.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Thief.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Static.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Throne.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/SubTime.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Wall.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Teleporter.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Warrior.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Thief.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/Window.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Throne.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/AddTime.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Wall.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Animation.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Warrior.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Board.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Window.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Button.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/AddTime.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Clock.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Animation.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/DestDwarf.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Board.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Dwarf.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Button.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Fire.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Clock.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/GameController.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/DestDwarf.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/GameObject.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Dwarf.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Gate.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Fire.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Gift.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/GameController.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Key.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/GameObject.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/King.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Gate.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Mage.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Gift.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/MainMenu.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Key.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Menu.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/King.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Moving.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Mage.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Orc.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/MainMenu.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Player.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Menu.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Static.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Moving.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/SubTime.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Orc.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Thief.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Player.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Throne.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Resources.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Wall.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Static.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Warrior.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/SubTime.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/Window.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Teleporter.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/main.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Thief.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/CMakeLists.txt">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Throne.cpp">
+			<Option target="ex02"/>
+		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Wall.cpp">
+			<Option target="ex02"/>
+		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Warrior.cpp">
+			<Option target="ex02"/>
+		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Window.cpp">
+			<Option target="ex02"/>
+		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/main.cpp">
+			<Option target="ex02"/>
+		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/../../../../../../Library/Frameworks/SFML.framework/Resources/CMake/SFMLConfig.cmake">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/../../../../../../Library/Frameworks/SFML.framework/Resources/CMake/SFMLConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Frameworks\SFML.framework\Resources\CMake\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/../../../../../../Library/Frameworks/SFML.framework/Resources/CMake/SFMLConfigDependencies.cmake">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/../../../../../../Library/Frameworks/SFML.framework/Resources/CMake/SFMLConfigDependencies.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Frameworks\SFML.framework\Resources\CMake\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/../../../../../../Library/Frameworks/SFML.framework/Resources/CMake/SFMLConfigVersion.cmake">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/../../../../../../Library/Frameworks/SFML.framework/Resources/CMake/SFMLConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Frameworks\SFML.framework\Resources\CMake\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/../../../../../../Library/Frameworks/SFML.framework/Resources/CMake/SFMLSharedTargets-release.cmake">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/../../../../../../Library/Frameworks/SFML.framework/Resources/CMake/SFMLSharedTargets-release.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Frameworks\SFML.framework\Resources\CMake\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/../../../../../../Library/Frameworks/SFML.framework/Resources/CMake/SFMLSharedTargets.cmake">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/../../../../../../Library/Frameworks/SFML.framework/Resources/CMake/SFMLSharedTargets.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\Library\Frameworks\SFML.framework\Resources\CMake\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/include/CMakeLists.txt">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\include\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/src/CMakeLists.txt">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/CMakeLists.txt">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/Dwarf.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Dwarf.png">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/Fire.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Fire.png">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/Gate.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Gate.png">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/Gift1.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Gift1.png">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/Gift2.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Gift2.png">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/Help.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Help.png">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/Key.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Key.png">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/King.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/King.png">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/Mage.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Level_1.txt">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/Map.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Level_2.txt">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/Spr_Villager_Idle.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Level_3.txt">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/Teleport.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Mage.png">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/Thief.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/MainMenuMusic.ogg">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/Title.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Map.png">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/W_Red_Idle_SPR.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Orc.png">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/Warrior.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Shrek.ogg">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/arcadeClassic.ttf">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Spr_Villager_Idle.png">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/skeleton2_v2.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Teleport.png">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/skull.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Thief.png">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop/resources/vertWall.png">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Title.png">
+			<Option virtualFolder="CMake Files\resources\"/>
+		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/W_Red_Idle_SPR.png">
+			<Option virtualFolder="CMake Files\resources\"/>
+		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Warrior.png">
+			<Option virtualFolder="CMake Files\resources\"/>
+		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/arcadeClassic.ttf">
+			<Option virtualFolder="CMake Files\resources\"/>
+		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/skull.png">
+			<Option virtualFolder="CMake Files\resources\"/>
+		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/vertWall.png">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
 	</Project>
