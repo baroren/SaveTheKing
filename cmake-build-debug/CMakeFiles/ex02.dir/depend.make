@@ -756,6 +756,7 @@ CMakeFiles/ex02.dir/src/GameController.cpp.o: \
  ../include/Button.h \
  ../include/Clock.h \
  ../include/Dwarf.h \
+ ../include/Fire.h \
  ../include/GameController.h \
  ../include/GameObject.h \
  ../include/Gate.h \
@@ -2875,6 +2876,7 @@ CMakeFiles/ex02.dir/src/main.cpp.o: \
  ../include/Button.h \
  ../include/Clock.h \
  ../include/Dwarf.h \
+ ../include/Fire.h \
  ../include/GameController.h \
  ../include/GameObject.h \
  ../include/Gate.h \

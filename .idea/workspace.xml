@@ -16,23 +16,13 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Board.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Board.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/GameController.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/GameController.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/MainMenu.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/MainMenu.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Menu.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Menu.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Thief.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Thief.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Wall.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Wall.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Window.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Window.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Key.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Key.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ex02" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ex02" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Board.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Board.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Thief.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Thief.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Wall.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Wall.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/Key.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Key.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Board.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Fire.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Fire.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/GameController.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/GameController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Level_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Level_1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Thief.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thief.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +107,7 @@
       <workItem from="1640539423876" duration="9652000" />
       <workItem from="1641212744347" duration="5000" />
       <workItem from="1641930807466" duration="3819000" />
-      <workItem from="1642180498426" duration="30049000" />
+      <workItem from="1642180498426" duration="31251000" />
     </task>
     <task id="LOCAL-00001" summary="added main menu">
       <created>1640361808874</created>
@@ -287,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642245704544</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added key wwith no func yyet">
+      <created>1642256737808</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1642256737808</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,6 +345,7 @@
     <MESSAGE value="singleton start" />
     <MESSAGE value="singlton working , before implamntation" />
     <MESSAGE value="added music test" />
-    <option name="LAST_COMMIT_MESSAGE" value="added music test" />
+    <MESSAGE value="added key wwith no func yyet" />
+    <option name="LAST_COMMIT_MESSAGE" value="added key wwith no func yyet" />
   </component>
 </project>

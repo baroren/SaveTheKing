@@ -13,7 +13,7 @@ GameController::GameController() {
   m_players.push_back(make_unique<Mage>(m_window.calculatePos('M'), mage,3,false));
     m_players.push_back(make_unique<Warrior>(m_window.calculatePos('W'),warrior,3, false));
     m_players.push_back(make_unique<Thief>(m_window.calculatePos('T'), thief,3 ,true));
-    m_players.push_back(make_unique<Thief>(sf::Vector2f(100 ,750),key,3,true));
+   // m_players.push_back(make_unique<Thief>(sf::Vector2f(100 ,750),key,3,true));
 
     m_currPlayer.setSize(sf::Vector2f(30, 3));
     m_currPlayer.setOutlineColor(sf::Color::Transparent);
@@ -25,7 +25,7 @@ GameController::GameController() {
     m_playerShow.push_back(make_unique<Mage>(sf::Vector2f(100 ,800),mage,3 ,false));
     m_playerShow.push_back(make_unique<Warrior>(sf::Vector2f(100 ,800), warrior,3, false));
     m_playerShow.push_back(make_unique<Thief>(sf::Vector2f(100 ,800),thief,3,true));
-    m_blockObjects.push_back(make_unique<Wall>(m_window.calculatePos('='), vertWall,3));
+   // m_keyShow= make_unique<Wall>(sf::Vector2f(100 ,750), key,3);
 
     storeTeleproters();
     m_menu.createButton("New Game",100,150);
@@ -110,7 +110,7 @@ void GameController::run()
         }
 
         m_currPlayer.setPosition(m_players[key]->getLocation());
-
+       // m_keyShow->updateAndDraw(0, deltaTime, m_window.getWindow());
         m_players[key]->updateAndDraw(0, deltaTime, m_window.getWindow());
         m_window.getWindow().draw(m_currPlayer);
 

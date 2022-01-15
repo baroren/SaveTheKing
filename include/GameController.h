@@ -15,7 +15,7 @@
 #include "King.h"
 #include "Warrior.h"
 #include "Thief.h"
-
+#include "Fire.h"
 
 using std::vector;
 using std::unique_ptr;
@@ -48,7 +48,8 @@ private:
     Menu m_menu;
    sf::Text m_timer;
    sf::RectangleShape m_currPlayer;
-   sf::Music m_music;
+    unique_ptr<Static> m_keyShow;
+    sf::Music m_music;
 //		vector of the player objects (mage, king etc)
 	vector <unique_ptr<Player>> m_players;
     vector <unique_ptr<Player>> m_playerShow;
