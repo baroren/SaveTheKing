@@ -10,10 +10,16 @@ using std::endl;
 
 GameController::GameController() {
     m_players.push_back(make_unique<King>(m_window.calculatePos('K'), king,3,true));
-  m_players.push_back(make_unique<Mage>(m_window.calculatePos('M'), mage,3,false));
+    m_players.push_back(make_unique<Mage>(m_window.calculatePos('M'), mage,3,false));
     m_players.push_back(make_unique<Warrior>(m_window.calculatePos('W'),warrior,3, false));
     m_players.push_back(make_unique<Thief>(m_window.calculatePos('T'), thief,3 ,true));
    // m_players.push_back(make_unique<Thief>(sf::Vector2f(100 ,750),key,3,true));
+
+    m_blockObjects.push_back(make_unique<Wall>(m_window.calculatePos('='), vertWall, 3));
+
+    storeSurroundWall();
+
+    m_dwarves.push_back(make_unique<Dwarf>(m_window.calculatePos('&'), dwarf, 3, true, sf::Vector2f(0,1)));
 
     m_currPlayer.setSize(sf::Vector2f(30, 3));
     m_currPlayer.setOutlineColor(sf::Color::Transparent);
@@ -76,44 +82,12 @@ void GameController::run()
         deltaTime = clock.restart().asSeconds();
         m_timer.setString(m_clock->countDown());
 
-        //       cout <<m_clock->countDown()<<endl;
-        while (m_window.getWindow().pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                m_window.close();
-
-//            switch (event.type)
-//            {
-//                case sf::Event::KeyReleased:
-//                {
-//                    if (event.key.code == sf::Keyboard::P)
-//                    {
-//                        (key == m_players.size() - 1) ? key = 0 : key++;
-//                    }
-////                      if player pressed T check if there is a collision with a teleporter
-//                    else if (event.key.code == sf::Keyboard::T)
-//                    {
-//                        handleCollision(key);
-//                    }
-//                }
-//            default:
-//                break;
-//            }
-        }
-
 
 
         for (auto& currDwarf : m_dwarves)
         {
             currDwarf->move(deltaTime);
         }
-
-        for (int i = 0; i < 3; i++) {
-            m_window.getWindow().draw(m_buttons[i]->render());
-            m_window.getWindow().draw(m_buttons[i]->drawText());
-
-
-
 
 //          check collisions of player and dwarf with any blocking object
         for (auto& currentPlayer : m_players)
@@ -124,10 +98,6 @@ void GameController::run()
         {
             handleCollision(*currentDwarf);
         }
-
-//          check collision of current player with all special static objects related only to players
-        handleCollision(key);
-
 
         m_window.displayBoard();
 
@@ -144,6 +114,12 @@ void GameController::run()
             m_blockObjects[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
 
+        for (int i = 0; i < m_surroundWall.size(); i++)
+        {
+            m_surroundWall[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
+        }
+
+//          draw all dwarves
         for (int i = 0; i < m_dwarves.size(); i++)
         {
             m_dwarves[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
@@ -167,8 +143,6 @@ void GameController::run()
         }
 
         m_playerShow[key]->updateAndDraw(0, deltaTime, m_window.getWindow());
-
-
 
 
         m_window.drawText(m_timer);
@@ -270,6 +244,23 @@ void GameController::storeTeleproters()
         else
             break;
     }
+}
+
+void GameController::storeSurroundWall()
+{
+    sf::Vector2f upperLeftDot = m_window.getUpperLeftDot();
+    sf::Vector2i rowColNum = m_window.getRowColNum();
+
+    m_surroundWall.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x, upperLeftDot.y + SQUARE / 2), vertWall, 3));
+    m_surroundWall.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x + rowColNum.y * SQUARE, upperLeftDot.y + SQUARE / 2), vertWall, 3));
+
+    for (int i = 1; i < rowColNum.x; i++)
+    {
+        m_surroundWall.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x, m_surroundWall[0]->getLocation().y + i * SQUARE), vertWall, 3));
+        m_surroundWall.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x + rowColNum.y * SQUARE, m_surroundWall[0]->getLocation().y + i * SQUARE), vertWall, 3));
+    }
+
+    
 }
 
 

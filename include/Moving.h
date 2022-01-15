@@ -11,7 +11,8 @@ class Static;
 class Moving : public GameObject {
 public:
 
-	Moving(const sf::Vector2f position,gameObjectId id=king,float scale=0, const bool isFacedRight=true);
+	Moving(const sf::Vector2f position = sf::Vector2f(0,0), gameObjectId id = king, float scale = 0, 
+			const bool isFacedRight = true, const sf::Vector2f moveDirection = sf::Vector2f(0,1));
 
 	bool checkBorder();
 

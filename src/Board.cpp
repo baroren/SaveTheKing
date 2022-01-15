@@ -11,13 +11,6 @@ using std::endl;
 Board::Board(int rowNum, int colNum)
 	:m_rowNum(rowNum), m_colNum(colNum)
 {
-
-  /*  if (!m_boardTexture.loadFromFile("Map.png"))
-    {
-        cout<<"Eror";
-    }
-
-  */
     m_boardTexture=Resources::instance().getTexture(map);
       m_sprite.setTexture(&m_boardTexture);
 
@@ -41,7 +34,11 @@ Board::Board(int rowNum, int colNum)
 	{
 		m_btsBoard.push_back(line);
 	}
-   // m_wall.push_back(make_unique<Wall>(sf::Vector2f(10.f,10.f), vertWall,3));
+
+
+//    m_wall.push_back(make_unique<Wall>(sf::Vector2f(m_upperLeftDot.x + 50, m_upperLeftDot.y), vertWall,3));
+
+
 
 }
 
@@ -119,6 +116,22 @@ void Board::display(sf::RenderWindow& window)
 		window.draw(verticalLine, 2, sf::Lines);
 	}
 
+
+	//for (int i = 0; i < m_wall.size(); i++)
+	//{
+	//	m_wall[i]->updateAndDraw(0, 0, window);
+	//}
+
+}
+
+sf::Vector2f Board:: getUpperLeftDot() const
+{
+	return m_upperLeftDot;
+}
+
+sf::Vector2i Board::getRowColNum() const
+{
+	return sf::Vector2i(m_rowNum, m_colNum);
 }
 
 

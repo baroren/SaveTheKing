@@ -5,6 +5,7 @@
 #include <memory>
 #include <string>
 #include "Static.h"
+#include "Wall.h"
 
 
 using std::vector;
@@ -30,6 +31,10 @@ public:
 //		using a tag name, the func searches for the tag on matrix and 
 //		returns the appropriate position on window
 	sf::Vector2f calculatePos(const char tag);
+
+	sf::Vector2f getUpperLeftDot() const;
+
+	sf::Vector2i getRowColNum() const;
 
 private:
     sf::Texture m_boardTexture; //temp

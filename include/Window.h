@@ -27,6 +27,10 @@ public:
 
 	sf::Vector2f calculatePos(const char tag);
 
+	sf::Vector2f getUpperLeftDot() const;
+
+	sf::Vector2i getRowColNum() const;
+
 private:
 //		the window
 	sf::RenderWindow m_window;

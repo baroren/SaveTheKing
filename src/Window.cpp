@@ -27,6 +27,16 @@ void Window::display()
 	m_window.clear(sf::Color(34, 20, 26));
 }
 
+sf::Vector2i Window::getRowColNum() const
+{
+	return m_board.getRowColNum();
+}
+
+sf::Vector2f Window::getUpperLeftDot() const
+{
+	return m_board.getUpperLeftDot();
+}
+
 sf::Vector2f Window::calculatePos(const char tag)
 {
 	return m_board.calculatePos(tag);

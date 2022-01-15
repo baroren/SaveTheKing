@@ -1,9 +1,9 @@
 
 #include "Dwarf.h"
 
-Dwarf::Dwarf(const sf::Vector2f position, const int numOfAnim, const int numOfFrames, const float animTime,
-    const float scale, const string imagePath, const bool isFacedRight, const sf::Vector2f moveDirection)
-    : Moving (position, numOfAnim, numOfFrames, animTime, scale, imagePath, isFacedRight)
+Dwarf::Dwarf(const sf::Vector2f position, gameObjectId id, float scale, const bool isFacedRight, 
+                 const sf::Vector2f moveDirection)
+    : Moving (position, id, scale, isFacedRight, moveDirection)
 {
     m_moveDirection = moveDirection;
 
