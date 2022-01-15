@@ -4,7 +4,9 @@
 #include <vector>
 #include <iostream>
 #include <string>
-
+#include "Animation.h"
+using std::vector;
+using std::string;
 class Resources {
 public:
     static Resources &instance();
@@ -13,22 +15,24 @@ public:
 
     void operator=(const Resources &) = delete;
 
-    sf::Texture &getTexture(int i) const;
+    sf::Texture &getTexture(int i) ;
 
-    sf::Font& getFont() const;
+    sf::Font& getFont() ;
+    sf::Sprite& getSprite(int i) ;
 
-    //Animation *getAnimation(int i) const;
+    Animation *getAnimation(int i) ;
 
 private:
     Resources();
     void buildTexture();
-
+    void buildSprite();
+    void buildAnimation();
     sf::Texture m_temp;
     vector <sf::Sprite> m_sprite;
     vector <sf::Texture> m_texture;
     vector <string> m_imagePath = {"King.png"};
-    //vector<Animation *> m_animation;
-    vector<int> numOfAnim{2};
+    vector<Animation *> m_animation;
+    vector<int> numOfAnim{2}
     , numOfFrames{ 4 };
     sf::Font m_font;
 };

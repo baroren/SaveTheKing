@@ -216,6 +216,9 @@
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Player.cpp">
 			<Option target="ex02"/>
 		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Resources.cpp">
+			<Option target="ex02"/>
+		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Static.cpp">
 			<Option target="ex02"/>
 		</Unit>

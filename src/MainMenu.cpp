@@ -10,7 +10,8 @@ MainMenu::MainMenu() {
     }
 
 
-
+   testSprite=Resources::instance().getSprite(0);
+    testSprite.setPosition(sf::Vector2f(100,100));
 
 
     //m_help.setTexture(m_helpTex);
@@ -51,7 +52,7 @@ void MainMenu::run(sf::RenderWindow &window) {
              window.draw(m_titles[i]);
          }*/
 
-
+window.draw(testSprite);
 
 
         // printHelp(window,m_menu.getButton(1));

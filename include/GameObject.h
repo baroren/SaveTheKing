@@ -2,6 +2,7 @@
 #include "SFML/Graphics.hpp"
 #include <string>
 #include "Animation.h"
+//#include "Resources.h"
 
 class Mage;
 class Wall;

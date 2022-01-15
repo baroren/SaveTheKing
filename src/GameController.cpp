@@ -32,7 +32,6 @@ GameController::GameController() {
     m_menu.createButton("Main Menu",100,300);
     m_menu.createButton("Quit",100,375);
 
-
     //cout << m_teleporters[1]->getLinkdedTeleporter()->getLocation().x << ' ' << m_teleporters[1]->getLinkdedTeleporter()->getLocation().y << endl;
     //cout << m_teleporters[0]->getLinkdedTeleporter()->getLocation().x << ' ' << m_teleporters[0]->getLinkdedTeleporter()->getLocation().y;
 

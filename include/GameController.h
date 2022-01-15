@@ -1,5 +1,4 @@
 #pragma once
-
 #include <vector>
 #include <memory>
 #include "Menu.h"
@@ -15,6 +14,7 @@
 #include "King.h"
 #include "Warrior.h"
 #include "Thief.h"
+
 
 using std::vector;
 using std::unique_ptr;

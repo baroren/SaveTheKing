@@ -8,6 +8,7 @@
 #include "Mage.h"
 #include "Orc.h"
 #include "Menu.h"
+#include "Resources.h"
 
 using std::vector;
 using std::make_unique;
@@ -24,7 +25,8 @@ class MainMenu {
 private :
 
     sf::Text makeTitle(int size,std::string text,float,float);
-
+    sf::Sprite testSprite;
+    sf::Texture testTexture;
     vector <unique_ptr <GameObject> >m_gameObjects;
   //  vector <Button*> m_buttons;
     Menu m_menu;

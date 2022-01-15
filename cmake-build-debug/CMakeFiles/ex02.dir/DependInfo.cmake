@@ -28,6 +28,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/bar/Documents/school/yearB/project_oop2/src/Moving.cpp" "/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles/ex02.dir/src/Moving.cpp.o"
   "/Users/bar/Documents/school/yearB/project_oop2/src/Orc.cpp" "/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles/ex02.dir/src/Orc.cpp.o"
   "/Users/bar/Documents/school/yearB/project_oop2/src/Player.cpp" "/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles/ex02.dir/src/Player.cpp.o"
+  "/Users/bar/Documents/school/yearB/project_oop2/src/Resources.cpp" "/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles/ex02.dir/src/Resources.cpp.o"
   "/Users/bar/Documents/school/yearB/project_oop2/src/Static.cpp" "/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles/ex02.dir/src/Static.cpp.o"
   "/Users/bar/Documents/school/yearB/project_oop2/src/SubTime.cpp" "/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles/ex02.dir/src/SubTime.cpp.o"
   "/Users/bar/Documents/school/yearB/project_oop2/src/Teleporter.cpp" "/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles/ex02.dir/src/Teleporter.cpp.o"

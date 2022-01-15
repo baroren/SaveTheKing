@@ -609,6 +609,30 @@ src/Player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Player.cpp.s
 .PHONY : src/Player.cpp.s
 
+src/Resources.o: src/Resources.cpp.o
+.PHONY : src/Resources.o
+
+# target to build an object file
+src/Resources.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Resources.cpp.o
+.PHONY : src/Resources.cpp.o
+
+src/Resources.i: src/Resources.cpp.i
+.PHONY : src/Resources.i
+
+# target to preprocess a source file
+src/Resources.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Resources.cpp.i
+.PHONY : src/Resources.cpp.i
+
+src/Resources.s: src/Resources.cpp.s
+.PHONY : src/Resources.s
+
+# target to generate assembly for a file
+src/Resources.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Resources.cpp.s
+.PHONY : src/Resources.cpp.s
+
 src/Static.o: src/Static.cpp.o
 .PHONY : src/Static.o
 
@@ -894,6 +918,9 @@ help:
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"
+	@echo "... src/Resources.o"
+	@echo "... src/Resources.i"
+	@echo "... src/Resources.s"
 	@echo "... src/Static.o"
 	@echo "... src/Static.i"
 	@echo "... src/Static.s"
