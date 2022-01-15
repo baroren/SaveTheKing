@@ -12,24 +12,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38447bec-1481-48d5-b9f9-a5a2745a32ca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/Shrek.ogg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Button.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Button.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Board.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Board.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/GameController.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/GameController.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/MainMenu.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/MainMenu.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Menu.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Menu.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Thief.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Thief.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Wall.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Wall.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Window.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/Window.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ex02.dir/src/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Key.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Key.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ex02" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ex02" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ex02.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ex02.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Button.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Button.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/GameController.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/GameController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Menu.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Menu.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Button.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Button.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Board.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Board.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Thief.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Thief.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Wall.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Wall.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/Key.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/Key.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Board.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainMenu.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Thief.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Thief.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +117,7 @@
       <workItem from="1640539423876" duration="9652000" />
       <workItem from="1641212744347" duration="5000" />
       <workItem from="1641930807466" duration="3819000" />
-      <workItem from="1642180498426" duration="26360000" />
+      <workItem from="1642180498426" duration="30049000" />
     </task>
     <task id="LOCAL-00001" summary="added main menu">
       <created>1640361808874</created>
@@ -277,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642243723220</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="added music test">
+      <created>1642245704544</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1642245704544</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

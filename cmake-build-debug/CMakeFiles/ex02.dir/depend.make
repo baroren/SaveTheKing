@@ -182,8 +182,30 @@ CMakeFiles/ex02.dir/src/Animation.cpp.o: \
  /usr/local/include/SFML/Window/WindowHandle.hpp \
  /usr/local/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/ex02.dir/src/Board.cpp.o: \
+ ../include/Animation.h \
  ../include/Board.h \
+ ../include/GameObject.h \
+ ../include/Macros.h \
+ ../include/Resources.h \
+ ../include/Static.h \
  ../src/Board.cpp \
+ /usr/local/include/SFML/Audio.hpp \
+ /usr/local/include/SFML/Audio/AlResource.hpp \
+ /usr/local/include/SFML/Audio/Export.hpp \
+ /usr/local/include/SFML/Audio/InputSoundFile.hpp \
+ /usr/local/include/SFML/Audio/Listener.hpp \
+ /usr/local/include/SFML/Audio/Music.hpp \
+ /usr/local/include/SFML/Audio/OutputSoundFile.hpp \
+ /usr/local/include/SFML/Audio/Sound.hpp \
+ /usr/local/include/SFML/Audio/SoundBuffer.hpp \
+ /usr/local/include/SFML/Audio/SoundBufferRecorder.hpp \
+ /usr/local/include/SFML/Audio/SoundFileFactory.hpp \
+ /usr/local/include/SFML/Audio/SoundFileFactory.inl \
+ /usr/local/include/SFML/Audio/SoundFileReader.hpp \
+ /usr/local/include/SFML/Audio/SoundFileWriter.hpp \
+ /usr/local/include/SFML/Audio/SoundRecorder.hpp \
+ /usr/local/include/SFML/Audio/SoundSource.hpp \
+ /usr/local/include/SFML/Audio/SoundStream.hpp \
  /usr/local/include/SFML/Config.hpp \
  /usr/local/include/SFML/Graphics.hpp \
  /usr/local/include/SFML/Graphics/BlendMode.hpp \
@@ -1549,9 +1571,14 @@ CMakeFiles/ex02.dir/src/MainMenu.cpp.o: \
  /usr/local/include/SFML/Window/WindowHandle.hpp \
  /usr/local/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/ex02.dir/src/Menu.cpp.o: \
+ ../include/Animation.h \
  ../include/Board.h \
  ../include/Button.h \
+ ../include/GameObject.h \
+ ../include/Macros.h \
  ../include/Menu.h \
+ ../include/Resources.h \
+ ../include/Static.h \
  ../include/Window.h \
  ../src/Menu.cpp \
  /usr/local/include/SFML/Audio.hpp \
@@ -2743,9 +2770,31 @@ CMakeFiles/ex02.dir/src/Warrior.cpp.o: \
  /usr/local/include/SFML/Window/WindowHandle.hpp \
  /usr/local/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/ex02.dir/src/Window.cpp.o: \
+ ../include/Animation.h \
  ../include/Board.h \
+ ../include/GameObject.h \
+ ../include/Macros.h \
+ ../include/Resources.h \
+ ../include/Static.h \
  ../include/Window.h \
  ../src/Window.cpp \
+ /usr/local/include/SFML/Audio.hpp \
+ /usr/local/include/SFML/Audio/AlResource.hpp \
+ /usr/local/include/SFML/Audio/Export.hpp \
+ /usr/local/include/SFML/Audio/InputSoundFile.hpp \
+ /usr/local/include/SFML/Audio/Listener.hpp \
+ /usr/local/include/SFML/Audio/Music.hpp \
+ /usr/local/include/SFML/Audio/OutputSoundFile.hpp \
+ /usr/local/include/SFML/Audio/Sound.hpp \
+ /usr/local/include/SFML/Audio/SoundBuffer.hpp \
+ /usr/local/include/SFML/Audio/SoundBufferRecorder.hpp \
+ /usr/local/include/SFML/Audio/SoundFileFactory.hpp \
+ /usr/local/include/SFML/Audio/SoundFileFactory.inl \
+ /usr/local/include/SFML/Audio/SoundFileReader.hpp \
+ /usr/local/include/SFML/Audio/SoundFileWriter.hpp \
+ /usr/local/include/SFML/Audio/SoundRecorder.hpp \
+ /usr/local/include/SFML/Audio/SoundSource.hpp \
+ /usr/local/include/SFML/Audio/SoundStream.hpp \
  /usr/local/include/SFML/Config.hpp \
  /usr/local/include/SFML/Graphics.hpp \
  /usr/local/include/SFML/Graphics/BlendMode.hpp \

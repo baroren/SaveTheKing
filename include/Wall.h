@@ -2,6 +2,7 @@
 
 #include "Static.h"
 #include "Mage.h"
+#include "Resources.h"
 
 class Wall : public Static {
 

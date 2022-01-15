@@ -11,11 +11,15 @@ using std::endl;
 Board::Board(int rowNum, int colNum)
 	:m_rowNum(rowNum), m_colNum(colNum)
 {
-    if (!m_boardTexture.loadFromFile("Map.png"))
+
+  /*  if (!m_boardTexture.loadFromFile("Map.png"))
     {
         cout<<"Eror";
     }
-    m_sprite.setTexture(&m_boardTexture);
+
+  */
+    m_boardTexture=Resources::instance().getTexture(map);
+      m_sprite.setTexture(&m_boardTexture);
 
 	ifstream inputFile;
 
@@ -37,6 +41,8 @@ Board::Board(int rowNum, int colNum)
 	{
 		m_btsBoard.push_back(line);
 	}
+   // m_wall.push_back(make_unique<Wall>(sf::Vector2f(10.f,10.f), vertWall,3));
+
 }
 
 sf::Vector2f Board::calculatePos(const char tag)
@@ -65,7 +71,8 @@ sf::Vector2f Board::calculatePos(const char tag)
 void Board::display(sf::RenderWindow& window)
 {
 
-	sf::Vector2f upperRightDot = sf::Vector2f(m_upperLeftDot.x + m_colNum * SQUARE, m_upperLeftDot.y),
+
+    sf::Vector2f upperRightDot = sf::Vector2f(m_upperLeftDot.x + m_colNum * SQUARE, m_upperLeftDot.y),
 				lowerLeftDot = sf::Vector2f(m_upperLeftDot.x, m_upperLeftDot.y + m_rowNum * SQUARE),
 				lowerRightDot = sf::Vector2f(upperRightDot.x, lowerLeftDot.y);
 

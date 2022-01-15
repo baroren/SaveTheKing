@@ -2,10 +2,15 @@
 
 #include "SFML/Graphics.hpp"
 #include <vector>
+#include <memory>
 #include <string>
+#include "Static.h"
 
 
 using std::vector;
+using std::unique_ptr;
+using std::make_unique;
+
 using std::string;
 
 //	size of squares in the game board
@@ -32,7 +37,8 @@ private:
 //		default upper left dot, depends on SQUARE. currently is 400 200
 	 sf::Vector2f m_upperLeftDot;
 	int m_rowNum, m_colNum;
-
+    //	vector of static objects that block the moving objects (wall, fire, gate, orc)
+    vector <unique_ptr<Static>> m_wall;
 	vector<string> m_btsBoard;
 
 };
