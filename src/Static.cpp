@@ -1,13 +1,12 @@
 #include "Static.h"
 
 
-//void Static::handleCollision(Player& player, const sf::Vector2f moveDirection)
-//{
-//
-//}
-//
-//
-//void Static::handleCollision(Dwarf& Dwarf)
-//{
-//
-//}
+void Static::setDelete()
+{
+	m_isDeleted = true;
+}
+
+bool Static::getDelete() const
+{
+	return m_isDeleted;
+}

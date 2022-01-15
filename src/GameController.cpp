@@ -17,6 +17,7 @@ GameController::GameController() {
     m_blockObjects.push_back(make_unique<Wall>(m_window.calculatePos('='), vertWall, 3));
     m_blockObjects.push_back(make_unique<Fire>(m_window.calculatePos('*'), fire, 3));
 
+
     storeSurroundWall();
 
 
@@ -100,20 +101,33 @@ void GameController::run()
         {
             handleCollision(*currentDwarf);
         }
+        handleCollision(key);
+
+        if (key == 2)
+            replaceOrcWithKey();
+
+        std::erase_if(m_blockObjects, [](const auto& currBlockObject) {return currBlockObject->getDelete(); });
+        std::erase_if(m_specialStatic, [](const auto& currSpecialObject) {return currSpecialObject->getDelete(); });
 
         m_window.displayBoard();
 
 
-        //          draw all teleporters
+//          draw all teleporters
         for (int i = 0; i < m_teleporters.size(); i++)
         {
             m_teleporters[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
 
-        //          draw all blocking objects
+//          draw all blocking objects
         for (int i = 0; i < m_blockObjects.size(); i++)
         {
             m_blockObjects[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
+        }
+
+//          draw all special static objects
+        for (int i = 0; i < m_specialStatic.size(); i++)
+        {
+            m_specialStatic[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
 
 //          draw all dwarves
@@ -135,8 +149,8 @@ void GameController::run()
         m_players[key]->updateAndDraw(0, deltaTime, m_window.getWindow());
         m_window.getWindow().draw(m_currPlayer);
 
-        for (int i = 0; i < m_static.size(); i++) {
-            m_static[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
+        for (int i = 0; i < m_specialStatic.size(); i++) {
+            m_specialStatic[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
 
         m_playerShow[key]->updateAndDraw(0, deltaTime, m_window.getWindow());
@@ -189,7 +203,7 @@ void GameController::run()
                     }
                     else if (event.key.code == sf::Keyboard::T) {
 //          check collisions special for the player objects (throne, teleporters etc)
-                        handleCollision(key);
+                        handleTeleporters(key);
 
                         cout << "test" << endl;
                     }
@@ -254,11 +268,9 @@ void GameController::storeSurroundWall()
 
     for (int i = 0; i < rowColNum.x; i++)
     {
-        m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x - 10, firstVerticalY + i * SQUARE), vertWall, 3));
-        m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x + rowColNum.y * SQUARE + 10, firstVerticalY + i * SQUARE), vertWall, 3));
+        m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x - 15, firstVerticalY + i * SQUARE), vertWall, 3));
+        m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x + rowColNum.y * SQUARE + 15, firstVerticalY + i * SQUARE), vertWall, 3));
     }
-
-    
 }
 
 
@@ -275,6 +287,19 @@ void GameController::handleCollision(Moving& movingObject)
 }
 
 void GameController::handleCollision(const int key)
+{
+    for (auto& specialStatic : m_specialStatic)
+    {
+        if (m_players[key]->checkCollision(*specialStatic))
+        {
+            m_players[key]->handleCollision(*specialStatic);
+
+            return;
+        }
+    }
+}
+
+void GameController::handleTeleporters(const int key)
 {
     for (auto& teleporter : m_teleporters)
     {
@@ -325,6 +350,19 @@ void GameController::handleKey(float deltaTime,int &key, sf::Vector2f& moveDirec
     }
 
 }
+
+void GameController::replaceOrcWithKey()
+{
+    for (auto& currOrc : m_blockObjects)
+    {
+        if (currOrc->getDelete())
+        {
+            m_specialStatic.push_back(make_unique<Key>(currOrc->getLocation(), key, 3));
+            break;
+        }
+    }
+}
+
 bool GameController::isRunning()
 {
     return running;

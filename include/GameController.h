@@ -45,6 +45,9 @@ private:
 //  handle collisions of current player with static objects special for the player (throne, teleporters, key)
 	void handleCollision(const int key);
 
+//		handle collisions of current player with teleporters
+	void handleTeleporters(const int key);
+
 	void storeSurroundWall();
 
     sf:: Font m_font;
@@ -61,7 +64,7 @@ private:
 //	vector of static objects that block the moving objects (wall, fire, gate, orc)
 	vector <unique_ptr<Static>> m_blockObjects;
 //		vector of other static objects that affect only the player objects (throne, key)
-	vector <unique_ptr<Static>> m_static;
+	vector <unique_ptr<Static>> m_specialStatic;
 //		vector of all teleports
 	vector <unique_ptr<Teleporter>> m_teleporters;
 

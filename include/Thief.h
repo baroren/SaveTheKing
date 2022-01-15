@@ -1,6 +1,8 @@
 #pragma once
 
 #include "Player.h"
+#include "Key.h"
+#include "Gate.h"
 
 class Thief : public Player {
 public:
@@ -8,11 +10,12 @@ public:
 	using Player::Player;
 
 	virtual void handleCollision(Fire& fire) override;
-
-    bool hasKey();
+	virtual void handleCollision(Key& key) override;
+	virtual void handleCollision(Orc& orc) override;
+	virtual void handleCollision(Gate& gate) override;
 
 private:
-bool m_haveKey;
+	bool m_haveKey = false;
 
 
 };
