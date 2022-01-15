@@ -9,19 +9,19 @@ using std::endl;
 
 void Player::handleCollision(Teleporter& teleporter)
 {
-	cout << "teleporter" << endl;
+	sf::Vector2f newPosition = teleporter.getLinkdedTeleporterLocation();
 
-//	if (sf::Keyboard::isKeyPressed(sf::Keyboard::T))
-//	{
-		sf::Vector2f newPosition = teleporter.getLinkdedTeleporter()->getLocation();
-
-		this->setLocation(newPosition);
-//	}
+	this->setLocation(newPosition);
 }
 
- void Player::handleCollision(Static& staticObject)
+void Player::handleCollision(Static& staticObject)
 {
 	 staticObject.handleCollision(*this);
 }
 
+void Player::stayInPlace()
+{
+	sf::Vector2f newPos(getLocation().x - getMoveDirection().x, getLocation().y - getMoveDirection().y);
 
+	setLocation(newPos);
+}

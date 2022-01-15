@@ -12,9 +12,9 @@ void Teleporter::setLinkedTeleporter(Teleporter&  otherTeleporter)
 	m_linkedTeleporter = &otherTeleporter;
 }
 
-Teleporter* Teleporter::getLinkdedTeleporter() const
+sf::Vector2f Teleporter::getLinkdedTeleporterLocation() const
 {
-	return m_linkedTeleporter;
+	return m_linkedTeleporter->getLocation();
 }
 
 //void Teleporter::handleCollision(Player& player)

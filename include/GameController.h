@@ -65,5 +65,4 @@ private:
 //		vector of all teleports
 	vector <unique_ptr<Teleporter>> m_teleporters;
 
-	vector <unique_ptr<Wall>> m_surroundWall;
 };

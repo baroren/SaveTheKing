@@ -21,7 +21,7 @@ public:
 
 
 
-	Teleporter* getLinkdedTeleporter() const;
+	sf::Vector2f getLinkdedTeleporterLocation() const;
 
 
 

@@ -13,13 +13,15 @@ GameController::GameController() {
     m_players.push_back(make_unique<Mage>(m_window.calculatePos('M'), mage,3,false));
     m_players.push_back(make_unique<Warrior>(m_window.calculatePos('W'),warrior,3, false));
     m_players.push_back(make_unique<Thief>(m_window.calculatePos('T'), thief,3 ,true));
-   // m_players.push_back(make_unique<Thief>(sf::Vector2f(100 ,750),key,3,true));
 
     m_blockObjects.push_back(make_unique<Wall>(m_window.calculatePos('='), vertWall, 3));
+    m_blockObjects.push_back(make_unique<Fire>(m_window.calculatePos('*'), fire, 3));
 
     storeSurroundWall();
 
-    m_dwarves.push_back(make_unique<Dwarf>(m_window.calculatePos('&'), dwarf, 3, true, sf::Vector2f(0,1)));
+
+
+    m_dwarves.push_back(make_unique<Dwarf>(m_window.calculatePos('&'), dwarf, 3, true, sf::Vector2f(1,0)));
 
     m_currPlayer.setSize(sf::Vector2f(30, 3));
     m_currPlayer.setOutlineColor(sf::Color::Transparent);
@@ -114,11 +116,6 @@ void GameController::run()
             m_blockObjects[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
 
-        for (int i = 0; i < m_surroundWall.size(); i++)
-        {
-            m_surroundWall[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
-        }
-
 //          draw all dwarves
         for (int i = 0; i < m_dwarves.size(); i++)
         {
@@ -186,16 +183,17 @@ void GameController::run()
             switch(event.type) {
                 case sf::Event::KeyReleased: {
 
-                    if (event.key.code == sf::Keyboard::K) {
+//          cycle on the player list
+                    if (event.key.code == sf::Keyboard::P) {
                         (key == m_players.size() - 1) ? key = 0 : key++;
                     }
-                    if (event.key.code == sf::Keyboard::T) {
-                        //          check collisions special for the player objects (throne, teleporters etc)
+                    else if (event.key.code == sf::Keyboard::T) {
+//          check collisions special for the player objects (throne, teleporters etc)
+                        handleCollision(key);
 
-                            handleCollision(key);
-
-                      cout<<"test"<<endl;
+                        cout << "test" << endl;
                     }
+
                     break;
 
                 }
@@ -251,13 +249,13 @@ void GameController::storeSurroundWall()
     sf::Vector2f upperLeftDot = m_window.getUpperLeftDot();
     sf::Vector2i rowColNum = m_window.getRowColNum();
 
-    m_surroundWall.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x, upperLeftDot.y + SQUARE / 2), vertWall, 3));
-    m_surroundWall.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x + rowColNum.y * SQUARE, upperLeftDot.y + SQUARE / 2), vertWall, 3));
+    float firstVerticalY = upperLeftDot.y + SQUARE / 2,
+            firstHorizontalX = upperLeftDot.x + SQUARE / 2;
 
-    for (int i = 1; i < rowColNum.x; i++)
+    for (int i = 0; i < rowColNum.x; i++)
     {
-        m_surroundWall.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x, m_surroundWall[0]->getLocation().y + i * SQUARE), vertWall, 3));
-        m_surroundWall.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x + rowColNum.y * SQUARE, m_surroundWall[0]->getLocation().y + i * SQUARE), vertWall, 3));
+        m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x - 10, firstVerticalY + i * SQUARE), vertWall, 3));
+        m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x + rowColNum.y * SQUARE + 10, firstVerticalY + i * SQUARE), vertWall, 3));
     }
 
     
@@ -292,11 +290,6 @@ void GameController::handleCollision(const int key)
 
 void GameController::handleKey(float deltaTime,int &key, sf::Vector2f& moveDirection)
 {
-
-    if (sf::Keyboard::isKeyPressed (sf::Keyboard::P))
-    {
-        (key == m_players.size() - 1) ? key = 0 : key++;
-    }
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
     {
