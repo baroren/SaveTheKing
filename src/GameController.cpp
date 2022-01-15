@@ -27,6 +27,7 @@ GameController::GameController() {
     m_playerShow.push_back(make_unique<Thief>(sf::Vector2f(100 ,800),thief,3,true));
    // m_keyShow= make_unique<Wall>(sf::Vector2f(100 ,750), key,3);
 
+//      store teleporters
     storeTeleproters();
     m_menu.createButton("New Game",100,150);
     m_menu.createButton("Help",100,225);
@@ -64,7 +65,10 @@ void GameController::run()
     sf::Vector2f moveDirection;
     m_clock =new Clock(80);
     m_clock->reset();
-	while (m_window.isOpen()) {
+
+    while (m_window.isOpen())
+    {
+
 
         m_window.getWindow().clear(sf::Color(34, 20, 26));
 
@@ -72,33 +76,77 @@ void GameController::run()
         deltaTime = clock.restart().asSeconds();
         m_timer.setString(m_clock->countDown());
 
-
-
-
-       // m_mainMenu.printHelp(m_window.getWindow(),m_buttons[1]);
-
-        for (auto& currentPlayer : m_players)
+        //       cout <<m_clock->countDown()<<endl;
+        while (m_window.getWindow().pollEvent(event))
         {
+            if (event.type == sf::Event::Closed)
+                m_window.close();
 
-            handleCollision(*currentPlayer, moveDirection);
+//            switch (event.type)
+//            {
+//                case sf::Event::KeyReleased:
+//                {
+//                    if (event.key.code == sf::Keyboard::P)
+//                    {
+//                        (key == m_players.size() - 1) ? key = 0 : key++;
+//                    }
+////                      if player pressed T check if there is a collision with a teleporter
+//                    else if (event.key.code == sf::Keyboard::T)
+//                    {
+//                        handleCollision(key);
+//                    }
+//                }
+//            default:
+//                break;
+//            }
         }
 
+
+
+        for (auto& currDwarf : m_dwarves)
+        {
+            currDwarf->move(deltaTime);
+        }
+
+        for (int i = 0; i < 3; i++) {
+            m_window.getWindow().draw(m_buttons[i]->render());
+            m_window.getWindow().draw(m_buttons[i]->drawText());
+
+
+
+
+//          check collisions of player and dwarf with any blocking object
+        for (auto& currentPlayer : m_players)
+        {
+            handleCollision(*currentPlayer);
+        }
+        for (auto& currentDwarf : m_dwarves)
+        {
+            handleCollision(*currentDwarf);
+        }
+
+//          check collision of current player with all special static objects related only to players
+        handleCollision(key);
 
 
         m_window.displayBoard();
 
 
-
-//          draw all teleporters
+        //          draw all teleporters
         for (int i = 0; i < m_teleporters.size(); i++)
         {
             m_teleporters[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
 
-//          draw all blocking objects
+        //          draw all blocking objects
         for (int i = 0; i < m_blockObjects.size(); i++)
         {
             m_blockObjects[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
+        }
+
+        for (int i = 0; i < m_dwarves.size(); i++)
+        {
+            m_dwarves[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
         }
 
 //          draw all players
@@ -224,15 +272,15 @@ void GameController::storeTeleproters()
     }
 }
 
-//  handles collision that have the same affect on the moving object
-void GameController::handleCollision(Moving& movingObject, const sf::Vector2f moveDirection)
+
+void GameController::handleCollision(Moving& movingObject)
 {
 //      check collisions with blocking objects
     for (auto& blockObject : m_blockObjects)
     {
         if (movingObject.checkCollision(*blockObject))
         {
-            movingObject.handleCollision(*blockObject, moveDirection);
+            movingObject.handleCollision(*blockObject);
         }
     }
 }
@@ -244,6 +292,7 @@ void GameController::handleCollision(const int key)
         if (m_players[key]->checkCollision(*teleporter))
         {
             m_players[key]->handleCollision(*teleporter);
+
             return;
         }
     }
@@ -253,7 +302,7 @@ void GameController::handleCollision(const int key)
 void GameController::handleKey(float deltaTime,int &key, sf::Vector2f& moveDirection)
 {
 
-    if(sf::Keyboard::isKeyPressed (sf::Keyboard::P))
+    if (sf::Keyboard::isKeyPressed (sf::Keyboard::P))
     {
         (key == m_players.size() - 1) ? key = 0 : key++;
     }
@@ -273,22 +322,22 @@ void GameController::handleKey(float deltaTime,int &key, sf::Vector2f& moveDirec
 
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
     {
-        m_players[key]->move(LEFT,deltaTime, moveDirection);
+        m_players[key]->move(LEFT,deltaTime);
     }
 
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
     {
-        m_players[key]->move(RIGHT,deltaTime, moveDirection);
+        m_players[key]->move(RIGHT,deltaTime);
     }
 
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
     {
-        m_players[key]->move(UP,deltaTime, moveDirection);
+        m_players[key]->move(UP,deltaTime);
     }
 
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
     {
-        m_players[key]->move(DOWN,deltaTime, moveDirection);
+        m_players[key]->move(DOWN,deltaTime);
     }
 
 }

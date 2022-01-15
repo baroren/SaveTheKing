@@ -10,17 +10,17 @@ using std::cout;
 Moving::Moving(const sf::Vector2f position,gameObjectId id,float scale,const bool isFacedRight)
     :GameObject(position, id, scale), m_isFacedRight(isFacedRight) {}
 
-void Moving::move(const Direction dir, float deltaTime, sf::Vector2f& moveDirection)
+void Moving::move(const Direction dir, float deltaTime)
 {
 
     int x = 0, y = 0;
-    moveDirection = sf::Vector2f(x, y);
+    m_moveDirection = sf::Vector2f(x, y);
     const float speed = 100;
 
     switch (dir)
     {
     case LEFT:
-        moveDirection.x = x = -1;
+        m_moveDirection.x = x = -1;
         if (m_isFacedRight)
         {
             m_sprite.scale(sf::Vector2f(-1, 1));
@@ -30,11 +30,11 @@ void Moving::move(const Direction dir, float deltaTime, sf::Vector2f& moveDirect
         break;
 
     case DOWN:
-        moveDirection.y = y = 1;
+        m_moveDirection.y = y = 1;
         break;
 
     case RIGHT:
-        moveDirection.x = x = 1;
+        m_moveDirection.x = x = 1;
         if (!m_isFacedRight)
         {
             m_sprite.scale(sf::Vector2f(-1, 1));
@@ -43,7 +43,7 @@ void Moving::move(const Direction dir, float deltaTime, sf::Vector2f& moveDirect
         break;
 
     case UP:
-        moveDirection.y = y = -1;
+        m_moveDirection.y = y = -1;
         break;
     }
 
@@ -52,15 +52,18 @@ void Moving::move(const Direction dir, float deltaTime, sf::Vector2f& moveDirect
     m_sprite.move(direction * speed * deltaTime);
 }
 
-void Moving::handleCollision(GameObject& gameObject)
+void Moving::setMoveDirection(const sf::Vector2f newDirection)
 {
-    gameObject.handleCollision(*this);
+    m_moveDirection = newDirection;
 }
 
-void Moving::handleCollision(Static& staticObject, const sf::Vector2f moveDirection)
+sf::Vector2f Moving::getMoveDirection() const
 {
-    staticObject.handleCollision(*this, moveDirection);
+    return m_moveDirection;
 }
+
+
+
 
 
 //	collision with wall
