@@ -9,10 +9,10 @@ using std::endl;
 
 
 GameController::GameController() {
-    m_players.push_back(make_unique<King>(m_window.calculatePos('K'), 2, 4, 0.17, 3, "King.png", true));
-    m_players.push_back(make_unique<Mage>(m_window.calculatePos('M'), 1, 3, 0.17, 3, "Mage.png", false));
-    m_players.push_back(make_unique<Warrior>(m_window.calculatePos('W'), 1, 3, 0.17, 3, "Warrior.png", false));
-    m_players.push_back(make_unique<Thief>(m_window.calculatePos('T'), 1, 3, 0.17, 3, "Thief.png", true));
+    m_players.push_back(make_unique<King>(m_window.calculatePos('K'), king,3,true));
+  m_players.push_back(make_unique<Mage>(m_window.calculatePos('M'), mage,3,false));
+    m_players.push_back(make_unique<Warrior>(m_window.calculatePos('W'),warrior,3, false));
+    m_players.push_back(make_unique<Thief>(m_window.calculatePos('T'), thief,3 ,true));
 
     m_currPlayer.setSize(sf::Vector2f(30, 3));
     m_currPlayer.setOutlineColor(sf::Color::Transparent);
@@ -20,11 +20,11 @@ GameController::GameController() {
     m_currPlayer.setOrigin(sf::Vector2f(m_currPlayer.getGlobalBounds().width-30.f,
                                         m_currPlayer.getGlobalBounds().height-40.f));
 
-    m_playerShow.push_back(make_unique<King>(sf::Vector2f(100 ,800), 2, 4, 0.17, 5, "King.png", true));
-    m_playerShow.push_back(make_unique<Mage>(sf::Vector2f(100 ,800), 1, 3, 0.17, 5, "Mage.png", false));
-    m_playerShow.push_back(make_unique<Warrior>(sf::Vector2f(100 ,800), 1, 3, 0.17, 5, "Warrior.png", false));
-    m_playerShow.push_back(make_unique<Thief>(sf::Vector2f(100 ,800), 1, 3, 0.17, 5, "Thief.png", true));
-    m_blockObjects.push_back(make_unique<Wall>(m_window.calculatePos('='), 1, 4, 0.17, 3, "skeleton2_v2.png"));
+    m_playerShow.push_back(make_unique<King>(sf::Vector2f(100 ,800),king,3 ,true));
+    m_playerShow.push_back(make_unique<Mage>(sf::Vector2f(100 ,800),mage,3 ,false));
+    m_playerShow.push_back(make_unique<Warrior>(sf::Vector2f(100 ,800), warrior,3, false));
+    m_playerShow.push_back(make_unique<Thief>(sf::Vector2f(100 ,800),thief,3,true));
+    m_blockObjects.push_back(make_unique<Wall>(m_window.calculatePos('='), dwarf,3));
 
     storeTeleproters();
     m_menu.createButton("New Game",100,150);
@@ -36,11 +36,7 @@ GameController::GameController() {
     //cout << m_teleporters[0]->getLinkdedTeleporter()->getLocation().x << ' ' << m_teleporters[0]->getLinkdedTeleporter()->getLocation().y;
 
 
-    if (!m_font.loadFromFile("arcadeClassic.ttf")) {
-        // error...
-        std::cout << "error loading font";
-
-    }
+     m_font=Resources::instance().getFont();
 
 
     m_timer.setFont(m_font);
@@ -191,8 +187,8 @@ void GameController::storeTeleproters()
         if (foundPos_1.x != -1 && foundPos_2.x != -1)
         {
 
-            m_teleporters.push_back(make_unique<Teleporter>(foundPos_1, 1, 4, 0.17, 3, "Teleport.png"));
-            m_teleporters.push_back(make_unique<Teleporter>(foundPos_2, 1, 4, 0.17, 3, "Teleport.png"));
+            m_teleporters.push_back(make_unique<Teleporter>(foundPos_1, teleport,3));
+            m_teleporters.push_back(make_unique<Teleporter>(foundPos_2, teleport,3));
 
             m_teleporters[teleIndex]->setLinkedTeleporter(*m_teleporters[nextTeleIndex]);
             m_teleporters[nextTeleIndex]->setLinkedTeleporter(*m_teleporters[teleIndex]);

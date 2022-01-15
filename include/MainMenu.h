@@ -1,5 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
+
 #include <vector>
 #include <iostream>
 #include <memory>
@@ -30,6 +32,7 @@ private :
     vector <unique_ptr <GameObject> >m_gameObjects;
   //  vector <Button*> m_buttons;
     Menu m_menu;
+    sf::Music m_music;
 //  check to see if gameObject works with unique ptr and how to solve Button
 //    vector <unique_ptr<GameObject>> m_gameObjects;
 //    vector <unique_ptr<Button>> m_buttons;

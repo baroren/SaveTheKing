@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/bar/Documents/school/yearB/project_oop2/include/Macros.cpp" "/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles/ex02.dir/include/Macros.cpp.o"
   "/Users/bar/Documents/school/yearB/project_oop2/src/AddTime.cpp" "/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles/ex02.dir/src/AddTime.cpp.o"
   "/Users/bar/Documents/school/yearB/project_oop2/src/Animation.cpp" "/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles/ex02.dir/src/Animation.cpp.o"
   "/Users/bar/Documents/school/yearB/project_oop2/src/Board.cpp" "/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles/ex02.dir/src/Board.cpp.o"

@@ -391,9 +391,22 @@ CMakeFiles/ex02.dir/src/Teleporter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/src/Teleporter.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/src/Teleporter.cpp -o CMakeFiles/ex02.dir/src/Teleporter.cpp.s
 
+CMakeFiles/ex02.dir/include/Macros.cpp.o: CMakeFiles/ex02.dir/flags.make
+CMakeFiles/ex02.dir/include/Macros.cpp.o: ../include/Macros.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/ex02.dir/include/Macros.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/include/Macros.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/include/Macros.cpp
+
+CMakeFiles/ex02.dir/include/Macros.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex02.dir/include/Macros.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bar/Documents/school/yearB/project_oop2/include/Macros.cpp > CMakeFiles/ex02.dir/include/Macros.cpp.i
+
+CMakeFiles/ex02.dir/include/Macros.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex02.dir/include/Macros.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bar/Documents/school/yearB/project_oop2/include/Macros.cpp -o CMakeFiles/ex02.dir/include/Macros.cpp.s
+
 CMakeFiles/ex02.dir/src/MainMenu.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/MainMenu.cpp.o: ../src/MainMenu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/ex02.dir/src/MainMenu.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/ex02.dir/src/MainMenu.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/MainMenu.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/MainMenu.cpp
 
 CMakeFiles/ex02.dir/src/MainMenu.cpp.i: cmake_force
@@ -406,7 +419,7 @@ CMakeFiles/ex02.dir/src/MainMenu.cpp.s: cmake_force
 
 CMakeFiles/ex02.dir/src/Button.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Button.cpp.o: ../src/Button.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/ex02.dir/src/Button.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/ex02.dir/src/Button.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Button.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Button.cpp
 
 CMakeFiles/ex02.dir/src/Button.cpp.i: cmake_force
@@ -419,7 +432,7 @@ CMakeFiles/ex02.dir/src/Button.cpp.s: cmake_force
 
 CMakeFiles/ex02.dir/src/Animation.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Animation.cpp.o: ../src/Animation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/ex02.dir/src/Animation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/ex02.dir/src/Animation.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Animation.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Animation.cpp
 
 CMakeFiles/ex02.dir/src/Animation.cpp.i: cmake_force
@@ -432,7 +445,7 @@ CMakeFiles/ex02.dir/src/Animation.cpp.s: cmake_force
 
 CMakeFiles/ex02.dir/src/Clock.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Clock.cpp.o: ../src/Clock.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/ex02.dir/src/Clock.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/ex02.dir/src/Clock.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Clock.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Clock.cpp
 
 CMakeFiles/ex02.dir/src/Clock.cpp.i: cmake_force
@@ -445,7 +458,7 @@ CMakeFiles/ex02.dir/src/Clock.cpp.s: cmake_force
 
 CMakeFiles/ex02.dir/src/Resources.cpp.o: CMakeFiles/ex02.dir/flags.make
 CMakeFiles/ex02.dir/src/Resources.cpp.o: ../src/Resources.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/ex02.dir/src/Resources.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/ex02.dir/src/Resources.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex02.dir/src/Resources.cpp.o -c /Users/bar/Documents/school/yearB/project_oop2/src/Resources.cpp
 
 CMakeFiles/ex02.dir/src/Resources.cpp.i: cmake_force
@@ -483,6 +496,7 @@ ex02_OBJECTS = \
 "CMakeFiles/ex02.dir/src/Menu.cpp.o" \
 "CMakeFiles/ex02.dir/src/GameController.cpp.o" \
 "CMakeFiles/ex02.dir/src/Teleporter.cpp.o" \
+"CMakeFiles/ex02.dir/include/Macros.cpp.o" \
 "CMakeFiles/ex02.dir/src/MainMenu.cpp.o" \
 "CMakeFiles/ex02.dir/src/Button.cpp.o" \
 "CMakeFiles/ex02.dir/src/Animation.cpp.o" \
@@ -517,6 +531,7 @@ ex02: CMakeFiles/ex02.dir/src/Board.cpp.o
 ex02: CMakeFiles/ex02.dir/src/Menu.cpp.o
 ex02: CMakeFiles/ex02.dir/src/GameController.cpp.o
 ex02: CMakeFiles/ex02.dir/src/Teleporter.cpp.o
+ex02: CMakeFiles/ex02.dir/include/Macros.cpp.o
 ex02: CMakeFiles/ex02.dir/src/MainMenu.cpp.o
 ex02: CMakeFiles/ex02.dir/src/Button.cpp.o
 ex02: CMakeFiles/ex02.dir/src/Animation.cpp.o
@@ -529,7 +544,7 @@ ex02: /Library/Frameworks/./sfml-network.framework/Versions/2.5.1/sfml-network
 ex02: /Library/Frameworks/./sfml-window.framework/Versions/2.5.1/sfml-window
 ex02: /Library/Frameworks/./sfml-system.framework/Versions/2.5.1/sfml-system
 ex02: CMakeFiles/ex02.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX executable ex02"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Linking CXX executable ex02"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ex02.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

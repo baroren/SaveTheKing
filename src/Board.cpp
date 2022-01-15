@@ -93,7 +93,7 @@ void Board::display(sf::RenderWindow& window)
 
 
     //m_sprite.setPosition(m_upperLeftDot.x -40.f, m_upperLeftDot.y-40.f);
-    //m_sprite.setSize(sf::Vector2f(m_rowNUm * SQUARE, m_colNum * SQUARE));
+   // m_sprite.setScale(sf::Vector2f(0.3, 0.3));
    // window.draw(m_sprite);
 
 	for (int i = 1; i < m_rowNum; i++)

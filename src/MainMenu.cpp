@@ -10,10 +10,15 @@ MainMenu::MainMenu() {
     }
 
 
-   testSprite=Resources::instance().getSprite(0);
+ //  testSprite=Resources::instance().getSprite(0);
     testSprite.setPosition(sf::Vector2f(100,100));
 
+  // m_music = Resources::instance().getMusic(king);
+    if (!m_music.openFromFile("MainMenuMusic.ogg")) {
+        // error...
+        std::cout << "error loading music";
 
+    }
     //m_help.setTexture(m_helpTex);
     m_titles.push_back(makeTitle(72, "Save  The  King",700.f,150.f));
     m_titles.push_back(makeTitle(32, "Dungeon  Edition",700.f,210.f));
@@ -21,11 +26,11 @@ MainMenu::MainMenu() {
     m_menu.createButton("NewGame",700,300);
     m_menu.createButton("Help",700,380);
     m_menu.createButton("Quit",700,460);
-    m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(300,600), 1, 3, 0.17, 5, "Dwarf.png", true));
-   m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(300,300), 2, 4, 0.17, 5, "King.png", false));
-    m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(300,400) ,1, 3, 0.17, 5, "Mage.png", true));
-    m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(300,500) ,1, 3, 0.17, 5, "Warrior.png", true));
-    m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(950,210) ,1, 3, 0.17, 5, "Fire.png", true));
+    m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(300,600), king,3,true));
+ //  m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(300,300), 2, 4, 0.17, 5, "King.png", false));
+    m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(300,400) ,mage,5, true));
+    m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(300,500) ,warrior,5 ,true));
+    m_gameObjects.push_back(make_unique<Mage>(sf::Vector2f(950,210) ,thief,5,true));
 
 
 }
@@ -38,7 +43,7 @@ void MainMenu::run(sf::RenderWindow &window) {
     float deltaTime = 0.0f;
     while (window.isOpen()) {
 
-
+    m_music.play();
         deltaTime = clock.restart().asSeconds();
         window.clear(sf::Color(34, 20, 26));
 
@@ -52,7 +57,7 @@ void MainMenu::run(sf::RenderWindow &window) {
              window.draw(m_titles[i]);
          }*/
 
-window.draw(testSprite);
+
 
 
         // printHelp(window,m_menu.getButton(1));
