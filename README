@@ -1,14 +1,122 @@
-& - dwarf
-$ - gift with time
-% - gift destroy all dwarves
-@ - throne
-X - teleport
-M - mage
-K - king
-T - thief
-W - warrior
-* - fire
-F - key
-= - wall
-# - gate
-! - troll
+﻿This is the README file for the oop project
+-------------------------------------------
+
+Created by:
+    Netanel Bondar, 207211848 & Bar Oren, 206548752
+
+Program Explanation:
+    This program will take your level file and transform it into a beautiful graphic board.
+
+    You will need a level (example Level_1.txt) to start playing. The characters are represented by the following symbols:
+
+    & - dwarf
+    $ - gift with time
+    % - gift destroy all dwarves
+    @ - throne
+    X - teleport
+    M - mage
+    K - king
+    T - thief
+    W - warrior
+    * - fire
+    F - key
+    = - wall
+    # - gate
+    ! - orc
+
+        You will be able to play the game by controlling one of 4 characters at a time: King, Mage, Warrior and Thief.
+        Your goal is to get the King to the throne!
+        But be aware, there are orcs, fire traps, walls and gates! But at least they are not moving, unlike the dwarves!
+        Don't worry, you will be able to kill trolls with the warrior, the orcs will drop keys for your thief to collect to open the gates,
+            the mage is expert in deleting fire traps and the king... well he exists.
+        There are teleporters as well, help you to get to places faster.
+        There are two types of in the game, one that adds/subtracts time from the level (randomly, do you trust your luck?),
+            and one that kills all dwarves in the game, magnificent.
+
+List of files:
+    Sources:
+        main.cpp
+            The main file, creates a GameController object that will control every aspect of the game.
+
+        Window.cpp
+            Controls the graphics side of things, displays the window and has a member of the Board class.
+
+        Board.cpp
+            Has a 2d Array representing the board the program detects while loading a level.
+            Can convert indexes on matrix to pixel on window to place the objects in the right spots in the start of the game.
+
+        Animation.cpp
+            Gets spreadsheet of the animation of each object and creates an animation out of it.
+            Used when displaying objects on the board.
+
+        Resources.cpp
+            A singleton file that stores all the image paths, textures and sprites that the game objects use to draw themselves.
+
+        MainMenu.cpp
+            Displays all the menu.
+
+        Menu.cpp
+            Handles the all the buttons.
+
+        Buttons.cpp
+            Displays a button and handles clicks on it.
+
+        Clock.cpp
+            Handles the time left in the game. Has functions to add/subtract time.
+
+        GameObject.cpp
+            Base class for all objects of the game, as basic functions like detecting collision with another gameObject etc.
+
+        Moving.cpp
+            Derived from the GameObject class, this class is the base class for all moving objects on the board (Player and Dwarf).
+            Has some base functions like move and member of the move direction.
+
+        Static.cpp
+            Derived from the GameObject class, this class is the base class for all static objects on the board (throne, gate, orc etc)
+
+        Player.cpp
+            Derived from the Moving class, this class is the base class for all the players objects (king, mage, warrior and thief)
+            Has functions specific for the players like collision with teleporters, throne, keys etc.
+
+        King.cpp, Mage.cpp, Warrior.cpp, Thief.cpp
+            Derived from the Player class, these classes is for player objects. 
+            Every class has functions specific for it (warrior kills orcs, mage kills fire etc)
+
+        Dwarf.cpp
+            Derived from the Moving class, this class is for the dwarves objects on the board.
+            Has functions to deal with collisions with the player class.
+
+        Wall.cpp, Gate.cpp, Fire.cpp, Orc.cpp, Key.cpp, Throne.cpp, Gift_1.cpp, Gift_2.cpp, Teleport.cpp
+            Derived from the Static class, these classes represents the static objects on the boarad.
+            Each has collision behavior according to the game description 
+            (orc killed by warrior drops key which can be picked by thief to open gates. Gift_1 adds/subtract time, Gift_2 kills all dwarves etc)
+
+
+    Include:
+        Include files for the cpp files.
+
+        Macro.h
+            enums for the objects id used in the Resources file and to search a specific char in the board.
+
+    Resources:
+        The objects images, music files and the level files.
+
+
+Data Structures:
+
+    GameController has vectors of all objects on board.
+    Resources has all the textures image paths and sprites.
+    Board has vector of strings that stores the loaded level.
+
+
+
+Exceptional Algorithms:
+    The magnificent double dispatch system.
+    
+
+Known bugs:
+    When pressing new game or restart level the objects sometimes don't appear in the right position on the window.
+
+
+Other comments:
+    

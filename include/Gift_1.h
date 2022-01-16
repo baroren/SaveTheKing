@@ -18,7 +18,6 @@ public:
 
 	virtual void handleCollision(Dwarf& dwarf)override {};
 
-	virtual void handleCollision(Mage& mage) override {};
 
 	virtual void handleCollision(Player& player)override {};
 

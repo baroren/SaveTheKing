@@ -10,7 +10,6 @@ public:
 
 	virtual void handleCollision(Dwarf& dwarf)override {};
 
-	virtual void handleCollision(Mage& mage) override {};
 
 private:
 

@@ -1,3 +1,5 @@
+
+
 #pragma once
 #include "SFML/Graphics.hpp"
 #include <string>
@@ -38,11 +40,10 @@ public:
 
      void handleCollision(GameObject& gameobject) { cout << "unknown object" << endl; };
 
+//	    handle collisions with player
      virtual void handleCollision(Player& player) = 0;
      virtual void handleCollision(Dwarf& Dwarf) = 0;
     void setOriginalPosition();
-
-     virtual void handleCollision(Mage& mage) = 0;
 
      sf::Sprite getSprite() const;
 
