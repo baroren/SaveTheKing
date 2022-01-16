@@ -75,7 +75,7 @@ private:
     sf::Text m_level;
 
     sf::RectangleShape m_currPlayer;
-    unique_ptr<Static> m_keyShow;
+    sf::Sprite m_keyShow;
     sf::Music m_music;
 
 

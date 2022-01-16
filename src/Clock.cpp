@@ -2,6 +2,7 @@
 
 Clock::Clock(int time)
 {
+    m_gameOver = false;
     addedTime=0;
     m_subTime=0; //temps
     if(time>60) {
@@ -31,7 +32,7 @@ std::string Clock::countDown() {
     m_time=(int )(m_clock.getElapsedTime().asSeconds());
     if(m_min==0&&m_sec==0)
     {
-
+        m_gameOver = true;
         std::cout<<"Game over";
         return "Game Over";
 
@@ -110,4 +111,8 @@ void Clock:: reset() {
 
     m_clock.restart().asSeconds();
 
+}
+bool Clock::isGameOver()
+{
+    return m_gameOver;
 }
