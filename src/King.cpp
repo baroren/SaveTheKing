@@ -16,10 +16,14 @@ void King::handleCollision(Orc& orc)
     Player::stayInPlace();
 }
 
+bool King::getLevelPassed() const
+{
+    return m_levelPassed;
+}
+
 void King::handleCollision(Throne& throne)
 {
     // level won woohoo
     m_levelPassed = true;
 
-    cout << "coillided with throne" << endl;
 }
