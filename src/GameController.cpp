@@ -9,10 +9,10 @@ using std::endl;
 
 
 GameController::GameController() {
-    m_players.push_back(make_unique<King>(m_window.calculatePos('K'), king,3,true));
-    m_players.push_back(make_unique<Mage>(m_window.calculatePos('M'), mage,3,false));
-    m_players.push_back(make_unique<Warrior>(m_window.calculatePos('W'),warrior,3, false));
-    m_players.push_back(make_unique<Thief>(m_window.calculatePos('T'), thief,3 ,true));
+
+    storePlayers();
+
+
 
     m_blockObjects.push_back(make_unique<Wall>(m_window.calculatePos('='), vertWall, 3));
     m_blockObjects.push_back(make_unique<Fire>(m_window.calculatePos('*'), fire, 3));
@@ -33,11 +33,7 @@ GameController::GameController() {
     m_currPlayer.setOrigin(sf::Vector2f(m_currPlayer.getGlobalBounds().width-30.f,
                                         m_currPlayer.getGlobalBounds().height-40.f));
 
-    m_playerShow.push_back(make_unique<King>(sf::Vector2f(100 ,800),king,3 ,true));
-    m_playerShow.push_back(make_unique<Mage>(sf::Vector2f(100 ,800),mage,3 ,false));
-    m_playerShow.push_back(make_unique<Warrior>(sf::Vector2f(100 ,800), warrior,3, false));
-    m_playerShow.push_back(make_unique<Thief>(sf::Vector2f(100 ,800),thief,3,true));
-   // m_keyShow= make_unique<Wall>(sf::Vector2f(100 ,750), key,3);
+
 
 //      store teleporters
     storeTeleproters();
@@ -398,6 +394,26 @@ void GameController::replaceOrcWithKey()
             break;
         }
     }
+}
+
+void GameController::storePlayers()
+{
+    m_players.push_back(make_unique<King>(m_window.calculatePos('K'), king, 3, true));
+    m_players.push_back(make_unique<Mage>(m_window.calculatePos('M'), mage, 3, false));
+    m_players.push_back(make_unique<Warrior>(m_window.calculatePos('W'), warrior, 3, false));
+    m_players.push_back(make_unique<Thief>(m_window.calculatePos('T'), thief, 3, true));
+
+    m_playerShow.push_back(make_unique<King>(sf::Vector2f(100, 800), king, 3, true));
+    m_playerShow.push_back(make_unique<Mage>(sf::Vector2f(100, 800), mage, 3, false));
+    m_playerShow.push_back(make_unique<Warrior>(sf::Vector2f(100, 800), warrior, 3, false));
+    m_playerShow.push_back(make_unique<Thief>(sf::Vector2f(100, 800), thief, 3, true));
+}
+
+void GameController::storeOtherObjects()
+{
+    sf::Vector2f foundPos;
+
+    //while (foundPos = m_window.calculatePos())
 }
 
 bool GameController::isRunning()

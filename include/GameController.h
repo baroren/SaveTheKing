@@ -46,6 +46,8 @@ private:
 
 	void storePlayers();
 
+	void storeOtherObjects();
+
 
 //  handles collision that have a block affect on the moving object
 	void handleCollision(Moving& movingObject);
