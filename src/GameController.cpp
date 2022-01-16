@@ -126,7 +126,22 @@ bool GameController::run(int level)
             storeSurroundWall();
             m_clock = new Clock(m_levelTime);
 
-       }
+
+        }
+        if(m_players[key]->getLevelFailed())
+        {
+            clearVectors();
+            m_window.deletBoard();
+            m_mainMenu.changeText("try again");
+            m_mainMenu.run(m_window.getWindow());
+
+            m_window.createBoard(level);
+            storeObjects();
+            storePlayers();
+            storeSurroundWall();
+            m_clock = new Clock(m_levelTime);
+
+        }
 
         destroyObjects(key);
         m_window.displayBoard();
