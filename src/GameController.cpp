@@ -39,9 +39,9 @@ GameController::GameController() {
 
     m_menu.createButton("restart level",100,375);
     m_menu.createButton("music on",100,450);
-    m_menu.createButton("Main Menu",100,525);
+  
 
-    m_menu.createButton("Quit",100,600);
+    m_menu.createButton("Quit",100,525);
 
     if (!m_music.openFromFile("Shrek.ogg")) {
         // error...
@@ -73,7 +73,7 @@ bool GameController::run(int level)
     storeSurroundWall();
 
    m_music.play();
-    m_mainMenu.run(m_window.getWindow());
+   m_mainMenu.run(m_window.getWindow());
 
     sf::Clock clock;
 
@@ -114,7 +114,10 @@ bool GameController::run(int level)
 
         if (m_players[thief]-> getLevelPassed())
         {
-        }
+            m_keyShow->setOpacity(255);
+        }else
+            m_keyShow->setOpacity(128);
+
         if (m_players[king]->getLevelPassed())
         {
 
@@ -196,9 +199,7 @@ bool GameController::run(int level)
 
                         m_clock = new Clock(m_levelTime);
                     }
-                    if(  m_menu.handleClick(m_window.getWindow().
-                      mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==3)
-                        m_mainMenu.run(m_window.getWindow());
+             
 
                     if(  m_menu.handleClick(m_window.getWindow().
                     mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==5) {
@@ -206,7 +207,7 @@ bool GameController::run(int level)
                         m_isRuning=false;
                     }
                     if(  m_menu.handleClick(m_window.getWindow().
-                            mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==4) {
+                            mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==3) {
                         if(m_music.getVolume()>0) {
                             m_music.setVolume(0.f);
                             m_menu.changeText("Music off");
@@ -420,7 +421,7 @@ void GameController::drawObjects(const int key)
     }
 
     m_currPlayer.setPosition(m_players[key]->getLocation());
-    m_window.getWindow().draw(m_keyShow);
+    m_keyShow->updateAndDraw(0, m_deltaTime, m_window.getWindow());
     m_players[key]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
     m_window.getWindow().draw(m_currPlayer);
 
@@ -517,10 +518,9 @@ void GameController:: resetPosition()
 }
 void GameController::storePlayers()
 {
-    m_keyShow = Resources::instance().getSprite(key);
-    m_keyShow.setPosition(sf::Vector2f(125, 150));
-
-    //m_keyShow.opacity
+    m_keyShow = make_unique<Key>(sf::Vector2f(150, 150), key, 3);
+    m_keyShow->setOpacity(128);
+   
     m_players.push_back(make_unique<King>(m_window.calculatePos('K'), king, 3, true));
     m_players.push_back(make_unique<Mage>(m_window.calculatePos('M'), mage, 3, false));
     m_players.push_back(make_unique<Warrior>(m_window.calculatePos('W'), warrior, 3, false));

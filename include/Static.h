@@ -11,6 +11,7 @@ public:
 	void setDelete();
 
 	bool getDelete() const;
+	void setOpacity(int opacity);
 
 
 private:

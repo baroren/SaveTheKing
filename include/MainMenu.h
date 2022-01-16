@@ -11,7 +11,7 @@
 #include "Orc.h"
 #include "Menu.h"
 #include "Resources.h"
-
+#include "Moving.h"
 using std::vector;
 using std::make_unique;
 using std::unique_ptr;
@@ -32,6 +32,7 @@ private :
     sf::Sprite testSprite;
     sf::Texture testTexture;
     vector <unique_ptr <GameObject> >m_gameObjects;
+    vector <unique_ptr <Moving> >m_dwarves;
   //  vector <Button*> m_buttons;
     Menu m_menu;
     sf::Music m_music;
