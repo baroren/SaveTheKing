@@ -278,6 +278,20 @@ GameController.h
 iostream
 -
 
+/Users/bar/Documents/school/yearB/project_oop2/src/main.cpp
+GameController.h
+/Users/bar/Documents/school/yearB/project_oop2/src/GameController.h
+MainMenu.h
+/Users/bar/Documents/school/yearB/project_oop2/src/MainMenu.h
+SFML/Graphics.hpp
+-
+Resources.h
+/Users/bar/Documents/school/yearB/project_oop2/src/Resources.h
+Window.h
+/Users/bar/Documents/school/yearB/project_oop2/src/Window.h
+iostream
+-
+
 /usr/local/include/SFML/Audio.hpp
 SFML/System.hpp
 -

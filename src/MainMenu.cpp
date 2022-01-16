@@ -127,6 +127,11 @@ sf::Text MainMenu::makeTitle(int size, std::string text,float posX, float posY) 
     return title;
 
 }
+void MainMenu::changeText(string text)
+{
+    m_menu.getButton(0)->changeText(text);
+
+}
 /*void MainMenu::printHelp(sf::RenderWindow & window,Button *button)
 {
     if (button->isPressed()) {

@@ -33,6 +33,7 @@ public:
 
     void createBoard(int level);
 
+    void deletBoard();
 
 private:
 //		the window

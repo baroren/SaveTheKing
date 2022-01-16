@@ -23,10 +23,7 @@ GameController::GameController() {
 //      store teleporters
 
 
-    m_window.createBoard(1);
-    storeObjects();
-    storePlayers();
-    storeSurroundWall();
+
 
     m_currPlayer.setSize(sf::Vector2f(30, 3));
     m_currPlayer.setOutlineColor(sf::Color::Transparent);
@@ -56,6 +53,10 @@ GameController::GameController() {
     m_timer.setOrigin(sf::Vector2f(m_timer.getGlobalBounds().width / 2.f,
                                    m_timer.getGlobalBounds().height / 2.f));
     m_timer.setPosition(sf::Vector2f(50, 75));
+    m_level.setFont(m_font);
+    m_level.setOrigin(sf::Vector2f(m_timer.getGlobalBounds().width / 2.f,
+                                   m_timer.getGlobalBounds().height / 2.f));
+    m_level.setPosition(sf::Vector2f(50, 30));
 
 }
 
@@ -64,7 +65,10 @@ GameController::GameController() {
 
 bool GameController::run(int level)
 {
-
+    m_window.createBoard(level);
+    storeObjects();
+    storePlayers();
+    storeSurroundWall();
 
    // m_music.play();
     m_mainMenu.run(m_window.getWindow());
@@ -87,7 +91,7 @@ bool GameController::run(int level)
 
         m_deltaTime = clock.restart().asSeconds();
         m_timer.setString(m_clock->countDown());
-
+        m_level.setString("Level" +std::to_string(level));
 
 
         for (auto& currDwarf : m_dwarves)
@@ -117,6 +121,7 @@ bool GameController::run(int level)
 
 
         m_window.drawText(m_timer);
+        m_window.drawText(m_level);
         m_menu.updateBt(m_window.getWindow());
        sf::Event event;
         if (m_window.getWindow().pollEvent(event))
@@ -127,13 +132,16 @@ bool GameController::run(int level)
                     if(  m_menu.handleClick(m_window.getWindow().
                             mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==0) {
                         cout<<"hi";
-                        m_blockObjects.clear();
-                        m_players.clear();
+                        return false;
                         cout<<"clear";
-                        m_window.createBoard(2);
+
+                            m_window.deletBoard();
+                        m_window.createBoard(3);
                         storeObjects();
                         storePlayers();
                         storeSurroundWall();
+                        m_clock =new Clock(m_levelTime);
+
 
                     }
                     if(  m_menu.handleClick(m_window.getWindow().
@@ -531,5 +539,15 @@ bool GameController::isRunning()
     return running;
 }
 void GameController::cangeMenu(string game){
-    m_menu.changeText(game);
+   m_mainMenu.changeText(game);
+}
+void GameController:: clearVectors()
+{
+    m_players.clear();
+    m_dwarves.clear();
+    m_blockObjects.clear();
+    m_specialStatic.clear();
+    m_gifts_1.clear();
+    m_gifts_2.clear();
+    m_teleporters.clear();
 }

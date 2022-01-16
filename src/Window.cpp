@@ -15,7 +15,10 @@ void Window::display()
 	m_window.display();
 	m_window.clear(sf::Color(34, 20, 26));
 }
-
+void Window ::deletBoard()
+{
+    m_board.deletBoard();
+}
 sf::Vector2i Window::getRowColNum() const
 {
 	return m_board.getRowColNum();

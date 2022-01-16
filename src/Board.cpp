@@ -44,6 +44,8 @@ void Board::createBoard(int level) {
     {
         m_btsBoard.push_back(line);
     }
+
+    inputFile.close();
 }
 
 sf::Vector2f Board::calculatePos(const char tag)
@@ -138,7 +140,10 @@ sf::Vector2i Board::getRowColNum() const
 	return sf::Vector2i(m_rowNum, m_colNum);
 }
 
-
+void Board ::deletBoard()
+{
+    m_btsBoard.clear();
+}
 sf::Vector2f Board::convertIndexToPixel(const int rowIndex, const int colIndex)
 {
 	int x = m_upperLeftDot.x + SQUARE / 2,

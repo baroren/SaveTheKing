@@ -36,6 +36,7 @@ public:
 
 	sf::Vector2i getRowColNum() const;
     void createBoard(int level);
+    void deletBoard();
 
 private:
     sf::Texture m_boardTexture; //temp

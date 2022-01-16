@@ -38,13 +38,15 @@ public:
 	void storeTeleproters();
     bool isRuning();
     void cangeMenu(string game);
+
+
 private:
     bool running = true;
 	float m_deltaTime;
     MainMenu m_mainMenu;
 	Window m_window;
     Clock *m_clock;
-
+    void clearVectors();
 	void storePlayers();
 
 //reset to original level position
@@ -70,6 +72,8 @@ private:
     sf:: Font m_font;
     Menu m_menu;
     sf::Text m_timer;
+    sf::Text m_level;
+
     sf::RectangleShape m_currPlayer;
     unique_ptr<Static> m_keyShow;
     sf::Music m_music;
