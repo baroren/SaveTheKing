@@ -29,7 +29,7 @@ MainMenu::MainMenu() {
 }
 
 
-void MainMenu::run(sf::RenderWindow &window) {
+bool MainMenu::run(sf::RenderWindow &window) {
 
     m_dwarves.push_back(make_unique<Dwarf>(sf::Vector2f(950, 300), dwarf, 3, false, sf::Vector2f(1, 0)));
     m_dwarves.push_back(make_unique<Dwarf>(sf::Vector2f(200, 300), dwarf, 3, false, sf::Vector2f(1, 0)));
@@ -72,8 +72,9 @@ void MainMenu::run(sf::RenderWindow &window) {
                 if (event.mouseButton.button == sf::Mouse::Left) {
                     if (m_menu.handleClick(window.mapPixelToCoords(sf::Mouse::getPosition(window)), window) == 0)
                     {
+
                         m_dwarves.clear();
-                        return;
+                        return true;
                     }
                     if(  m_menu.handleClick(window.mapPixelToCoords(sf::Mouse::getPosition(window)),window)==2)
                         window.close();
@@ -89,6 +90,7 @@ void MainMenu::run(sf::RenderWindow &window) {
 
         window.display();
     }
+    return true;
 }
 
 

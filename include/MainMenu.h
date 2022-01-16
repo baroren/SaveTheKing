@@ -20,7 +20,7 @@ using std::unique_ptr;
 class MainMenu {
     public:
     MainMenu();
-    void run(sf::RenderWindow & window);
+    bool run(sf::RenderWindow & window);
    void changeText(string );
 
 
