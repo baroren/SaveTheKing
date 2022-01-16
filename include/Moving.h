@@ -14,7 +14,7 @@ public:
 	Moving(const sf::Vector2f position = sf::Vector2f(0,0), gameObjectId id = king, float scale = 0, 
 			const bool isFacedRight = true, const sf::Vector2f moveDirection = sf::Vector2f(0,1));
 
-//		moves the object in a direction using direction, deltaTime 
+	//  moves the moving object based on the direction received and deltaTime
 	void move(const Direction dir, float);
 
 //		handle the collision of all moving objects with all objects
@@ -22,7 +22,7 @@ public:
 
 
 	virtual void handleCollision(Static& staticObject) = 0;
-	virtual void handleCollision(Mage& mage) override {};
+
 
 	sf::Vector2f getMoveDirection() const;
 	void setMoveDirection(const sf::Vector2f newDirection);
@@ -40,7 +40,5 @@ private:
 
 //		returns current direction the object is facing
 	bool getDirection() const;
-
-	void movingBehavior();
 
 };

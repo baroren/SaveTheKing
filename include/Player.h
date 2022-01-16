@@ -27,7 +27,6 @@ public:
     void handleCollision(Teleporter& teleport);
     virtual void handleCollision(Player& player)override {};
     virtual void handleCollision(Dwarf& Dwarf)override;
-    virtual void handleCollision(Mage& mage) override {};
     virtual void handleCollision(Fire& fire) = 0;
     virtual void handleCollision(Key& key) = 0;
     virtual void handleCollision(Orc& orc) = 0;
@@ -37,10 +36,9 @@ public:
     void handleCollision(Gift_2& gift_2, vector<unique_ptr<Dwarf>>&);
 
     virtual bool getLevelPassed() const = 0;
-  //  virtual bool hasKey()const = 0;
     bool getLevelFailed() const;
     
-
+//      make the moving object go backwards thus preventing it from walking forward
     void stayInPlace();
 
 private:
