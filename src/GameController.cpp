@@ -12,7 +12,11 @@ GameController::GameController() {
     m_levelTime=80;
 
 
+
     storeObjects();
+
+    m_specialStatic.push_back(make_unique<Throne>(m_window.calculatePos('@'), orc, 3));
+
 
     storePlayers();
     storeSurroundWall();
@@ -343,6 +347,16 @@ void GameController::handleCollision(const int key)
         if (m_players[key]->checkCollision(*currGift_2))
         {
             m_players[key]->handleCollision(*currGift_2, m_dwarves);
+
+            return;
+        }
+    }
+
+    for (auto& durrDwarf : m_dwarves)
+    {
+        if (m_players[key]->checkCollision(*durrDwarf))
+        {
+            m_players[key]->handleCollision(*durrDwarf);
 
             return;
         }
