@@ -11,6 +11,7 @@ GameObject::GameObject(const  sf::Vector2f position,gameObjectId id,float scale)
 
 
 {
+    m_originalPosition=position;
   /*  if (!m_texture.loadFromFile(m_imagePath))
     {
         // error...
@@ -40,7 +41,10 @@ GameObject::GameObject(const  sf::Vector2f position,gameObjectId id,float scale)
     //cout << "origin x: " << m_sprite.getOrigin().x << " y: " << m_sprite.getOrigin().y << endl;
 }
 
-
+void GameObject::setOriginalPosition()
+{
+   m_sprite.setPosition(m_originalPosition);
+}
 
 bool GameObject::checkCollision(const GameObject& gameObject)
 {

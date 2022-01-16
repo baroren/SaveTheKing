@@ -153,30 +153,6 @@ include/Macros.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/include/Macros.cpp.s
 .PHONY : include/Macros.cpp.s
 
-src/AddTime.o: src/AddTime.cpp.o
-.PHONY : src/AddTime.o
-
-# target to build an object file
-src/AddTime.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/AddTime.cpp.o
-.PHONY : src/AddTime.cpp.o
-
-src/AddTime.i: src/AddTime.cpp.i
-.PHONY : src/AddTime.i
-
-# target to preprocess a source file
-src/AddTime.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/AddTime.cpp.i
-.PHONY : src/AddTime.cpp.i
-
-src/AddTime.s: src/AddTime.cpp.s
-.PHONY : src/AddTime.s
-
-# target to generate assembly for a file
-src/AddTime.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/AddTime.cpp.s
-.PHONY : src/AddTime.cpp.s
-
 src/Animation.o: src/Animation.cpp.o
 .PHONY : src/Animation.o
 
@@ -272,30 +248,6 @@ src/Clock.s: src/Clock.cpp.s
 src/Clock.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Clock.cpp.s
 .PHONY : src/Clock.cpp.s
-
-src/DestDwarf.o: src/DestDwarf.cpp.o
-.PHONY : src/DestDwarf.o
-
-# target to build an object file
-src/DestDwarf.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/DestDwarf.cpp.o
-.PHONY : src/DestDwarf.cpp.o
-
-src/DestDwarf.i: src/DestDwarf.cpp.i
-.PHONY : src/DestDwarf.i
-
-# target to preprocess a source file
-src/DestDwarf.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/DestDwarf.cpp.i
-.PHONY : src/DestDwarf.cpp.i
-
-src/DestDwarf.s: src/DestDwarf.cpp.s
-.PHONY : src/DestDwarf.s
-
-# target to generate assembly for a file
-src/DestDwarf.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/DestDwarf.cpp.s
-.PHONY : src/DestDwarf.cpp.s
 
 src/Dwarf.o: src/Dwarf.cpp.o
 .PHONY : src/Dwarf.o
@@ -417,29 +369,53 @@ src/Gate.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Gate.cpp.s
 .PHONY : src/Gate.cpp.s
 
-src/Gift.o: src/Gift.cpp.o
-.PHONY : src/Gift.o
+src/Gift_1.o: src/Gift_1.cpp.o
+.PHONY : src/Gift_1.o
 
 # target to build an object file
-src/Gift.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Gift.cpp.o
-.PHONY : src/Gift.cpp.o
+src/Gift_1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Gift_1.cpp.o
+.PHONY : src/Gift_1.cpp.o
 
-src/Gift.i: src/Gift.cpp.i
-.PHONY : src/Gift.i
+src/Gift_1.i: src/Gift_1.cpp.i
+.PHONY : src/Gift_1.i
 
 # target to preprocess a source file
-src/Gift.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Gift.cpp.i
-.PHONY : src/Gift.cpp.i
+src/Gift_1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Gift_1.cpp.i
+.PHONY : src/Gift_1.cpp.i
 
-src/Gift.s: src/Gift.cpp.s
-.PHONY : src/Gift.s
+src/Gift_1.s: src/Gift_1.cpp.s
+.PHONY : src/Gift_1.s
 
 # target to generate assembly for a file
-src/Gift.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Gift.cpp.s
-.PHONY : src/Gift.cpp.s
+src/Gift_1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Gift_1.cpp.s
+.PHONY : src/Gift_1.cpp.s
+
+src/Gift_2.o: src/Gift_2.cpp.o
+.PHONY : src/Gift_2.o
+
+# target to build an object file
+src/Gift_2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Gift_2.cpp.o
+.PHONY : src/Gift_2.cpp.o
+
+src/Gift_2.i: src/Gift_2.cpp.i
+.PHONY : src/Gift_2.i
+
+# target to preprocess a source file
+src/Gift_2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Gift_2.cpp.i
+.PHONY : src/Gift_2.cpp.i
+
+src/Gift_2.s: src/Gift_2.cpp.s
+.PHONY : src/Gift_2.s
+
+# target to generate assembly for a file
+src/Gift_2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Gift_2.cpp.s
+.PHONY : src/Gift_2.cpp.s
 
 src/Key.o: src/Key.cpp.o
 .PHONY : src/Key.o
@@ -681,30 +657,6 @@ src/Static.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/Static.cpp.s
 .PHONY : src/Static.cpp.s
 
-src/SubTime.o: src/SubTime.cpp.o
-.PHONY : src/SubTime.o
-
-# target to build an object file
-src/SubTime.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/SubTime.cpp.o
-.PHONY : src/SubTime.cpp.o
-
-src/SubTime.i: src/SubTime.cpp.i
-.PHONY : src/SubTime.i
-
-# target to preprocess a source file
-src/SubTime.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/SubTime.cpp.i
-.PHONY : src/SubTime.cpp.i
-
-src/SubTime.s: src/SubTime.cpp.s
-.PHONY : src/SubTime.s
-
-# target to generate assembly for a file
-src/SubTime.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/src/SubTime.cpp.s
-.PHONY : src/SubTime.cpp.s
-
 src/Teleporter.o: src/Teleporter.cpp.o
 .PHONY : src/Teleporter.o
 
@@ -885,9 +837,6 @@ help:
 	@echo "... include/Macros.o"
 	@echo "... include/Macros.i"
 	@echo "... include/Macros.s"
-	@echo "... src/AddTime.o"
-	@echo "... src/AddTime.i"
-	@echo "... src/AddTime.s"
 	@echo "... src/Animation.o"
 	@echo "... src/Animation.i"
 	@echo "... src/Animation.s"
@@ -900,9 +849,6 @@ help:
 	@echo "... src/Clock.o"
 	@echo "... src/Clock.i"
 	@echo "... src/Clock.s"
-	@echo "... src/DestDwarf.o"
-	@echo "... src/DestDwarf.i"
-	@echo "... src/DestDwarf.s"
 	@echo "... src/Dwarf.o"
 	@echo "... src/Dwarf.i"
 	@echo "... src/Dwarf.s"
@@ -918,9 +864,12 @@ help:
 	@echo "... src/Gate.o"
 	@echo "... src/Gate.i"
 	@echo "... src/Gate.s"
-	@echo "... src/Gift.o"
-	@echo "... src/Gift.i"
-	@echo "... src/Gift.s"
+	@echo "... src/Gift_1.o"
+	@echo "... src/Gift_1.i"
+	@echo "... src/Gift_1.s"
+	@echo "... src/Gift_2.o"
+	@echo "... src/Gift_2.i"
+	@echo "... src/Gift_2.s"
 	@echo "... src/Key.o"
 	@echo "... src/Key.i"
 	@echo "... src/Key.s"
@@ -951,9 +900,6 @@ help:
 	@echo "... src/Static.o"
 	@echo "... src/Static.i"
 	@echo "... src/Static.s"
-	@echo "... src/SubTime.o"
-	@echo "... src/SubTime.i"
-	@echo "... src/SubTime.s"
 	@echo "... src/Teleporter.o"
 	@echo "... src/Teleporter.i"
 	@echo "... src/Teleporter.s"

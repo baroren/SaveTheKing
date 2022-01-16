@@ -65,6 +65,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../resources/W_Red_Idle_SPR.png"
   "../resources/Warrior.png"
   "../resources/arcadeClassic.ttf"
+  "../resources/boxWall.png"
+  "../resources/horiWall.png"
   "../resources/skull.png"
   "../resources/vertWall.png"
   "../src/CMakeLists.txt"
@@ -106,6 +108,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "Level_3.txt"
   "MainMenuMusic.ogg"
   "Shrek.ogg"
+  "horiWall.png"
+  "boxWall.png"
   "resources/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

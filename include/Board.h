@@ -35,6 +35,7 @@ public:
 	sf::Vector2f getUpperLeftDot() const;
 
 	sf::Vector2i getRowColNum() const;
+    void createBoard();
 
 private:
     sf::Texture m_boardTexture; //temp
@@ -45,5 +46,6 @@ private:
     //	vector of static objects that block the moving objects (wall, fire, gate, orc)
     vector <unique_ptr<Static>> m_wall;
 	vector<string> m_btsBoard;
+
 
 };

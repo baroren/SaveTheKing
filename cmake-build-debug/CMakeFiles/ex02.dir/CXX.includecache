@@ -25,6 +25,8 @@ string
 -
 Static.h
 ../include/Static.h
+Wall.h
+../include/Wall.h
 
 ../include/Button.h
 SFML/Graphics.hpp
@@ -93,6 +95,10 @@ Thief.h
 ../include/Thief.h
 Fire.h
 ../include/Fire.h
+Gift_1.h
+../include/Gift_1.h
+Gift_2.h
+../include/Gift_2.h
 
 ../include/GameObject.h
 SFML/Graphics.hpp
@@ -101,6 +107,8 @@ string
 -
 Animation.h
 ../include/Animation.h
+iostream
+-
 Resources.h
 ../include/Resources.h
 Macros.h
@@ -109,6 +117,24 @@ Macros.h
 ../include/Gate.h
 Static.h
 ../include/Static.h
+
+../include/Gift_1.h
+memory
+-
+Static.h
+../include/Static.h
+Dwarf.h
+../include/Dwarf.h
+Clock.h
+../include/Clock.h
+
+../include/Gift_2.h
+memory
+-
+Static.h
+../include/Static.h
+Dwarf.h
+../include/Dwarf.h
 
 ../include/King.h
 Player.h
@@ -169,6 +195,14 @@ Static.h
 ../include/Player.h
 Moving.h
 ../include/Moving.h
+Static.h
+../include/Static.h
+Gift_1.h
+../include/Gift_1.h
+Gift_2.h
+../include/Gift_2.h
+memory
+-
 
 ../include/Resources.h
 SFML/Graphics.hpp

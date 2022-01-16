@@ -7,25 +7,18 @@
 using std::cout;
 using std::endl;
 
-
 GameController::GameController() {
 
+    m_levelTime=80;
+
+
+    storeObjects();
+
     storePlayers();
-
-
-
-    m_blockObjects.push_back(make_unique<Wall>(m_window.calculatePos('='), boxWall, 3));
-    m_blockObjects.push_back(make_unique<Fire>(m_window.calculatePos('*'), fire, 3));
-
-    m_gifts_1.push_back(make_unique<Gift_1>(m_window.calculatePos('$'), gift1, 3));
-    m_gifts_2.push_back(make_unique<Gift_2>(m_window.calculatePos('%'), gift2, 3));
-
-
     storeSurroundWall();
 
 
 
-    m_dwarves.push_back(make_unique<Dwarf>(m_window.calculatePos('&'), dwarf, 3, true, sf::Vector2f(1,0)));
 
     m_currPlayer.setSize(sf::Vector2f(30, 3));
     m_currPlayer.setOutlineColor(sf::Color::Transparent);
@@ -61,6 +54,16 @@ GameController::GameController() {
     m_timer.setPosition(sf::Vector2f(50, 75));
 
 }
+
+void GameController::storeObjects() {
+    m_blockObjects.push_back(std::__1::make_unique<Wall>(m_window.calculatePos('='), boxWall, 3));
+    m_blockObjects.push_back(std::__1::make_unique<Fire>(m_window.calculatePos('*'), fire, 3));
+
+    m_gifts_1.push_back(std::__1::make_unique<Gift_1>(m_window.calculatePos('$'), gift1, 3));
+    m_gifts_2.push_back(std::__1::make_unique<Gift_2>(m_window.calculatePos('%'), gift2, 3));
+    m_dwarves.push_back(std::__1::make_unique<Dwarf>(m_window.calculatePos('&'), dwarf, 3, true, sf::Vector2f(1, 0)));
+}
+
 void GameController::run()
 {
 
@@ -71,7 +74,7 @@ void GameController::run()
 
     int key = 0;
     sf::Vector2f moveDirection;
-    m_clock =new Clock(80);
+    m_clock =new Clock(m_levelTime);
     m_clock->reset();
 
     while (m_window.isOpen())
@@ -145,7 +148,8 @@ void GameController::run()
 //          draw all dwarves
         for (int i = 0; i < m_dwarves.size(); i++)
         {
-            m_dwarves[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
+          //  if(m_dwarves[i]->getDelete())
+             m_dwarves[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
         }
 
 //          draw all players
@@ -177,8 +181,15 @@ void GameController::run()
                 if (event.mouseButton.button == sf::Mouse::Left) {
                     if(  m_menu.handleClick(m_window.getWindow().
                             mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==0) {
-                        cout<<"run";
-                        run();
+                       // std::erase_if(m_players, [](const auto& cuurPlayer) {return true; });
+              //         m_players.clear();
+                //      cout<<"deleted";
+                     //   resetPosition();
+
+                 //       m_clock =new Clock(m_levelTime);
+
+                        //storePlayers();
+                        //storeObjects();
 
                     }
                     if(  m_menu.handleClick(m_window.getWindow().
@@ -401,7 +412,18 @@ void GameController::replaceOrcWithKey()
         }
     }
 }
+void GameController:: resetPosition()
+{
+    for (int i = 0; i < m_players.size(); i++) {
+        m_players[i]->setOriginalPosition();
+    }
+    if(m_dwarves.size() ==0)
+    {
+        m_dwarves.push_back(make_unique<Dwarf>(m_window.calculatePos('&'), dwarf, 3, true, sf::Vector2f(1,0)));
 
+    }
+
+}
 void GameController::storePlayers()
 {
     m_players.push_back(make_unique<King>(m_window.calculatePos('K'), king, 3, true));
