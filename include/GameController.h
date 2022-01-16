@@ -16,6 +16,8 @@
 #include "Warrior.h"
 #include "Thief.h"
 #include "Fire.h"
+#include "Gift_1.h"
+#include "Gift_2.h"
 
 
 using std::vector;
@@ -41,6 +43,9 @@ private:
     MainMenu m_mainMenu;
 	Window m_window;
     Clock *m_clock;
+
+	void storePlayers();
+
 
 //  handles collision that have a block affect on the moving object
 	void handleCollision(Moving& movingObject);
@@ -71,7 +76,9 @@ private:
 //		vector of other static objects that affect only the player objects (throne, key)
 	vector <unique_ptr<Static>> m_specialStatic;
 
-	vector <unique_ptr<Gift>> m_gifts;
+	vector <unique_ptr<Gift_1>> m_gifts_1;
+	vector <unique_ptr<Gift_2>> m_gifts_2;
+
 //		vector of all teleports
 	vector <unique_ptr<Teleporter>> m_teleporters;
 

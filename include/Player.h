@@ -2,7 +2,8 @@
 
 #include "Moving.h"
 #include "Static.h"
-#include "Gift.h"
+#include "Gift_1.h"
+#include "Gift_2.h"
 
 #include <memory>
 
@@ -14,6 +15,8 @@ class Key;
 class Orc;
 class Gate;
 class Dwarf;
+class Clock;
+
 
 class Player : public Moving {
 public:
@@ -28,8 +31,9 @@ public:
     virtual void handleCollision(Key& key) = 0;
     virtual void handleCollision(Orc& orc) = 0;
     virtual void handleCollision(Gate& gate) = 0;
-    void handleCollision(Gift& gift, vector<unique_ptr<Dwarf>>&);
-    void handleCollision(Gift& gift, float deltaTime);
+    void handleCollision(Gift_1& gift_1, Clock& clock);
+    void handleCollision(Gift_2& gift_2, vector<unique_ptr<Dwarf>>&);
+
 
 
     

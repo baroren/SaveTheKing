@@ -100,8 +100,14 @@ void Clock:: subTime()
     }
     m_subTime++;
 }
+
+int Clock::getTime() const
+{
+    return m_time;
+}
+
 void Clock:: reset() {
 
-  m_clock.restart().asSeconds();
+    m_clock.restart().asSeconds();
 
 }

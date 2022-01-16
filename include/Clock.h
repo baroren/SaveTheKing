@@ -1,3 +1,5 @@
+#pragma once
+
 #include "SFML/Graphics.hpp"
 #include <string>
 #include <iostream>
@@ -9,12 +11,14 @@ public:
     void reset();
     void addTime();
     void subTime();
+
+    int getTime() const;
 private:
     sf::Clock m_clock;
     int m_time;
     int m_min,m_sec,m_extraTime;
-   int deltaTime;
-  std:: string m_sTime,st_min,st_sec;
-  int addedTime;
-  int m_subTime;
+    int deltaTime;
+    std:: string m_sTime,st_min,st_sec;
+    int addedTime;
+    int m_subTime;
 };

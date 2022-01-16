@@ -17,6 +17,8 @@ GameController::GameController() {
     m_blockObjects.push_back(make_unique<Wall>(m_window.calculatePos('='), vertWall, 3));
     m_blockObjects.push_back(make_unique<Fire>(m_window.calculatePos('*'), fire, 3));
 
+    m_gifts_1.push_back(make_unique<Gift_1>(m_window.calculatePos('$'), gift1, 3));
+    m_gifts_2.push_back(make_unique<Gift_2>(m_window.calculatePos('%'), gift2, 3));
 
 
     storeSurroundWall();
@@ -107,8 +109,11 @@ void GameController::run()
         if (key == 2)
             replaceOrcWithKey();
 
+//          destroy static objects
         std::erase_if(m_blockObjects, [](const auto& currBlockObject) {return currBlockObject->getDelete(); });
         std::erase_if(m_specialStatic, [](const auto& currSpecialObject) {return currSpecialObject->getDelete(); });
+        std::erase_if(m_gifts_1, [](const auto& currGift_1) {return currGift_1->getDelete(); });
+        std::erase_if(m_gifts_2, [](const auto& currGift_2) {return currGift_2->getDelete(); });
 
         m_window.displayBoard();
 
@@ -131,6 +136,16 @@ void GameController::run()
             m_specialStatic[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
         }
 
+        for (int i = 0; i < m_gifts_1.size(); i++)
+        {
+            m_gifts_1[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
+        }
+
+        for (int i = 0; i < m_gifts_2.size(); i++)
+        {
+            m_gifts_2[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
+        }
+
 //          draw all dwarves
         for (int i = 0; i < m_dwarves.size(); i++)
         {
@@ -146,7 +161,6 @@ void GameController::run()
         }
 
         m_currPlayer.setPosition(m_players[key]->getLocation());
-       // m_keyShow->updateAndDraw(0, deltaTime, m_window.getWindow());
         m_players[key]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
         m_window.getWindow().draw(m_currPlayer);
 
@@ -259,6 +273,8 @@ void GameController::storeTeleproters()
     }
 }
 
+
+
 void GameController::storeSurroundWall()
 {
     sf::Vector2f upperLeftDot = m_window.getUpperLeftDot();
@@ -299,12 +315,21 @@ void GameController::handleCollision(const int key)
         }
     }
 
-    for (auto& currGift : m_gifts)
+    for (auto& currGift_1 : m_gifts_1)
     {
-        if (m_players[key]->checkCollision(*currGift))
+        if (m_players[key]->checkCollision(*currGift_1))
         {
-            //m_players[key]->handleCollision(*currGift, m_dwarves);
-            //m_players[key]->handleCollision(*currGift, m_deltaTime);
+            m_players[key]->handleCollision(*currGift_1, *m_clock);
+
+            return;
+        }
+    }
+
+    for (auto& currGift_2 : m_gifts_2)
+    {
+        if (m_players[key]->checkCollision(*currGift_2))
+        {
+            m_players[key]->handleCollision(*currGift_2, m_dwarves);
 
             return;
         }
