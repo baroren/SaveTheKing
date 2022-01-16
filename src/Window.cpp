@@ -13,20 +13,12 @@ void Window::display()
 
 
 	m_window.display();
-
-/*	if (sf::Event event; m_window.pollEvent(event))
-	{
-		switch (event.type)
-		{
-		case sf::Event::Closed:
-			m_window.close();
-			break;
-		}
-	}
-*/
 	m_window.clear(sf::Color(34, 20, 26));
 }
-
+void Window ::deletBoard()
+{
+    m_board.deletBoard();
+}
 sf::Vector2i Window::getRowColNum() const
 {
 	return m_board.getRowColNum();
@@ -41,9 +33,9 @@ sf::Vector2f Window::calculatePos(const char tag)
 {
 	return m_board.calculatePos(tag);
 }
-void Window::createBoard()
+void Window::createBoard(int level)
 {
-    m_board.createBoard();
+    m_board.createBoard(level);
 }
 
 void Window::displayBoard()

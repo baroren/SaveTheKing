@@ -102,7 +102,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "Gift1.png"
   "Gift2.png"
   "Teleport.png"
-  "resources/COPYONLY"
+  "Gate.png"
   "Level_1.txt"
   "Level_2.txt"
   "Level_3.txt"

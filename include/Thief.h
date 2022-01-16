@@ -14,7 +14,8 @@ public:
 	virtual void handleCollision(Orc& orc) override;
 	virtual void handleCollision(Gate& gate) override;
 	virtual void handleCollision(Throne& throne) override {};
-	virtual bool getLevelPassed() const override { return false; };
+	virtual bool getLevelPassed() const override { return m_haveKey; };
+	//virtual bool hasKey()const override;
 
 private:
 	bool m_haveKey = false;

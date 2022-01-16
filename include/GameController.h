@@ -31,11 +31,13 @@ public:
 	
 	GameController();
 
-	void run();
+	bool run(int level);
     bool isRunning();
 	void handleKey(float deltaTime,int &key, sf::Vector2f& moveDirection);
 
 	void storeTeleproters();
+    bool isRuning();
+    void cangeMenu(string game);
 
 
 private:
@@ -44,7 +46,7 @@ private:
     MainMenu m_mainMenu;
 	Window m_window;
     Clock *m_clock;
-
+    void clearVectors();
 	void storePlayers();
 
 //reset to original level position
@@ -70,12 +72,14 @@ private:
     sf:: Font m_font;
     Menu m_menu;
     sf::Text m_timer;
+    sf::Text m_level;
+
     sf::RectangleShape m_currPlayer;
-    unique_ptr<Static> m_keyShow;
+    sf::Sprite m_keyShow;
     sf::Music m_music;
 
 
-
+    bool m_isRuning;
 //		vector of the player objects (mage, king etc)
 	vector <unique_ptr<Player>> m_players;
 	vector <unique_ptr<Dwarf>> m_dwarves;

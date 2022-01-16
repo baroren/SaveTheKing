@@ -8,13 +8,13 @@ using std::getline;
 using std::cout;
 using std::endl;
 
-Board::Board(int rowNum, int colNum)
-	:m_rowNum(rowNum), m_colNum(colNum)
+Board::Board(int level)
+
 {
     m_boardTexture=Resources::instance().getTexture(map);
       m_sprite.setTexture(&m_boardTexture);
 
-    createBoard();
+  //  createBoard(level);
 
 
 //    m_wall.push_back(make_unique<Wall>(sf::Vector2f(m_upperLeftDot.x + 50, m_upperLeftDot.y), vertWall,3));
@@ -23,10 +23,10 @@ Board::Board(int rowNum, int colNum)
 
 }
 
-void Board::createBoard() {
+void Board::createBoard(int level) {
     ifstream inputFile;
 
-    inputFile.open("Level_1.txt");
+    inputFile.open("Level_"+std::to_string(level)+".txt");
 
     if (!inputFile.is_open())
     {
@@ -44,6 +44,8 @@ void Board::createBoard() {
     {
         m_btsBoard.push_back(line);
     }
+
+    inputFile.close();
 }
 
 sf::Vector2f Board::calculatePos(const char tag)
@@ -94,17 +96,17 @@ void Board::display(sf::RenderWindow& window)
     sf::Vertex leftLine[] = { m_upperLeftDot, lowerLeftDot };
     sf::Vertex rightLine[] = { upperRightDot, lowerRightDot };
     window.draw(quad,&m_boardTexture);
-	window.draw(topLine, 2, sf::Lines);
+	/*window.draw(topLine, 2, sf::Lines);
 	window.draw(bottomLine, 2, sf::Lines);
 	window.draw(leftLine, 2, sf::Lines);
-	window.draw(rightLine, 2, sf::Lines);
+	window.draw(rightLine, 2, sf::Lines);*/
 
 
     //m_sprite.setPosition(m_upperLeftDot.x -40.f, m_upperLeftDot.y-40.f);
    // m_sprite.setScale(sf::Vector2f(0.3, 0.3));
    // window.draw(m_sprite);
 
-	for (int i = 1; i < m_rowNum; i++)
+	/*for (int i = 1; i < m_rowNum; i++)
 	{
 		sf::Vertex horizontalLine[] = { sf::Vector2f(m_upperLeftDot.x, m_upperLeftDot.y + SQUARE * i),
 										sf::Vector2f(upperRightDot.x, upperRightDot.y + SQUARE * i) };
@@ -120,7 +122,7 @@ void Board::display(sf::RenderWindow& window)
 		window.draw(verticalLine, 2, sf::Lines);
 	}
 
-
+	*/
 	//for (int i = 0; i < m_wall.size(); i++)
 	//{
 	//	m_wall[i]->updateAndDraw(0, 0, window);
@@ -138,7 +140,10 @@ sf::Vector2i Board::getRowColNum() const
 	return sf::Vector2i(m_rowNum, m_colNum);
 }
 
-
+void Board ::deletBoard()
+{
+    m_btsBoard.clear();
+}
 sf::Vector2f Board::convertIndexToPixel(const int rowIndex, const int colIndex)
 {
 	int x = m_upperLeftDot.x + SQUARE / 2,

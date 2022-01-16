@@ -23,6 +23,8 @@ class MainMenu {
     //add dest
     void run(sf::RenderWindow & window);
    //void printHelp(sf::RenderWindow & window,Button *button);
+   void changeText(string );
+
 
 private :
 

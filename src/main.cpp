@@ -12,9 +12,15 @@ using std::endl;
 
 int main()
 {
-
+int level=1;
    GameController gameController;
-   gameController.run();
+    gameController.run(1);
+
+      
+
+
+
+
 
 
 

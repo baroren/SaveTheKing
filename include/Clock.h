@@ -11,7 +11,7 @@ public:
     void reset();
     void addTime();
     void subTime();
-
+    bool isGameOver();
     int getTime() const;
 private:
     sf::Clock m_clock;
@@ -21,4 +21,5 @@ private:
     std:: string m_sTime,st_min,st_sec;
     int addedTime;
     int m_subTime;
+    bool m_gameOver;
 };

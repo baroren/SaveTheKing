@@ -12,15 +12,14 @@ GameController::GameController() {
     m_levelTime=80;
 
 
-
-
+     m_isRuning=true;
 
     //m_specialStatic.push_back(make_unique<Throne>(m_window.calculatePos('@'), orc, 3));
 
 
-    storeObjects();
+   /* storeObjects();
     storePlayers();
-    storeSurroundWall();
+    storeSurroundWall();*/
 //      store teleporters
 
 
@@ -35,12 +34,14 @@ GameController::GameController() {
 
 
 
-    m_menu.createButton("New Game",100,150);
-    m_menu.createButton("Help",100,225);
-    m_menu.createButton("Main Menu",100,300);
-    m_menu.createButton("music on",100,375);
+    m_menu.createButton("New Game",100,225);
+    m_menu.createButton("help", 100, 300);
 
-    m_menu.createButton("Quit",100,450);
+    m_menu.createButton("restart level",100,375);
+    m_menu.createButton("music on",100,450);
+    m_menu.createButton("Main Menu",100,525);
+
+    m_menu.createButton("Quit",100,600);
 
     if (!m_music.openFromFile("Shrek.ogg")) {
         // error...
@@ -54,14 +55,22 @@ GameController::GameController() {
     m_timer.setOrigin(sf::Vector2f(m_timer.getGlobalBounds().width / 2.f,
                                    m_timer.getGlobalBounds().height / 2.f));
     m_timer.setPosition(sf::Vector2f(50, 75));
+    m_level.setFont(m_font);
+    m_level.setOrigin(sf::Vector2f(m_timer.getGlobalBounds().width / 2.f,
+                                   m_timer.getGlobalBounds().height / 2.f));
+    m_level.setPosition(sf::Vector2f(50, 30));
 
 }
 
 
 
 
-void GameController::run()
+bool GameController::run(int level)
 {
+    m_window.createBoard(level);
+    storeObjects();
+    storePlayers();
+    storeSurroundWall();
 
    // m_music.play();
     m_mainMenu.run(m_window.getWindow());
@@ -75,7 +84,7 @@ void GameController::run()
 
     while (m_window.isOpen())
     {
-        cout <<dwarfChar;
+
 
 
 
@@ -84,7 +93,7 @@ void GameController::run()
 
         m_deltaTime = clock.restart().asSeconds();
         m_timer.setString(m_clock->countDown());
-
+        m_level.setString("Level" +std::to_string(level));
 
 
         for (auto& currDwarf : m_dwarves)
@@ -103,11 +112,42 @@ void GameController::run()
         }
         handleCollision(key);
 
+        if (m_players[thief]-> getLevelPassed())
+        {
+        }
+        if (m_players[king]->getLevelPassed())
+        {
+
+            level++;
+            clearVectors();
+            m_window.deletBoard();
+            m_mainMenu.changeText("level "+std::to_string(level));
+            m_mainMenu.run(m_window.getWindow());
+
+            m_window.createBoard(level);
+            storeObjects();
+            storePlayers();
+            storeSurroundWall();
+            m_clock = new Clock(m_levelTime);
 
 
+        }
+        if(m_players[key]->getLevelFailed()||m_clock->isGameOver())
+        {
+            clearVectors();
+            m_window.deletBoard();
+            m_mainMenu.changeText("try again");
+            m_mainMenu.run(m_window.getWindow());
+
+            m_window.createBoard(level);
+            storeObjects();
+            storePlayers();
+            storeSurroundWall();
+            m_clock = new Clock(m_levelTime);
+
+        }
 
         destroyObjects(key);
-
         m_window.displayBoard();
 
 
@@ -115,6 +155,7 @@ void GameController::run()
 
 
         m_window.drawText(m_timer);
+        m_window.drawText(m_level);
         m_menu.updateBt(m_window.getWindow());
        sf::Event event;
         if (m_window.getWindow().pollEvent(event))
@@ -122,28 +163,50 @@ void GameController::run()
 
             if (event.type == sf::Event::MouseButtonPressed) {
                 if (event.mouseButton.button == sf::Mouse::Left) {
-                    if(  m_menu.handleClick(m_window.getWindow().
-                            mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==0) {
-                       // std::erase_if(m_players, [](const auto& cuurPlayer) {return true; });
-              //         m_players.clear();
-                     cout<<"deleted";
-                     //   resetPosition();
+                    if (m_menu.handleClick(m_window.getWindow().
+                        mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())), m_window.getWindow()) == 0) {
+                        cout << "hi";
+                        //  return false;
+                        cout << "clear";
+                        clearVectors();
+                        m_window.deletBoard();
+                        m_mainMenu.changeText("continue");
 
-                 //       m_clock =new Clock(m_levelTime);
+                        m_mainMenu.run(m_window.getWindow());
+                        m_window.createBoard(1);
+                        storeObjects();
+                        storePlayers();
+                        storeSurroundWall();
+                        m_clock = new Clock(m_levelTime);
 
-                        //storePlayers();
-                        //storeObjects();
 
                     }
+                    if (m_menu.handleClick(m_window.getWindow().
+                        mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())), m_window.getWindow()) == 2)
+                    {
+                        clearVectors();
+                        m_window.deletBoard();
+                        m_mainMenu.changeText("continue");
+
+                        m_mainMenu.run(m_window.getWindow());
+                        m_window.createBoard(level);
+                        storeObjects();
+                        storePlayers();
+                        storeSurroundWall();
+
+                        m_clock = new Clock(m_levelTime);
+                    }
                     if(  m_menu.handleClick(m_window.getWindow().
-                      mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==2)
+                      mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==3)
                         m_mainMenu.run(m_window.getWindow());
 
                     if(  m_menu.handleClick(m_window.getWindow().
-                    mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==4)
+                    mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==5) {
                         m_window.getWindow().close();
+                        m_isRuning=false;
+                    }
                     if(  m_menu.handleClick(m_window.getWindow().
-                            mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==3) {
+                            mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==4) {
                         if(m_music.getVolume()>0) {
                             m_music.setVolume(0.f);
                             m_menu.changeText("Music off");
@@ -191,10 +254,14 @@ void GameController::run()
         m_window.display();
 
         handleKey(m_deltaTime, key, moveDirection);
+
     }
-
+    return true;
 }
-
+bool GameController::isRuning()
+{
+    return m_isRuning;
+}
 void GameController::storeTeleproters()
 {
     sf::Vector2f foundPos_1, foundPos_2;
@@ -239,7 +306,7 @@ void GameController::storeSurroundWall()
         m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x + rowColNum.y * SQUARE + 15, firstVerticalY + i * SQUARE), vertWall, 3));
     }
 
-    for (int i = 0; i < rowColNum.x; i++)
+    for (int i = 0; i < rowColNum.y; i++)
     {
         m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f(firstHorizontalX + i * SQUARE, upperLeftDot.y - 15), horiWall, 3));
         m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f( firstHorizontalX + i * SQUARE, upperLeftDot.y + rowColNum.x * SQUARE + 15), horiWall, 3));
@@ -353,6 +420,7 @@ void GameController::drawObjects(const int key)
     }
 
     m_currPlayer.setPosition(m_players[key]->getLocation());
+    m_window.getWindow().draw(m_keyShow);
     m_players[key]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
     m_window.getWindow().draw(m_currPlayer);
 
@@ -449,15 +517,19 @@ void GameController:: resetPosition()
 }
 void GameController::storePlayers()
 {
+    m_keyShow = Resources::instance().getSprite(key);
+    m_keyShow.setPosition(sf::Vector2f(125, 150));
+
+    //m_keyShow.opacity
     m_players.push_back(make_unique<King>(m_window.calculatePos('K'), king, 3, true));
     m_players.push_back(make_unique<Mage>(m_window.calculatePos('M'), mage, 3, false));
     m_players.push_back(make_unique<Warrior>(m_window.calculatePos('W'), warrior, 3, false));
     m_players.push_back(make_unique<Thief>(m_window.calculatePos('T'), thief, 3, true));
 
-    m_playerShow.push_back(make_unique<King>(sf::Vector2f(100, 800), king, 3, true));
-    m_playerShow.push_back(make_unique<Mage>(sf::Vector2f(100, 800), mage, 3, false));
-    m_playerShow.push_back(make_unique<Warrior>(sf::Vector2f(100, 800), warrior, 3, false));
-    m_playerShow.push_back(make_unique<Thief>(sf::Vector2f(100, 800), thief, 3, true));
+    m_playerShow.push_back(make_unique<King>(sf::Vector2f(75, 150), king, 3, true));
+    m_playerShow.push_back(make_unique<Mage>(sf::Vector2f(75, 150), mage, 3, false));
+    m_playerShow.push_back(make_unique<Warrior>(sf::Vector2f(75, 150), warrior, 3, false));
+    m_playerShow.push_back(make_unique<Thief>(sf::Vector2f(75, 150), thief, 3, true));
 }
 
 
@@ -482,7 +554,7 @@ void GameController::storeObjects() {
     }
    foundPos =m_window.calculatePos(throneChar);
     while(foundPos!=sf::Vector2f(-1.f,-1.f)) {
-        m_specialStatic.push_back(make_unique<Throne>(foundPos, orc, 3));
+        m_specialStatic.push_back(make_unique<Throne>(foundPos, throne, 3));
         foundPos= m_window.calculatePos(throneChar);
     }
     foundPos =m_window.calculatePos(fireChar);
@@ -522,4 +594,17 @@ void GameController::storeObjects() {
 bool GameController::isRunning()
 {
     return running;
+}
+void GameController::cangeMenu(string game){
+   m_mainMenu.changeText(game);
+}
+void GameController:: clearVectors()
+{
+    m_players.clear();
+    m_dwarves.clear();
+    m_blockObjects.clear();
+    m_specialStatic.clear();
+    m_gifts_1.clear();
+    m_gifts_2.clear();
+    m_teleporters.clear();
 }
