@@ -70,7 +70,7 @@ void GameController::run()
     m_mainMenu.run(m_window.getWindow());
 
     sf::Clock clock;
-    float deltaTime;
+
     int key = 0;
     sf::Vector2f moveDirection;
     m_clock =new Clock(80);
@@ -83,14 +83,14 @@ void GameController::run()
         m_window.getWindow().clear(sf::Color(34, 20, 26));
 
 
-        deltaTime = clock.restart().asSeconds();
+        m_deltaTime = clock.restart().asSeconds();
         m_timer.setString(m_clock->countDown());
 
 
 
         for (auto& currDwarf : m_dwarves)
         {
-            currDwarf->move(deltaTime);
+            currDwarf->move(m_deltaTime);
         }
 
 //          check collisions of player and dwarf with any blocking object
@@ -116,25 +116,25 @@ void GameController::run()
 //          draw all teleporters
         for (int i = 0; i < m_teleporters.size(); i++)
         {
-            m_teleporters[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
+            m_teleporters[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
         }
 
 //          draw all blocking objects
         for (int i = 0; i < m_blockObjects.size(); i++)
         {
-            m_blockObjects[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
+            m_blockObjects[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
         }
 
 //          draw all special static objects
         for (int i = 0; i < m_specialStatic.size(); i++)
         {
-            m_specialStatic[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
+            m_specialStatic[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
         }
 
 //          draw all dwarves
         for (int i = 0; i < m_dwarves.size(); i++)
         {
-            m_dwarves[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
+            m_dwarves[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
         }
 
 //          draw all players
@@ -142,19 +142,19 @@ void GameController::run()
         {
 
             if (i != key)
-                m_players[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
+                m_players[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
         }
 
         m_currPlayer.setPosition(m_players[key]->getLocation());
        // m_keyShow->updateAndDraw(0, deltaTime, m_window.getWindow());
-        m_players[key]->updateAndDraw(0, deltaTime, m_window.getWindow());
+        m_players[key]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
         m_window.getWindow().draw(m_currPlayer);
 
         for (int i = 0; i < m_specialStatic.size(); i++) {
-            m_specialStatic[i]->updateAndDraw(0, deltaTime, m_window.getWindow());
+            m_specialStatic[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
         }
 
-        m_playerShow[key]->updateAndDraw(0, deltaTime, m_window.getWindow());
+        m_playerShow[key]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
 
 
         m_window.drawText(m_timer);
@@ -226,7 +226,7 @@ void GameController::run()
         }
         m_window.display();
 
-        handleKey(deltaTime, key, moveDirection);
+        handleKey(m_deltaTime, key, moveDirection);
     }
 
 }
@@ -294,6 +294,17 @@ void GameController::handleCollision(const int key)
         if (m_players[key]->checkCollision(*specialStatic))
         {
             m_players[key]->handleCollision(*specialStatic);
+
+            return;
+        }
+    }
+
+    for (auto& currGift : m_gifts)
+    {
+        if (m_players[key]->checkCollision(*currGift))
+        {
+            //m_players[key]->handleCollision(*currGift, m_dwarves);
+            //m_players[key]->handleCollision(*currGift, m_deltaTime);
 
             return;
         }

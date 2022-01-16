@@ -16,8 +16,6 @@
 #include "Warrior.h"
 #include "Thief.h"
 #include "Fire.h"
-#include "Gift_1.h"
-#include "Gift_2.h"
 
 
 using std::vector;
@@ -37,12 +35,9 @@ public:
 	void storeTeleproters();
 
 
-	friend void Gift_1::handleCollision(Player&);
-	friend void Gift_2::handleCollision(Player&);
-
-
 private:
     bool running = true;
+	float m_deltaTime;
     MainMenu m_mainMenu;
 	Window m_window;
     Clock *m_clock;
@@ -75,6 +70,8 @@ private:
 	vector <unique_ptr<Static>> m_blockObjects;
 //		vector of other static objects that affect only the player objects (throne, key)
 	vector <unique_ptr<Static>> m_specialStatic;
+
+	vector <unique_ptr<Gift>> m_gifts;
 //		vector of all teleports
 	vector <unique_ptr<Teleporter>> m_teleporters;
 

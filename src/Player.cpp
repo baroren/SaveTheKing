@@ -25,3 +25,13 @@ void Player::stayInPlace()
 
 	setLocation(newPos);
 }
+
+void Player::handleCollision(Gift& gift, vector<unique_ptr<Dwarf>>& dwarves)
+{
+	gift.handleCollision(*this, dwarves);
+}
+
+void Player::handleCollision(Gift& gift, float deltaTime)
+{
+	gift.handleCollision(*this, deltaTime);
+}
