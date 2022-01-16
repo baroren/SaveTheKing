@@ -18,6 +18,7 @@
 #include "Fire.h"
 #include "Gift_1.h"
 #include "Gift_2.h"
+#include "Throne.h"
 
 
 using std::vector;
@@ -68,6 +69,8 @@ private:
    sf::RectangleShape m_currPlayer;
     unique_ptr<Static> m_keyShow;
     sf::Music m_music;
+
+
 
 //		vector of the player objects (mage, king etc)
 	vector <unique_ptr<Player>> m_players;

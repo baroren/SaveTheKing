@@ -20,6 +20,7 @@ GameController::GameController() {
     m_gifts_1.push_back(make_unique<Gift_1>(m_window.calculatePos('$'), gift1, 3));
     m_gifts_2.push_back(make_unique<Gift_2>(m_window.calculatePos('%'), gift2, 3));
 
+    m_specialStatic.push_back(make_unique<Throne>(m_window.calculatePos('@'), orc, 3));
 
     storeSurroundWall();
 
@@ -332,6 +333,16 @@ void GameController::handleCollision(const int key)
         if (m_players[key]->checkCollision(*currGift_2))
         {
             m_players[key]->handleCollision(*currGift_2, m_dwarves);
+
+            return;
+        }
+    }
+
+    for (auto& durrDwarf : m_dwarves)
+    {
+        if (m_players[key]->checkCollision(*durrDwarf))
+        {
+            m_players[key]->handleCollision(*durrDwarf);
 
             return;
         }

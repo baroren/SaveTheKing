@@ -12,6 +12,7 @@ public:
 	virtual void handleCollision(Fire& fire) override;
 	virtual void handleCollision(Orc& orc) override;
 	virtual void handleCollision(Gate& gate) override;
+	virtual void handleCollision(Throne& throne) override {};
 	virtual void handleCollision(Key& key) override {};
 
 

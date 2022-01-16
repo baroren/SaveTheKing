@@ -14,6 +14,18 @@ void Player::handleCollision(Teleporter& teleporter)
 	this->setLocation(newPosition);
 }
 
+bool Player::getLevelFailed() const
+{
+	return m_levelFailed;
+}
+
+void Player::handleCollision(Dwarf& dwarf)
+{
+	m_levelFailed = true;
+
+	cout << "coillided with dwarf" << endl;
+}
+
 void Player::handleCollision(Static& staticObject)
 {
 	 staticObject.handleCollision(*this);
