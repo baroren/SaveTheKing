@@ -36,6 +36,7 @@ public:
     void handleCollision(Gift_1& gift_1, Clock& clock);
     void handleCollision(Gift_2& gift_2, vector<unique_ptr<Dwarf>>&);
 
+    virtual bool getLevelPassed() const = 0;
 
     bool getLevelFailed() const;
     

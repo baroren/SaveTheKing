@@ -17,6 +17,7 @@ GameController::GameController() {
 
     m_specialStatic.push_back(make_unique<Throne>(m_window.calculatePos('@'), orc, 3));
 
+    
 
     storePlayers();
     storeSurroundWall();
@@ -41,9 +42,6 @@ GameController::GameController() {
 
     m_menu.createButton("Quit",100,450);
 
-    //cout << m_teleporters[1]->getLinkdedTeleporter()->getLocation().x << ' ' << m_teleporters[1]->getLinkdedTeleporter()->getLocation().y << endl;
-    //cout << m_teleporters[0]->getLinkdedTeleporter()->getLocation().x << ' ' << m_teleporters[0]->getLinkdedTeleporter()->getLocation().y;
-
     if (!m_music.openFromFile("Shrek.ogg")) {
         // error...
         std::cout << "error loading music";
@@ -60,12 +58,12 @@ GameController::GameController() {
 }
 
 void GameController::storeObjects() {
-    m_blockObjects.push_back(std::__1::make_unique<Wall>(m_window.calculatePos('='), boxWall, 3));
-    m_blockObjects.push_back(std::__1::make_unique<Fire>(m_window.calculatePos('*'), fire, 3));
+    m_blockObjects.push_back(make_unique<Wall>(m_window.calculatePos('='), boxWall, 3));
+    m_blockObjects.push_back(make_unique<Fire>(m_window.calculatePos('*'), fire, 3));
 
-    m_gifts_1.push_back(std::__1::make_unique<Gift_1>(m_window.calculatePos('$'), gift1, 3));
-    m_gifts_2.push_back(std::__1::make_unique<Gift_2>(m_window.calculatePos('%'), gift2, 3));
-    m_dwarves.push_back(std::__1::make_unique<Dwarf>(m_window.calculatePos('&'), dwarf, 3, true, sf::Vector2f(1, 0)));
+    m_gifts_1.push_back(make_unique<Gift_1>(m_window.calculatePos('$'), gift1, 3));
+    m_gifts_2.push_back(make_unique<Gift_2>(m_window.calculatePos('%'), gift2, 3));
+    m_dwarves.push_back(make_unique<Dwarf>(m_window.calculatePos('&'), dwarf, 3, true, sf::Vector2f(1, 0)));
 }
 
 void GameController::run()
@@ -109,70 +107,15 @@ void GameController::run()
         }
         handleCollision(key);
 
-        if (key == 2)
-            replaceOrcWithKey();
 
-//          destroy static objects
-        std::erase_if(m_blockObjects, [](const auto& currBlockObject) {return currBlockObject->getDelete(); });
-        std::erase_if(m_specialStatic, [](const auto& currSpecialObject) {return currSpecialObject->getDelete(); });
-        std::erase_if(m_gifts_1, [](const auto& currGift_1) {return currGift_1->getDelete(); });
-        std::erase_if(m_gifts_2, [](const auto& currGift_2) {return currGift_2->getDelete(); });
+
+
+        destroyObjects(key);
 
         m_window.displayBoard();
 
 
-//          draw all teleporters
-        for (int i = 0; i < m_teleporters.size(); i++)
-        {
-            m_teleporters[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
-        }
-
-//          draw all blocking objects
-        for (int i = 0; i < m_blockObjects.size(); i++)
-        {
-            m_blockObjects[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
-        }
-
-//          draw all special static objects
-        for (int i = 0; i < m_specialStatic.size(); i++)
-        {
-            m_specialStatic[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
-        }
-
-        for (int i = 0; i < m_gifts_1.size(); i++)
-        {
-            m_gifts_1[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
-        }
-
-        for (int i = 0; i < m_gifts_2.size(); i++)
-        {
-            m_gifts_2[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
-        }
-
-//          draw all dwarves
-        for (int i = 0; i < m_dwarves.size(); i++)
-        {
-          //  if(m_dwarves[i]->getDelete())
-             m_dwarves[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
-        }
-
-//          draw all players
-        for (int i = 0; i < m_players.size(); i++)
-        {
-
-            if (i != key)
-                m_players[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
-        }
-
-        m_currPlayer.setPosition(m_players[key]->getLocation());
-        m_players[key]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
-        m_window.getWindow().draw(m_currPlayer);
-
-        for (int i = 0; i < m_specialStatic.size(); i++) {
-            m_specialStatic[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
-        }
-
-        m_playerShow[key]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
+        drawObjects(key);
 
 
         m_window.drawText(m_timer);
@@ -328,6 +271,11 @@ void GameController::handleCollision(const int key)
         {
             m_players[key]->handleCollision(*specialStatic);
 
+            if (key == 0 && m_players[key]->getLevelPassed())
+            {
+                cout << "game is finised" << endl;
+            }
+
             return;
         }
     }
@@ -361,6 +309,58 @@ void GameController::handleCollision(const int key)
             return;
         }
     }
+}
+
+void GameController::drawObjects(const int key)
+{
+    //          draw all teleporters
+    for (int i = 0; i < m_teleporters.size(); i++)
+    {
+        m_teleporters[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
+    }
+
+    //          draw all blocking objects
+    for (int i = 0; i < m_blockObjects.size(); i++)
+    {
+        m_blockObjects[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
+    }
+
+    //          draw all special static objects
+    for (int i = 0; i < m_specialStatic.size(); i++)
+    {
+        m_specialStatic[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
+    }
+
+    for (int i = 0; i < m_gifts_1.size(); i++)
+    {
+        m_gifts_1[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
+    }
+
+    for (int i = 0; i < m_gifts_2.size(); i++)
+    {
+        m_gifts_2[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
+    }
+
+    //          draw all dwarves
+    for (int i = 0; i < m_dwarves.size(); i++)
+    {
+        //  if(m_dwarves[i]->getDelete())
+        m_dwarves[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
+    }
+
+    //          draw all players
+    for (int i = 0; i < m_players.size(); i++)
+    {
+
+        if (i != key)
+            m_players[i]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
+    }
+
+    m_currPlayer.setPosition(m_players[key]->getLocation());
+    m_players[key]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
+    m_window.getWindow().draw(m_currPlayer);
+
+    m_playerShow[key]->updateAndDraw(0, m_deltaTime, m_window.getWindow());
 }
 
 void GameController::handleTeleporters(const int key)
@@ -415,6 +415,19 @@ void GameController::handleKey(float deltaTime,int &key, sf::Vector2f& moveDirec
 
 }
 
+void GameController::destroyObjects(const int key)
+{
+//      if player controlls the warrior destroy the killed orc with key
+    if (key == 2)
+        replaceOrcWithKey();
+
+//          destroy static objects
+    std::erase_if(m_blockObjects, [](const auto& currBlockObject) {return currBlockObject->getDelete(); });
+    std::erase_if(m_specialStatic, [](const auto& currSpecialObject) {return currSpecialObject->getDelete(); });
+    std::erase_if(m_gifts_1, [](const auto& currGift_1) {return currGift_1->getDelete(); });
+    std::erase_if(m_gifts_2, [](const auto& currGift_2) {return currGift_2->getDelete(); });
+}
+
 void GameController::replaceOrcWithKey()
 {
     for (auto& currOrc : m_blockObjects)
@@ -449,13 +462,6 @@ void GameController::storePlayers()
     m_playerShow.push_back(make_unique<Mage>(sf::Vector2f(100, 800), mage, 3, false));
     m_playerShow.push_back(make_unique<Warrior>(sf::Vector2f(100, 800), warrior, 3, false));
     m_playerShow.push_back(make_unique<Thief>(sf::Vector2f(100, 800), thief, 3, true));
-}
-
-void GameController::storeOtherObjects()
-{
-    sf::Vector2f foundPos;
-
-    //while (foundPos = m_window.calculatePos())
 }
 
 bool GameController::isRunning()

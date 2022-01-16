@@ -47,7 +47,6 @@ private:
 
 	void storePlayers();
 
-	void storeOtherObjects();
 //reset to original level position
     void  resetPosition();
 
@@ -63,6 +62,10 @@ private:
 	void storeSurroundWall();
 
 	void replaceOrcWithKey();
+
+	void drawObjects(const int key);
+
+	void destroyObjects(const int key);
 
     sf:: Font m_font;
     Menu m_menu;
@@ -84,6 +87,8 @@ private:
 
 	vector <unique_ptr<Gift_1>> m_gifts_1;
 	vector <unique_ptr<Gift_2>> m_gifts_2;
+
+
 
 //		vector of all teleports
 	vector <unique_ptr<Teleporter>> m_teleporters;
