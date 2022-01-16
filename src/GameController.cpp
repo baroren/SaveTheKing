@@ -72,7 +72,7 @@ bool GameController::run(int level)
     storePlayers();
     storeSurroundWall();
 
-   // m_music.play();
+   m_music.play();
     m_mainMenu.run(m_window.getWindow());
 
     sf::Clock clock;
