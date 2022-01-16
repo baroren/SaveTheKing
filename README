@@ -12,3 +12,5 @@ F - key
 = - wall
 # - gate
 ! - troll
+
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
