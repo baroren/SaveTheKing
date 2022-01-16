@@ -99,6 +99,8 @@ Gift_1.h
 ../include/Gift_1.h
 Gift_2.h
 ../include/Gift_2.h
+Throne.h
+../include/Throne.h
 
 ../include/GameObject.h
 SFML/Graphics.hpp
@@ -135,6 +137,12 @@ Static.h
 ../include/Static.h
 Dwarf.h
 ../include/Dwarf.h
+
+../include/Key.h
+Static.h
+../include/Static.h
+Player.h
+../include/Player.h
 
 ../include/King.h
 Player.h
@@ -231,6 +239,16 @@ Static.h
 ../include/Thief.h
 Player.h
 ../include/Player.h
+Key.h
+../include/Key.h
+Gate.h
+../include/Gate.h
+
+../include/Throne.h
+Static.h
+../include/Static.h
+Player.h
+../include/Player.h
 
 ../include/Wall.h
 Static.h
@@ -243,6 +261,8 @@ Resources.h
 ../include/Warrior.h
 Player.h
 ../include/Player.h
+Orc.h
+../include/Orc.h
 
 ../include/Window.h
 SFML/Graphics.hpp

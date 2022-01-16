@@ -13,16 +13,15 @@ GameController::GameController() {
 
 
 
+
+
+    //m_specialStatic.push_back(make_unique<Throne>(m_window.calculatePos('@'), orc, 3));
+
+
     storeObjects();
-
-    m_specialStatic.push_back(make_unique<Throne>(m_window.calculatePos('@'), orc, 3));
-
-    m_blockObjects.push_back(make_unique<Fire>(m_window.calculatePos('*'), fire, 3));
-    m_blockObjects.push_back(make_unique<Fire>(m_window.calculatePos('*'), fire, 3));
-    m_blockObjects.push_back(make_unique<Orc>(m_window.calculatePos('!'), orc, 3));
-
     storePlayers();
     storeSurroundWall();
+//      store teleporters
 
 
 
@@ -35,8 +34,7 @@ GameController::GameController() {
 
 
 
-//      store teleporters
-    storeTeleproters();
+
     m_menu.createButton("New Game",100,150);
     m_menu.createButton("Help",100,225);
     m_menu.createButton("Main Menu",100,300);
@@ -59,15 +57,8 @@ GameController::GameController() {
 
 }
 
-void GameController::storeObjects() {
-    m_blockObjects.push_back(make_unique<Wall>(m_window.calculatePos('='), boxWall, 3));
-    m_blockObjects.push_back(make_unique<Fire>(m_window.calculatePos('*'), fire, 3));
 
-    m_gifts_1.push_back(make_unique<Gift_1>(m_window.calculatePos('$'), gift1, 3));
-    m_gifts_1.push_back(make_unique<Gift_1>(m_window.calculatePos('$'), gift1, 3));
-    m_gifts_2.push_back(make_unique<Gift_2>(m_window.calculatePos('%'), gift2, 3));
-    m_dwarves.push_back(make_unique<Dwarf>(m_window.calculatePos('&'), dwarf, 3, true, sf::Vector2f(1, 0)));
-}
+
 
 void GameController::run()
 {
@@ -84,6 +75,8 @@ void GameController::run()
 
     while (m_window.isOpen())
     {
+        cout <<dwarfChar;
+
 
 
         m_window.getWindow().clear(sf::Color(34, 20, 26));
@@ -133,7 +126,7 @@ void GameController::run()
                             mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==0) {
                        // std::erase_if(m_players, [](const auto& cuurPlayer) {return true; });
               //         m_players.clear();
-                //      cout<<"deleted";
+                     cout<<"deleted";
                      //   resetPosition();
 
                  //       m_clock =new Clock(m_levelTime);
@@ -466,6 +459,65 @@ void GameController::storePlayers()
     m_playerShow.push_back(make_unique<Warrior>(sf::Vector2f(100, 800), warrior, 3, false));
     m_playerShow.push_back(make_unique<Thief>(sf::Vector2f(100, 800), thief, 3, true));
 }
+
+
+
+void GameController::storeObjects() {
+    sf::Vector2f foundPos;
+    foundPos =m_window.calculatePos(dwarfChar);
+     while(foundPos!=sf::Vector2f(-1.f,-1.f)) {
+         m_dwarves.push_back(make_unique<Dwarf>(foundPos, dwarf, 3, false, sf::Vector2f(1, 0)));
+         foundPos=  m_window.calculatePos(dwarfChar);
+         cout<<"hi";
+     }
+    foundPos =m_window.calculatePos(timeGift);
+    while(foundPos!=sf::Vector2f(-1.f,-1.f)) {
+        m_gifts_1.push_back(make_unique<Gift_1>(foundPos, gift1, 3));
+        foundPos= m_window.calculatePos(timeGift);
+    }
+    foundPos =m_window.calculatePos(killDwarf);
+    while(foundPos!=sf::Vector2f(-1.f,-1.f)) {
+        m_gifts_2.push_back(make_unique<Gift_2>(foundPos, gift2, 3));
+        foundPos= m_window.calculatePos(killDwarf);
+    }
+   foundPos =m_window.calculatePos(throneChar);
+    while(foundPos!=sf::Vector2f(-1.f,-1.f)) {
+        m_specialStatic.push_back(make_unique<Throne>(foundPos, orc, 3));
+        foundPos= m_window.calculatePos(throneChar);
+    }
+    foundPos =m_window.calculatePos(fireChar);
+    while(foundPos!=sf::Vector2f(-1.f,-1.f)) {
+        m_blockObjects.push_back(make_unique<Fire>(foundPos, fire, 3));
+        foundPos= m_window.calculatePos(fireChar);
+        cout<<"hi";
+    }
+    foundPos =m_window.calculatePos(gateChar);
+    while(foundPos!=sf::Vector2f(-1.f,-1.f)) {
+        m_blockObjects.push_back(make_unique<Gate>(foundPos, gate, 3));
+        foundPos= m_window.calculatePos(gateChar);
+        cout<<"hi";
+    }
+
+    foundPos =m_window.calculatePos(keyChar);
+    while(foundPos!=sf::Vector2f(-1.f,-1.f)) {
+        m_specialStatic.push_back(make_unique<Key>(foundPos, key, 3));
+        foundPos= m_window.calculatePos(keyChar);
+    }
+    foundPos =m_window.calculatePos(wallChar);
+    while(foundPos!=sf::Vector2f(-1.f,-1.f)) {
+        m_blockObjects.push_back(make_unique<Wall>(foundPos, boxWall, 3));
+        foundPos= m_window.calculatePos(wallChar);
+    }
+    foundPos =m_window.calculatePos(trollChar);
+    while(foundPos!=sf::Vector2f(-1.f,-1.f)) {
+        m_blockObjects.push_back(make_unique<Orc>(foundPos, orc, 3));
+        foundPos= m_window.calculatePos(trollChar);
+        cout<<"hi";
+    }
+    storeTeleproters();
+}
+
+
 
 bool GameController::isRunning()
 {
