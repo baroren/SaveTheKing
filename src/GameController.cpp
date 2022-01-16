@@ -12,19 +12,21 @@ GameController::GameController() {
     m_levelTime=80;
 
 
-
-
+     m_isRuning=true;
 
     //m_specialStatic.push_back(make_unique<Throne>(m_window.calculatePos('@'), orc, 3));
 
 
-    storeObjects();
+   /* storeObjects();
     storePlayers();
-    storeSurroundWall();
+    storeSurroundWall();*/
 //      store teleporters
 
 
-
+    m_window.createBoard(1);
+    storeObjects();
+    storePlayers();
+    storeSurroundWall();
 
     m_currPlayer.setSize(sf::Vector2f(30, 3));
     m_currPlayer.setOutlineColor(sf::Color::Transparent);
@@ -60,8 +62,9 @@ GameController::GameController() {
 
 
 
-void GameController::run()
+bool GameController::run(int level)
 {
+
 
    // m_music.play();
     m_mainMenu.run(m_window.getWindow());
@@ -75,7 +78,7 @@ void GameController::run()
 
     while (m_window.isOpen())
     {
-        cout <<dwarfChar;
+
 
 
 
@@ -107,7 +110,6 @@ void GameController::run()
 
 
         destroyObjects(key);
-
         m_window.displayBoard();
 
 
@@ -124,15 +126,14 @@ void GameController::run()
                 if (event.mouseButton.button == sf::Mouse::Left) {
                     if(  m_menu.handleClick(m_window.getWindow().
                             mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==0) {
-                       // std::erase_if(m_players, [](const auto& cuurPlayer) {return true; });
-              //         m_players.clear();
-                     cout<<"deleted";
-                     //   resetPosition();
-
-                 //       m_clock =new Clock(m_levelTime);
-
-                        //storePlayers();
-                        //storeObjects();
+                        cout<<"hi";
+                        m_blockObjects.clear();
+                        m_players.clear();
+                        cout<<"clear";
+                        m_window.createBoard(2);
+                        storeObjects();
+                        storePlayers();
+                        storeSurroundWall();
 
                     }
                     if(  m_menu.handleClick(m_window.getWindow().
@@ -140,8 +141,10 @@ void GameController::run()
                         m_mainMenu.run(m_window.getWindow());
 
                     if(  m_menu.handleClick(m_window.getWindow().
-                    mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==4)
+                    mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==4) {
                         m_window.getWindow().close();
+                        m_isRuning=false;
+                    }
                     if(  m_menu.handleClick(m_window.getWindow().
                             mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==3) {
                         if(m_music.getVolume()>0) {
@@ -191,10 +194,14 @@ void GameController::run()
         m_window.display();
 
         handleKey(m_deltaTime, key, moveDirection);
+
     }
-
+    return true;
 }
-
+bool GameController::isRuning()
+{
+    return m_isRuning;
+}
 void GameController::storeTeleproters()
 {
     sf::Vector2f foundPos_1, foundPos_2;
@@ -239,7 +246,7 @@ void GameController::storeSurroundWall()
         m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x + rowColNum.y * SQUARE + 15, firstVerticalY + i * SQUARE), vertWall, 3));
     }
 
-    for (int i = 0; i < rowColNum.x; i++)
+    for (int i = 0; i < rowColNum.y; i++)
     {
         m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f(firstHorizontalX + i * SQUARE, upperLeftDot.y - 15), horiWall, 3));
         m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f( firstHorizontalX + i * SQUARE, upperLeftDot.y + rowColNum.x * SQUARE + 15), horiWall, 3));
@@ -522,4 +529,7 @@ void GameController::storeObjects() {
 bool GameController::isRunning()
 {
     return running;
+}
+void GameController::cangeMenu(string game){
+    m_menu.changeText(game);
 }

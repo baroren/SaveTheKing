@@ -8,13 +8,13 @@ using std::getline;
 using std::cout;
 using std::endl;
 
-Board::Board(int rowNum, int colNum)
-	:m_rowNum(rowNum), m_colNum(colNum)
+Board::Board(int level)
+
 {
     m_boardTexture=Resources::instance().getTexture(map);
       m_sprite.setTexture(&m_boardTexture);
 
-    createBoard();
+  //  createBoard(level);
 
 
 //    m_wall.push_back(make_unique<Wall>(sf::Vector2f(m_upperLeftDot.x + 50, m_upperLeftDot.y), vertWall,3));
@@ -23,10 +23,10 @@ Board::Board(int rowNum, int colNum)
 
 }
 
-void Board::createBoard() {
+void Board::createBoard(int level) {
     ifstream inputFile;
 
-    inputFile.open("Level_1.txt");
+    inputFile.open("Level_"+std::to_string(level)+".txt");
 
     if (!inputFile.is_open())
     {

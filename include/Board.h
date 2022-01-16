@@ -21,7 +21,7 @@ class Board {
 
 public:
 //		where the actual game will take place
-	Board(int rowNum = 5, int colNum = 5);
+	Board(int level=1);
 
 //		display the game board on window
 	void display(sf::RenderWindow& window);
@@ -35,7 +35,7 @@ public:
 	sf::Vector2f getUpperLeftDot() const;
 
 	sf::Vector2i getRowColNum() const;
-    void createBoard();
+    void createBoard(int level);
 
 private:
     sf::Texture m_boardTexture; //temp

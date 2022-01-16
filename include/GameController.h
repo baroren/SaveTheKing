@@ -31,13 +31,13 @@ public:
 	
 	GameController();
 
-	void run();
+	bool run(int level);
     bool isRunning();
 	void handleKey(float deltaTime,int &key, sf::Vector2f& moveDirection);
 
 	void storeTeleproters();
-
-
+    bool isRuning();
+    void cangeMenu(string game);
 private:
     bool running = true;
 	float m_deltaTime;
@@ -75,7 +75,7 @@ private:
     sf::Music m_music;
 
 
-
+    bool m_isRuning;
 //		vector of the player objects (mage, king etc)
 	vector <unique_ptr<Player>> m_players;
 	vector <unique_ptr<Dwarf>> m_dwarves;
