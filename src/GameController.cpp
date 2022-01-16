@@ -14,7 +14,7 @@ GameController::GameController() {
     m_players.push_back(make_unique<Warrior>(m_window.calculatePos('W'),warrior,3, false));
     m_players.push_back(make_unique<Thief>(m_window.calculatePos('T'), thief,3 ,true));
 
-    m_blockObjects.push_back(make_unique<Wall>(m_window.calculatePos('='), vertWall, 3));
+    m_blockObjects.push_back(make_unique<Wall>(m_window.calculatePos('='), boxWall, 3));
     m_blockObjects.push_back(make_unique<Fire>(m_window.calculatePos('*'), fire, 3));
 
 
@@ -271,6 +271,12 @@ void GameController::storeSurroundWall()
     {
         m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x - 15, firstVerticalY + i * SQUARE), vertWall, 3));
         m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x + rowColNum.y * SQUARE + 15, firstVerticalY + i * SQUARE), vertWall, 3));
+    }
+
+    for (int i = 0; i < rowColNum.x; i++)
+    {
+        m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f(firstHorizontalX + i * SQUARE, upperLeftDot.y - 15), horiWall, 3));
+        m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f( firstHorizontalX + i * SQUARE, upperLeftDot.y + rowColNum.x * SQUARE + 15), horiWall, 3));
     }
 }
 
