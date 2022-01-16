@@ -31,7 +31,10 @@ public:
 	
 	GameController();
 
-	bool run(int level);
+	void run(int level);
+	void handleMenuClick(int &level,sf::Clock &clock);
+	//void menuClick(int& level);
+	void resetLevel(int& level,string text,sf::Clock& clock);
     bool isRunning();
 	void handleKey(float deltaTime,int &key, sf::Vector2f& moveDirection);
 
@@ -75,7 +78,8 @@ private:
     sf::Text m_level;
 
     sf::RectangleShape m_currPlayer;
-    sf::Sprite m_keyShow;
+    unique_ptr<Key> m_keyShow;
+	
     sf::Music m_music;
 
 

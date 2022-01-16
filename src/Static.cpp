@@ -10,3 +10,8 @@ bool Static::getDelete() const
 {
 	return m_isDeleted;
 }
+void Static::setOpacity(int opacity)
+{
+	m_sprite.setColor(sf::Color(
+		255	, 255, 255, opacity));
+}
