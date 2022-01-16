@@ -16,13 +16,7 @@ int level=1;
    GameController gameController;
     gameController.run(1);
 
-       GameController newLevel;
-       newLevel.cangeMenu("continue");
-       newLevel.run(2);
-    GameController newLevel2;
-    newLevel.cangeMenu("continue");
-    newLevel2.run(3);
-    gameController.run(1);
+      
 
 
 

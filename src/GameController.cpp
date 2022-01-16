@@ -111,7 +111,22 @@ bool GameController::run(int level)
         handleCollision(key);
 
 
+        if (m_players[0]->getLevelPassed())
+        {
 
+            level++;
+            clearVectors();
+            m_window.deletBoard();
+            m_mainMenu.changeText("level "+std::to_string(level));
+            m_mainMenu.run(m_window.getWindow());
+
+            m_window.createBoard(level);
+            storeObjects();
+            storePlayers();
+            storeSurroundWall();
+            m_clock = new Clock(m_levelTime);
+
+       }
 
         destroyObjects(key);
         m_window.displayBoard();
@@ -132,11 +147,14 @@ bool GameController::run(int level)
                     if(  m_menu.handleClick(m_window.getWindow().
                             mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())),m_window.getWindow())==0) {
                         cout<<"hi";
-                        return false;
+                      //  return false;
                         cout<<"clear";
-
+                        clearVectors();
                             m_window.deletBoard();
-                        m_window.createBoard(3);
+                            m_mainMenu.changeText("continue");
+
+                            m_mainMenu.run(m_window.getWindow());
+                        m_window.createBoard(1);
                         storeObjects();
                         storePlayers();
                         storeSurroundWall();
