@@ -42,16 +42,6 @@ void Button::update(sf::Vector2f mousePos)
             this->m_bState = BTN_HOVER;
             //pressed
 
-        /*    if (event.type == sf::Event::MouseButtonPressed)
-            {
-                if (event.mouseButton.button == sf::Mouse::Left)
-                {
-                    this->m_bState = BTN_PRESSED;
-                    std::cout<<"pressed"<<m_pressed<<std::endl;
-                    m_pressed=true;
-                }
-            }*/
-
 
             switch (this->m_bState) {
                 case BTN_IDLE:

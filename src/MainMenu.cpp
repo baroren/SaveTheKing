@@ -107,18 +107,6 @@ sf::Text MainMenu::makeTitle(int size, std::string text,float posX, float posY) 
 void MainMenu::changeText(string text)
 {
     m_menu.getButton(0)->changeText(text);
+    cout << text;
 
 }
-/*void MainMenu::printHelp(sf::RenderWindow & window,Button *button)
-{
-    if (button->isPressed()) {
-        window.draw(m_menu.get);
-    } else {
-        //  m_buttons[1]->update(window.mapPixelToCoords(sf::Mouse::getPosition(window)));
-
-    }
-    if (!m_help.getGlobalBounds().contains(window.mapPixelToCoords(sf::Mouse::getPosition(window)))
-        && sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-        button->quit();
-    }
-}*/

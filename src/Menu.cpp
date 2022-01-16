@@ -1,5 +1,6 @@
 #include "Menu.h"
 Menu::Menu(){
+
     if (!m_font.loadFromFile("arcadeClassic.ttf")) {
         // error...
         std::cout << "error loading font";
@@ -7,26 +8,19 @@ Menu::Menu(){
     }
 
 
-    if (!m_helpTex.loadFromFile("Help.png")) {
-        // error...
-        std::cout << "error loading font";
-
-    }// meed to make it a function
+    m_help = Resources::instance().getSprite(help);
     m_music=true;
-    m_help.setTexture(m_helpTex);
     m_help.setOrigin(sf::Vector2f(m_help.getGlobalBounds().width / 2.f, m_help.getGlobalBounds().height / 2.f));
     m_help.setPosition(sf::Vector2f(700.f, 450.f));
     m_help.setScale(1.5, 1.5);
     m_helpPressed =false;
-    /* m_buttons.push_back(new Button(700, 300, 150, 50, &this->m_font, "New Game",
-                                    sf::Color(70, 70, 70, 200), sf::Color(70, 3, 150, 200),
-                                    sf::Color(70, 20, 20, 200)));
-     m_buttons.push_back(new Button(700, 380, 150, 50, &this->m_font, "Help",
-                                    sf::Color(70, 70, 70, 200), sf::Color(70, 3, 150, 200),
-                                    sf::Color(70, 20, 20, 200)));
-     m_buttons.push_back(new Button(700, 460, 150, 50, &this->m_font, "Quit",
-                                    sf::Color(70, 70, 70, 200), sf::Color(70, 3, 150, 200),
-                                    sf::Color(70, 20, 20, 200)));*/
+    
+}
+Menu::~Menu() {
+    for (int i = 0;i < m_buttons.size();i++)
+    {
+        delete m_buttons[i];
+    }
 }
 
 void Menu::createButton(string name,int x,int y)
@@ -46,10 +40,8 @@ sf::Sprite Menu::getHelp()
 }
 int Menu::handleClick(sf::Vector2f mousePos,sf::RenderWindow& window)
 {
-   /* for(int i=0;i>m_buttons.size();i++)
-    {
-        switch (i) {
-            case 0:*/
+  
+         
 for(int i=0; i<m_buttons.size();i++)
 {
     if(i!=1)
@@ -86,7 +78,7 @@ bool Menu:: helpBt(int i,sf::Vector2f mousePos,sf::RenderWindow& window)
     if(m_buttons[i]->isPressed(mousePos))
     {
         m_helpPressed=true;
-      //  window.draw(m_help);
+    
        std:: cout<<"help"<<std::endl;
        return true;
     }

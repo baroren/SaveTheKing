@@ -5,9 +5,11 @@
 #include "Window.h"
 #include <string>
 #include <iostream>
+#include "Resources.h"
 class Menu {
 public:
         Menu();
+        ~Menu();
         void createButton(string ,int x,int y);
         int handleClick(const sf::Vector2f position,sf::RenderWindow& window);
         Button* getButton(int i);
@@ -21,7 +23,7 @@ public:
 private:
     bool m_music;
     vector <Button*> m_buttons;
-    sf::Texture m_helpTex;
+  //  sf::Texture m_helpTex;
     sf:: Font m_font;
     bool m_helpPressed;
     sf:: Sprite m_help ; //need to make vector
