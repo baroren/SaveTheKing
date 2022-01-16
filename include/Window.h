@@ -31,6 +31,9 @@ public:
 
 	sf::Vector2i getRowColNum() const;
 
+    void createBoard();
+
+
 private:
 //		the window
 	sf::RenderWindow m_window;

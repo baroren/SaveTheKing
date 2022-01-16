@@ -40,7 +40,7 @@ public:
 
      virtual void handleCollision(Player& player) = 0;
      virtual void handleCollision(Dwarf& Dwarf) = 0;
-
+    void setOriginalPosition();
 
      virtual void handleCollision(Mage& mage) = 0;
 
@@ -51,6 +51,7 @@ protected:
     sf::Sprite m_sprite;
 
 private:
+    sf::Vector2f m_originalPosition;
     string m_imagePath;
     Animation* m_animation;
 //	sf::Vector2i m_location;

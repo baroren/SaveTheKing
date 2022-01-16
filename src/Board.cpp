@@ -14,32 +14,36 @@ Board::Board(int rowNum, int colNum)
     m_boardTexture=Resources::instance().getTexture(map);
       m_sprite.setTexture(&m_boardTexture);
 
-	ifstream inputFile;
-
-	inputFile.open("Level_1.txt");
-
-	if (!inputFile.is_open())
-	{
-		cout << "file failed to open" << endl;
-		exit(EXIT_FAILURE);
-	}
-
-	inputFile >> m_rowNum >> m_colNum;       //stores board size from file input
-    m_upperLeftDot=sf::Vector2f(((14-m_colNum+1)/2)*SQUARE,SQUARE);
-
-	inputFile.ignore();
-
-	string line;
-	while (getline(inputFile, line))
-	{
-		m_btsBoard.push_back(line);
-	}
+    createBoard();
 
 
 //    m_wall.push_back(make_unique<Wall>(sf::Vector2f(m_upperLeftDot.x + 50, m_upperLeftDot.y), vertWall,3));
 
 
 
+}
+
+void Board::createBoard() {
+    ifstream inputFile;
+
+    inputFile.open("Level_1.txt");
+
+    if (!inputFile.is_open())
+    {
+        cout << "file failed to open" << endl;
+        exit(EXIT_FAILURE);
+    }
+
+    inputFile >> m_rowNum >> m_colNum;       //stores board size from file input
+    m_upperLeftDot =sf::Vector2f(((14 - m_colNum + 1) / 2) * SQUARE, SQUARE);
+
+    inputFile.ignore();
+
+    string line;
+    while (getline(inputFile, line))
+    {
+        m_btsBoard.push_back(line);
+    }
 }
 
 sf::Vector2f Board::calculatePos(const char tag)

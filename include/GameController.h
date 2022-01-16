@@ -48,7 +48,8 @@ private:
 	void storePlayers();
 
 	void storeOtherObjects();
-
+//reset to original level position
+    void  resetPosition();
 
 //  handles collision that have a block affect on the moving object
 	void handleCollision(Moving& movingObject);
@@ -65,8 +66,8 @@ private:
 
     sf:: Font m_font;
     Menu m_menu;
-   sf::Text m_timer;
-   sf::RectangleShape m_currPlayer;
+    sf::Text m_timer;
+    sf::RectangleShape m_currPlayer;
     unique_ptr<Static> m_keyShow;
     sf::Music m_music;
 
@@ -86,5 +87,7 @@ private:
 
 //		vector of all teleports
 	vector <unique_ptr<Teleporter>> m_teleporters;
+    int m_levelTime;
 
+    void storeObjects();
 };

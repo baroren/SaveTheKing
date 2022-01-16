@@ -84,13 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/AddTime.h">
-			<Option target="ex02"/>
-		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Board.h">
-			<Option target="ex02"/>
-		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/DestDwarf.h">
 			<Option target="ex02"/>
 		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Dwarf.h">
@@ -108,7 +102,7 @@
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Gate.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Gift.h">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Gift_1.h">
 			<Option target="ex02"/>
 		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Key.h">
@@ -141,9 +135,6 @@
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Static.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/SubTime.h">
-			<Option target="ex02"/>
-		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Teleporter.h">
 			<Option target="ex02"/>
 		</Unit>
@@ -162,9 +153,6 @@
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Window.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/AddTime.cpp">
-			<Option target="ex02"/>
-		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Animation.cpp">
 			<Option target="ex02"/>
 		</Unit>
@@ -175,9 +163,6 @@
 			<Option target="ex02"/>
 		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Clock.cpp">
-			<Option target="ex02"/>
-		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/DestDwarf.cpp">
 			<Option target="ex02"/>
 		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Dwarf.cpp">
@@ -195,7 +180,10 @@
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Gate.cpp">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Gift.cpp">
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Gift_1.cpp">
+			<Option target="ex02"/>
+		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Gift_2.cpp">
 			<Option target="ex02"/>
 		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Key.cpp">
@@ -226,9 +214,6 @@
 			<Option target="ex02"/>
 		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Static.cpp">
-			<Option target="ex02"/>
-		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/SubTime.cpp">
 			<Option target="ex02"/>
 		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/src/Teleporter.cpp">
@@ -346,6 +331,12 @@
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/arcadeClassic.ttf">
+			<Option virtualFolder="CMake Files\resources\"/>
+		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/boxWall.png">
+			<Option virtualFolder="CMake Files\resources\"/>
+		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/horiWall.png">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/skull.png">
