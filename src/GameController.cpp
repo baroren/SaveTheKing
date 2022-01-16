@@ -14,13 +14,6 @@ GameController::GameController() {
 
      m_isRuning=true;
 
-    //m_specialStatic.push_back(make_unique<Throne>(m_window.calculatePos('@'), orc, 3));
-
-
-   /* storeObjects();
-    storePlayers();
-    storeSurroundWall();*/
-//      store teleporters
 
 
 
@@ -33,14 +26,11 @@ GameController::GameController() {
 
 
 
-
+    //creatring the side menu
     m_menu.createButton("New Game",100,225);
     m_menu.createButton("help", 100, 300);
-
     m_menu.createButton("restart level",100,375);
     m_menu.createButton("music on",100,450);
-  
-
     m_menu.createButton("Quit",100,525);
 
     if (!m_music.openFromFile("Shrek.ogg")) {
@@ -86,8 +76,6 @@ bool GameController::run(int level)
     {
 
 
-
-
         m_window.getWindow().clear(sf::Color(34, 20, 26));
 
 
@@ -122,16 +110,7 @@ bool GameController::run(int level)
         {
 
             level++;
-            clearVectors();
-            m_window.deletBoard();
-            m_mainMenu.changeText("level "+std::to_string(level));
-            m_mainMenu.run(m_window.getWindow());
-
-            m_window.createBoard(level);
-            storeObjects();
-            storePlayers();
-            storeSurroundWall();
-            m_clock = new Clock(m_levelTime);
+            resetLevel(level);
 
 
         }
@@ -166,38 +145,18 @@ bool GameController::run(int level)
 
             if (event.type == sf::Event::MouseButtonPressed) {
                 if (event.mouseButton.button == sf::Mouse::Left) {
+                    
                     if (m_menu.handleClick(m_window.getWindow().
                         mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())), m_window.getWindow()) == 0) {
-                        cout << "hi";
-                        //  return false;
-                        cout << "clear";
-                        clearVectors();
-                        m_window.deletBoard();
-                        m_mainMenu.changeText("continue");
-
-                        m_mainMenu.run(m_window.getWindow());
-                        m_window.createBoard(1);
-                        storeObjects();
-                        storePlayers();
-                        storeSurroundWall();
-                        m_clock = new Clock(m_levelTime);
+                        resetLevel(1);
 
 
                     }
                     if (m_menu.handleClick(m_window.getWindow().
                         mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())), m_window.getWindow()) == 2)
                     {
-                        clearVectors();
-                        m_window.deletBoard();
-                        m_mainMenu.changeText("continue");
 
-                        m_mainMenu.run(m_window.getWindow());
-                        m_window.createBoard(level);
-                        storeObjects();
-                        storePlayers();
-                        storeSurroundWall();
-
-                        m_clock = new Clock(m_levelTime);
+                        resetLevel(level);
                     }
              
 
@@ -247,7 +206,7 @@ bool GameController::run(int level)
                 }
             }
         }
-
+        //check if pressed outside of help box
         if(m_menu.helpPressed() ) {
             std::cout<<"help pressed"<<endl;
             m_window.getWindow().draw(m_menu.getHelp());
@@ -258,6 +217,20 @@ bool GameController::run(int level)
 
     }
     return true;
+}
+void GameController::resetLevel(int level)
+{
+    clearVectors();
+    m_window.deletBoard();
+    m_mainMenu.changeText("continue");
+    m_mainMenu.run(m_window.getWindow());
+    m_window.createBoard(level);
+
+    storePlayers();
+    storeSurroundWall();
+    storeObjects();
+
+    m_clock = new Clock(m_levelTime);
 }
 bool GameController::isRuning()
 {
@@ -444,10 +417,10 @@ void GameController::handleTeleporters(const int key)
 
 void GameController::handleKey(float deltaTime,int &key, sf::Vector2f& moveDirection)
 {
-
+    //handle key press
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
     {
-       // running = false;   //why tho?
+
 
         m_window.close();
     }
@@ -518,8 +491,8 @@ void GameController:: resetPosition()
 }
 void GameController::storePlayers()
 {
-    m_keyShow = make_unique<Key>(sf::Vector2f(150, 150), key, 3);
-    m_keyShow->setOpacity(128);
+    //making player vetor
+   
    
     m_players.push_back(make_unique<King>(m_window.calculatePos('K'), king, 3, true));
     m_players.push_back(make_unique<Mage>(m_window.calculatePos('M'), mage, 3, false));
@@ -552,11 +525,11 @@ void GameController::storeObjects() {
         m_gifts_2.push_back(make_unique<Gift_2>(foundPos, gift2, 3));
         foundPos= m_window.calculatePos(killDwarf);
     }
+    //only one throne dont need to check for more 
    foundPos =m_window.calculatePos(throneChar);
-    while(foundPos!=sf::Vector2f(-1.f,-1.f)) {
-        m_specialStatic.push_back(make_unique<Throne>(foundPos, throne, 3));
-        foundPos= m_window.calculatePos(throneChar);
-    }
+   m_specialStatic.push_back(make_unique<Throne>(foundPos, throne, 3));
+      
+    
     foundPos =m_window.calculatePos(fireChar);
     while(foundPos!=sf::Vector2f(-1.f,-1.f)) {
         m_blockObjects.push_back(make_unique<Fire>(foundPos, fire, 3));
@@ -586,6 +559,8 @@ void GameController::storeObjects() {
         foundPos= m_window.calculatePos(trollChar);
         cout<<"hi";
     }
+    m_keyShow = make_unique<Key>(sf::Vector2f(150, 150), key, 3);
+    m_keyShow->setOpacity(128);
     storeTeleproters();
 }
 

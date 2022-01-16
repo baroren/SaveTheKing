@@ -32,6 +32,8 @@ public:
 	GameController();
 
 	bool run(int level);
+	void menuClick(int level);
+	void resetLevel(int level);
     bool isRunning();
 	void handleKey(float deltaTime,int &key, sf::Vector2f& moveDirection);
 
