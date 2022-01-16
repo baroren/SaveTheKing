@@ -41,9 +41,9 @@ sf::Vector2f Window::calculatePos(const char tag)
 {
 	return m_board.calculatePos(tag);
 }
-void Window::createBoard()
+void Window::createBoard(int level)
 {
-    m_board.createBoard();
+    m_board.createBoard(level);
 }
 
 void Window::displayBoard()

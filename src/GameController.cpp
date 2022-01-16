@@ -62,6 +62,7 @@ GameController::GameController() {
 void GameController::storeObjects() {
     m_blockObjects.push_back(make_unique<Wall>(m_window.calculatePos('='), boxWall, 3));
     m_blockObjects.push_back(make_unique<Fire>(m_window.calculatePos('*'), fire, 3));
+    m_blockObjects.push_back(make_unique<Fire>(m_window.calculatePos('!'), orc, 3));
 
     m_gifts_1.push_back(make_unique<Gift_1>(m_window.calculatePos('$'), gift1, 3));
     m_gifts_1.push_back(make_unique<Gift_1>(m_window.calculatePos('$'), gift1, 3));
@@ -246,7 +247,7 @@ void GameController::storeSurroundWall()
         m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f(upperLeftDot.x + rowColNum.y * SQUARE + 15, firstVerticalY + i * SQUARE), vertWall, 3));
     }
 
-    for (int i = 0; i < rowColNum.x; i++)
+    for (int i = 0; i < rowColNum.y; i++)
     {
         m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f(firstHorizontalX + i * SQUARE, upperLeftDot.y - 15), horiWall, 3));
         m_blockObjects.push_back(make_unique<Wall>(sf::Vector2f( firstHorizontalX + i * SQUARE, upperLeftDot.y + rowColNum.x * SQUARE + 15), horiWall, 3));

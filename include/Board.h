@@ -35,7 +35,7 @@ public:
 	sf::Vector2f getUpperLeftDot() const;
 
 	sf::Vector2i getRowColNum() const;
-    void createBoard();
+    void createBoard(int level);
 
 private:
     sf::Texture m_boardTexture; //temp

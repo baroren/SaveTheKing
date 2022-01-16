@@ -31,7 +31,7 @@ public:
 
 	sf::Vector2i getRowColNum() const;
 
-    void createBoard();
+    void createBoard(int level);
 
 
 private:

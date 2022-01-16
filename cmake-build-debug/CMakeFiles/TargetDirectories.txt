@@ -1,9 +1,0 @@
-/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/CMakeFiles/ex02.dir
-/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/include/CMakeFiles/rebuild_cache.dir
-/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/include/CMakeFiles/edit_cache.dir
-/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
-/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/src/CMakeFiles/edit_cache.dir
-/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/resources/CMakeFiles/rebuild_cache.dir
-/Users/bar/Documents/school/yearB/project_oop2/cmake-build-debug/resources/CMakeFiles/edit_cache.dir

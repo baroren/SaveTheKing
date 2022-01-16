@@ -14,7 +14,7 @@ Board::Board(int rowNum, int colNum)
     m_boardTexture=Resources::instance().getTexture(map);
       m_sprite.setTexture(&m_boardTexture);
 
-    createBoard();
+    createBoard(3);
 
 
 //    m_wall.push_back(make_unique<Wall>(sf::Vector2f(m_upperLeftDot.x + 50, m_upperLeftDot.y), vertWall,3));
@@ -23,11 +23,11 @@ Board::Board(int rowNum, int colNum)
 
 }
 
-void Board::createBoard() {
+void Board::createBoard(int level) {
     ifstream inputFile;
 
-    inputFile.open("Level_1.txt");
-
+    inputFile.open("Level_"+std::to_string(level)+".txt");
+  //  cout << "Level_"+std::to_string(level)+".txt";
     if (!inputFile.is_open())
     {
         cout << "file failed to open" << endl;
