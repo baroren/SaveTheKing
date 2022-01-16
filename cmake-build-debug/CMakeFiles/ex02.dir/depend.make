@@ -570,6 +570,7 @@ CMakeFiles/ex02.dir/src/GameController.cpp.o: \
  ../include/Gate.h \
  ../include/Gift_1.h \
  ../include/Gift_2.h \
+ ../include/Key.h \
  ../include/King.h \
  ../include/Macros.h \
  ../include/Mage.h \
@@ -582,6 +583,7 @@ CMakeFiles/ex02.dir/src/GameController.cpp.o: \
  ../include/Static.h \
  ../include/Teleporter.h \
  ../include/Thief.h \
+ ../include/Throne.h \
  ../include/Wall.h \
  ../include/Warrior.h \
  ../include/Window.h \
@@ -2227,8 +2229,10 @@ CMakeFiles/ex02.dir/src/Thief.cpp.o: \
  ../include/Clock.h \
  ../include/Dwarf.h \
  ../include/GameObject.h \
+ ../include/Gate.h \
  ../include/Gift_1.h \
  ../include/Gift_2.h \
+ ../include/Key.h \
  ../include/Macros.h \
  ../include/Moving.h \
  ../include/Player.h \
@@ -2329,8 +2333,14 @@ CMakeFiles/ex02.dir/src/Thief.cpp.o: \
  /usr/local/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/ex02.dir/src/Throne.cpp.o: \
  ../include/Animation.h \
+ ../include/Clock.h \
+ ../include/Dwarf.h \
  ../include/GameObject.h \
+ ../include/Gift_1.h \
+ ../include/Gift_2.h \
  ../include/Macros.h \
+ ../include/Moving.h \
+ ../include/Player.h \
  ../include/Resources.h \
  ../include/Static.h \
  ../include/Throne.h \
@@ -2541,6 +2551,7 @@ CMakeFiles/ex02.dir/src/Warrior.cpp.o: \
  ../include/Gift_2.h \
  ../include/Macros.h \
  ../include/Moving.h \
+ ../include/Orc.h \
  ../include/Player.h \
  ../include/Resources.h \
  ../include/Static.h \
@@ -2757,6 +2768,7 @@ CMakeFiles/ex02.dir/src/main.cpp.o: \
  ../include/Gate.h \
  ../include/Gift_1.h \
  ../include/Gift_2.h \
+ ../include/Key.h \
  ../include/King.h \
  ../include/Macros.h \
  ../include/Mage.h \
@@ -2769,6 +2781,7 @@ CMakeFiles/ex02.dir/src/main.cpp.o: \
  ../include/Static.h \
  ../include/Teleporter.h \
  ../include/Thief.h \
+ ../include/Throne.h \
  ../include/Wall.h \
  ../include/Warrior.h \
  ../include/Window.h \
