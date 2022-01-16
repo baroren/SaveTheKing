@@ -17,7 +17,9 @@ GameController::GameController() {
 
     m_specialStatic.push_back(make_unique<Throne>(m_window.calculatePos('@'), orc, 3));
 
-    
+    m_blockObjects.push_back(make_unique<Fire>(m_window.calculatePos('*'), fire, 3));
+    m_blockObjects.push_back(make_unique<Fire>(m_window.calculatePos('*'), fire, 3));
+    m_blockObjects.push_back(make_unique<Orc>(m_window.calculatePos('!'), orc, 3));
 
     storePlayers();
     storeSurroundWall();
@@ -61,6 +63,7 @@ void GameController::storeObjects() {
     m_blockObjects.push_back(make_unique<Wall>(m_window.calculatePos('='), boxWall, 3));
     m_blockObjects.push_back(make_unique<Fire>(m_window.calculatePos('*'), fire, 3));
 
+    m_gifts_1.push_back(make_unique<Gift_1>(m_window.calculatePos('$'), gift1, 3));
     m_gifts_1.push_back(make_unique<Gift_1>(m_window.calculatePos('$'), gift1, 3));
     m_gifts_2.push_back(make_unique<Gift_2>(m_window.calculatePos('%'), gift2, 3));
     m_dwarves.push_back(make_unique<Dwarf>(m_window.calculatePos('&'), dwarf, 3, true, sf::Vector2f(1, 0)));
