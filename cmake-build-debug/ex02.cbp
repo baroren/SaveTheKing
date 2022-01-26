@@ -111,9 +111,6 @@
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/King.h">
 			<Option target="ex02"/>
 		</Unit>
-		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Macros.cpp">
-			<Option target="ex02"/>
-		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/include/Macros.h">
 			<Option target="ex02"/>
 		</Unit>
@@ -321,6 +318,9 @@
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Thief.png">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Throne.png">
+			<Option virtualFolder="CMake Files\resources\"/>
+		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/Title.png">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
@@ -331,6 +331,9 @@
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/arcadeClassic.ttf">
+			<Option virtualFolder="CMake Files\resources\"/>
+		</Unit>
+		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/barGameBg.ogg">
 			<Option virtualFolder="CMake Files\resources\"/>
 		</Unit>
 		<Unit filename="/Users/bar/Documents/school/yearB/project_oop2/resources/boxWall.png">

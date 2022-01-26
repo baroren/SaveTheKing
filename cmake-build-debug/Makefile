@@ -129,30 +129,6 @@ ex02/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/build
 .PHONY : ex02/fast
 
-include/Macros.o: include/Macros.cpp.o
-.PHONY : include/Macros.o
-
-# target to build an object file
-include/Macros.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/include/Macros.cpp.o
-.PHONY : include/Macros.cpp.o
-
-include/Macros.i: include/Macros.cpp.i
-.PHONY : include/Macros.i
-
-# target to preprocess a source file
-include/Macros.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/include/Macros.cpp.i
-.PHONY : include/Macros.cpp.i
-
-include/Macros.s: include/Macros.cpp.s
-.PHONY : include/Macros.s
-
-# target to generate assembly for a file
-include/Macros.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ex02.dir/build.make CMakeFiles/ex02.dir/include/Macros.cpp.s
-.PHONY : include/Macros.cpp.s
-
 src/Animation.o: src/Animation.cpp.o
 .PHONY : src/Animation.o
 
@@ -834,9 +810,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ex02"
-	@echo "... include/Macros.o"
-	@echo "... include/Macros.i"
-	@echo "... include/Macros.s"
 	@echo "... src/Animation.o"
 	@echo "... src/Animation.i"
 	@echo "... src/Animation.s"
