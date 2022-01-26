@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ex02.dir/include/Macros.cpp.o"
   "CMakeFiles/ex02.dir/src/Animation.cpp.o"
   "CMakeFiles/ex02.dir/src/Board.cpp.o"
   "CMakeFiles/ex02.dir/src/Button.cpp.o"

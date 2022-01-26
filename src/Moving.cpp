@@ -10,6 +10,7 @@ using std::cout;
 Moving::Moving(const sf::Vector2f position, gameObjectId id, float scale, const bool isFacedRight, const sf::Vector2f moveDirection)
     :GameObject(position, id, scale), m_isFacedRight(isFacedRight) {}
 
+
 void Moving::move(const Direction dir, float deltaTime)
 {
 

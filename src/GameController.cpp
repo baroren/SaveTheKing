@@ -30,7 +30,7 @@ GameController::GameController() {
 	m_menu.createButton("music on", 100, 450);
 	m_menu.createButton("Quit", 100, 525);
 
-	if (!m_music.openFromFile("Shrek.ogg")) {
+	if (!m_music.openFromFile("barGameBg.ogg")) {
 		// error...
 		std::cout << "error loading music";
 

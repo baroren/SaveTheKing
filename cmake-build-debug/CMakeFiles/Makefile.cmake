@@ -61,10 +61,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../resources/Spr_Villager_Idle.png"
   "../resources/Teleport.png"
   "../resources/Thief.png"
+  "../resources/Throne.png"
   "../resources/Title.png"
   "../resources/W_Red_Idle_SPR.png"
   "../resources/Warrior.png"
   "../resources/arcadeClassic.ttf"
+  "../resources/barGameBg.ogg"
   "../resources/boxWall.png"
   "../resources/horiWall.png"
   "../resources/skull.png"
@@ -110,6 +112,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "Shrek.ogg"
   "horiWall.png"
   "boxWall.png"
+  "Throne.png"
+  "barGameBg.ogg"
   "resources/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
