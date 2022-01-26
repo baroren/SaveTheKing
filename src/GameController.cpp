@@ -9,9 +9,12 @@ using std::endl;
 
 GameController::GameController() {
 
-	m_levelTime = 80;
+	m_levelTime = 61;
 
-
+	m_window.createBoard(1);
+	storeObjects();
+	storePlayers();
+	storeSurroundWall();
 	
 
 	m_currPlayer.setSize(sf::Vector2f(30, 3));
@@ -51,10 +54,7 @@ GameController::GameController() {
 
 void GameController::run(int level)
 {
-	m_window.createBoard(level);
-	storeObjects();
-	storePlayers();
-	storeSurroundWall();
+	
 
 	m_music.play();
 	m_mainMenu.run(m_window.getWindow());
@@ -92,13 +92,13 @@ void GameController::run(int level)
 		{
 
 			level++;
-			resetLevel(level,"level"+std::to_string(level));
+			resetLevel(level,"level"+std::to_string(level),clock);
 
 
 		}
 		if (m_players[key]->getLevelFailed() || m_clock->isGameOver())
 		{
-			resetLevel(level, "try again");
+			resetLevel(level, "try again",clock);
 
 		}
 
@@ -116,8 +116,9 @@ void GameController::run(int level)
 
 			if (event.type == sf::Event::MouseButtonPressed) {
 				if (event.mouseButton.button == sf::Mouse::Left) {
+					m_deltaTime = clock.restart().asSeconds();
 
-					handleMenuClick(level);
+					handleMenuClick(level, clock);
 
 				}
 			}
@@ -157,22 +158,22 @@ void GameController::run(int level)
 	}
 	
 }
-void GameController::handleMenuClick(int level)
+void GameController::handleMenuClick(int &level,sf::Clock &clock)
 {
 	if (m_menu.handleClick(m_window.getWindow().
 		mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())), m_window.getWindow()) == 0) {
-		resetLevel(1, "continue");
-
+		resetLevel(level=1, "continue",clock);
+		level = 1;
 
 	}
 	if (m_menu.handleClick(m_window.getWindow().
 		mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())), m_window.getWindow()) == 2)
 	{
 
-		resetLevel(level, "continue");
+		resetLevel(level, "continue",clock);
 	}
 
-
+	
 	if (m_menu.handleClick(m_window.getWindow().
 		mapPixelToCoords(sf::Mouse::getPosition(m_window.getWindow())), m_window.getWindow()) == 4) {
 		m_window.getWindow().close();
@@ -193,19 +194,29 @@ void GameController::handleMenuClick(int level)
 
 	}
 }
-void GameController::resetLevel(int level,string text)
+void GameController::resetLevel(int &level,string text,sf::Clock &clock)
 {
 	clearVectors();
 	m_window.deletBoard();
 	m_mainMenu.changeText(text);
-	m_mainMenu.run(m_window.getWindow());
+	//
+	if (m_mainMenu.run(m_window.getWindow()))
+	{
+		cout << "hi";
+	//_window.getWindow().draw(m_menu.getHelp());
+	}
 	m_window.createBoard(level);
-
-	storePlayers();
-	storeSurroundWall();
-	storeObjects();
-
 	m_clock = new Clock(m_levelTime);
+	m_clock->reset();
+	m_deltaTime = clock.restart().asSeconds();
+
+
+	storeSurroundWall();
+	storePlayers();
+	storeObjects();
+	cout << "hi"<<endl;
+
+	
 }
 bool GameController::isRuning()
 {
